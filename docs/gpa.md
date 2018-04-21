@@ -32,15 +32,22 @@ This document annotates selected parts of the GPA, with details on how to publis
         <td>the name and address of the procuring entity and other information necessary to contact the procuring entity and obtain all relevant documents relating to the procurement, and their cost and terms of payment, if any;</td>
         <td>
           <ul>
+            <li>
+              Add an <code>Organization</code> object to the <code>parties</code> array:
+              <ul>
+                <li>Add 'procuringEntity' to its <code>roles</code></li>
+                <li>Enter an arbitrary identifier in its <code>id</code></li>
+                <li>Enter the <q>name of the procuring entity</q> in its <code>name</code></li>
+                <li>Enter the <q>address of the procuring entity</q> in its <code>address</code></li>
+                <li>Enter <q>other information necessary to contact the procuring entity</q> in its <code>contactPoint</code></li>
+              </ul>
+            </li>
+            <li>Enter the above identifier in <code>tender/procuringEntity/id</code></li>
             <li>Enter the <q>name of the procuring entity</q> in <code>tender/procuringEntity/name</code></li>
-            <li>Use <code>tender/procuringEntity/id</code> to refer to an <code>Organization</code> entry in the <code>parties</code> array</li>
-            <li>Add 'procuringEntity' to the party's <code>roles</code></li>
-            <li>Enter the <q>name of the procuring entity</q> in the party's <code>name</code></li>
-            <li>Enter the <q>address of the procuring entity</q> in the party's <code>address</code></li>
-            <li>Enter <q>other information necessary to contact the procuring entity</q> in the party's <code>contactPoint</code></li>
             <li>You may proactively enter the <q>cost and terms of payment</q> of <q>all relevant documents relating to the procurement</q> in <code>tender/participationFees</code></li>
             <li>You may proactively enter any <q>relevant documents relating to the procurement</q> in <code>tender/documents</code></li>
           </ul>
+          This requires the Participation Fees extension.
         </td>
       </tr>
       <tr>
@@ -49,7 +56,12 @@ This document annotates selected parts of the GPA, with details on how to publis
         <td>
           <ul>
             <li>Enter <q>a description of the procurement</q> in <code>tender/description</code></li>
-            <li>Enter <q>the nature and the quantity of the goods or services to be procured or, where the quantity is not known, the estimated quantity</q> in <code>tender/description</code> or, if possible, split this into <code>Item</code> entries in the <code>tender/items</code> array; enter <q>the nature</q> in the item's <code>description</code> and/or <code>unit</code> and <q>the quantity</q> in the item's <code>quantity</code></li>
+            <li>
+              Enter <q>the nature and the quantity of the goods or services to be procured or, where the quantity is not known, the estimated quantity</q> in <code>tender/description</code> or, if possible, split this into <code>Item</code> objects in the <code>tender/items</code> array:
+              <ul>
+                <li>Enter <q>the nature</q> in an item's <code>description</code> and/or <code>unit</code></li>
+                <li>Enter <q>the quantity</q> in an item's <code>quantity</code></li>
+              </ul>
           </ul>
         </td>
       </tr>
@@ -61,6 +73,7 @@ This document annotates selected parts of the GPA, with details on how to publis
             <li>Enter <q>an estimate, if possible, of the timing of subsequent notices of intended procurement</q> in <code>tender/recurrence/dates</code></li>
             <li>Enter any further information in <code>tender/recurrence/description</code></li>
           </ul>
+          This requires the Recurring Contracts extension.
         </td>
       </tr>
       <tr>
@@ -70,6 +83,7 @@ This document annotates selected parts of the GPA, with details on how to publis
           <ul>
             <li>Enter this in <code>tender/options</code></li>
           </ul>
+          This requires the Options extension.
         </td>
       </tr>
       <tr>
@@ -78,11 +92,10 @@ This document annotates selected parts of the GPA, with details on how to publis
         <td>
           <ul>
             <li>
-              <p>Enter <q>the duration of the contract</q> in <code>tender/contractPeriod</code>, or:</p>
+              Enter <q>the duration of the contract</q> in <code>tender/contractPeriod</code> and/or add a <code>Milestone</code> object to the <code>tender/milestones</code> array:
               <ul>
-                <li>Add a <code>Milestone</code> object to the <code>tender/milestones</code> array</li>
-                <li>Use 'delivery' for the milestone's <code>type</code></li>
-                <li>Enter <q>the time-frame for delivery of goods or services</q> in the milestone's <code>period</code> <em>or</em> <code>dueDate</code></li>
+                <li>Use 'delivery' for its <code>type</code></li>
+                <li>Enter <q>the time-frame for delivery of goods or services</q> in its <code>dueDate</code> <strong>or</strong> <code>period</code></li>
               </ul>
             </li>
           </ul>
@@ -95,8 +108,9 @@ This document annotates selected parts of the GPA, with details on how to publis
           <ul>
             <li>Use 'open', 'selective' or 'limited' for <q>the procurement method that will be used</q> in <code>tender/procurementMethod</code></li>
             <li>If <q>it will involve negotiation</q>, add 'negotiated' to <code>tender/procurementMethodModalities</code></li>
-            <li>If <q>it will involve … electronic auction</q>, add 'electronicAuction' to <code>tender/procurementMethodModalities</code></li>
+            <li>If <q>it will involve electronic auction</q>, add 'electronicAuction' to <code>tender/procurementMethodModalities</code></li>
           </ul>
+          This requires the Procurement Method Modalities extension.
         </td>
       </tr>
       <tr>
@@ -104,10 +118,14 @@ This document annotates selected parts of the GPA, with details on how to publis
         <td>where applicable, the address and any final date for the submission of requests for participation in the procurement;</td>
         <td>
           <ul>
-            <li>Add a <code>Milestone</code> object to the <code>tender/milestones</code> array</li>
-            <li>Use 'requestToParticipate' for the milestone's <code>type</code></li>
-            <li>Enter <q>any final date for the submission of requests for participation in the procurement</q> in the milestone's <code>dueDate</code></li>
-            <li>Add <q>the address … for the submission of requests for participation in the procurement</q> to the milestone's <code>description</code></li>
+            <li>
+              Add a <code>Milestone</code> object to the <code>tender/milestones</code> array:
+              <ul>
+                <li>Use 'requestToParticipate' for its <code>type</code></li>
+                <li>Enter <q>any final date for the submission of requests for participation in the procurement</q> in its <code>dueDate</code></li>
+                <li>Add <q>the address for the submission of requests for participation in the procurement</q> to its <code>description</code></li>
+              </ul>
+            </li>
           </ul>
         </td>
       </tr>
@@ -117,7 +135,7 @@ This document annotates selected parts of the GPA, with details on how to publis
         <td>
           <ul>
             <li>Enter <q>the final date for the submission of tenders</q> in <code>tender/tenderPeriod/endDate</code></li>
-            <li>Add <q>the address … for the submission of tenders</q> to <code>tender/submissionMethodDetails</code></li>
+            <li>Add <q>the address for the submission of tenders</q> to <code>tender/submissionMethodDetails</code></li>
           </ul>
         </td>
       </tr>
@@ -126,7 +144,8 @@ This document annotates selected parts of the GPA, with details on how to publis
         <td>the language or languages in which tenders or requests for participation may be submitted, if they may be submitted in a language other than an official language of the Party of the procuring entity;</td>
         <td>
           <ul>
-            <li>Enter <q>the language or languages in which tenders or requests for participation may be submitted</q> in <code>contactPoint/availableLanguage</code>, in the <code>Organization</code> entry in the <code>parties</code> array referred by <code>tender/procuringEntity</code></li>
+            <li>Find the <code>Organization</code> object in the <code>parties</code> array whose <code>id</code> matches <code>tender/procuringEntity/id</code></li>
+            <li>Enter <q>the language or languages in which tenders or requests for participation may be submitted</q> in its <code>contactPoint/availableLanguage</code></li>
           </ul>
         </td>
       </tr>
@@ -153,8 +172,9 @@ This document annotates selected parts of the GPA, with details on how to publis
         <td>an indication that the procurement is covered by this Agreement.</td>
         <td>
           <ul>
-            <li>Add 'GPA' to <code>tender/flags</code></li>
+            <li>Add 'GPA' to <code>tender/coveredBy</code></li>
           </ul>
+          This requires the Covered By extension.
         </td>
       </tr>
       <!--
