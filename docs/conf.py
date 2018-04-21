@@ -59,7 +59,7 @@ source_parsers = {
 master_doc = 'index'
 
 # General information about the project.
-project = 'OCDS for GPA'
+project = 'Open Contracting Data Standard for Agreement on Government Procurement'
 copyright = '2018 Open Contracting Partnership'
 author = 'Open Contracting Partnership'
 
@@ -121,6 +121,7 @@ extension_registry_git_ref = 'master'
 
 def setup(app):
     app.add_config_value('recommonmark_config', {
+        'auto_toc_tree_section': 'Contents',
         'enable_eval_rst': True
     }, True)
 
