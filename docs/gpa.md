@@ -67,7 +67,9 @@ This document annotates selected parts of the GPA, with details on how to publis
                 <li>Enter <q>the nature</q> in an item's <code>description</code> and/or <code>unit</code></li>
                 <li>Enter <q>the quantity</q> in an item's <code>quantity</code></li>
               </ul>
+            </li>
           </ul>
+          The method of representing an estimated quantity is <a href="https://github.com/open-contracting/standard/issues/689">under discussion</a>.
         </td>
       </tr>
       <tr>
@@ -96,14 +98,15 @@ This document annotates selected parts of the GPA, with details on how to publis
         <td>the time-frame for delivery of goods or services or the duration of the contract;</td>
         <td>
           <ul>
-            <li>
-              Enter <q>the duration of the contract</q> in <code>tender/contractPeriod</code> and/or add a <code>Milestone</code> object to the <code>tender/milestones</code> array:
+            <li>If <q>the duration of the contract</q> is disclosed, enter it in <code>tender/contractPeriod</code></li>
+            <li>If <q>the time-frame for delivery of goods or services</q> is disclosed, add a <code>Milestone</code> object to the <code>tender/milestones</code> array:
               <ul>
                 <li>Use 'delivery' for its <code>type</code></li>
-                <li>Enter <q>the time-frame for delivery of goods or services</q> in its <code>dueDate</code> <strong>or</strong> <code>period</code></li>
+                <li>If <q>the time-frame for delivery of goods or services</q> is a specific date, enter it in the object's <code>dueDate</code> or, if it is a time period, enter it in the object's <code>period</code></li>
               </ul>
             </li>
           </ul>
+          The addition of <code>period</code> to the <code>Milestone</code> building block is <a href="https://github.com/open-contracting/standard/issues/523#issuecomment-382608504">under discussion</a>.
         </td>
       </tr>
       <tr>
@@ -152,6 +155,7 @@ This document annotates selected parts of the GPA, with details on how to publis
             <li>Find the <code>Organization</code> object in the <code>parties</code> array whose <code>id</code> matches <code>tender/procuringEntity/id</code></li>
             <li>Enter <q>the language or languages in which tenders or requests for participation may be submitted</q> in its <code>contactPoint/availableLanguage</code></li>
           </ul>
+          This requires the <a href="https://github.com/open-contracting/ocds_additionalContactPoints_extension">Additional Contact Points</a> extension.
         </td>
       </tr>
       <tr>
