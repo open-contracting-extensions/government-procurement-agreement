@@ -41,7 +41,7 @@ This document annotates selected parts of the GPA, with details on how to publis
               Add an <code>Organization</code> object to the <code>parties</code> array:
               <ul>
                 <li>Add 'procuringEntity' to its <code>roles</code></li>
-                <li>Enter an arbitrary identifier in its <code>id</code></li>
+                <li>Enter an identifier in its <code>id</code>, which can be arbitrary as it is primarily to allow referencing from other parts of the file</li>
                 <li>Enter the <q>name of the procuring entity</q> in its <code>name</code></li>
                 <li>Enter the <q>address of the procuring entity</q> in its <code>address</code></li>
                 <li>Enter <q>other information necessary to contact the procuring entity</q> in its <code>contactPoint</code></li>
@@ -49,8 +49,8 @@ This document annotates selected parts of the GPA, with details on how to publis
             </li>
             <li>Enter the above identifier in <code>tender/procuringEntity/id</code></li>
             <li>Enter the <q>name of the procuring entity</q> in <code>tender/procuringEntity/name</code></li>
-            <li>You may proactively enter the <q>cost and terms of payment</q> of <q>all relevant documents relating to the procurement</q> in <code>tender/participationFees</code></li>
-            <li>You may proactively enter any <q>relevant documents relating to the procurement</q> in <code>tender/documents</code></li>
+            <li>You can proactively enter the <q>cost and terms of payment</q> of <q>all relevant documents relating to the procurement</q> in <code>tender/participationFees</code></li>
+            <li>You can proactively enter any <q>relevant documents relating to the procurement</q> in <code>tender/documents</code></li>
           </ul>
           This requires the <a href="https://github.com/open-contracting/ocds_participationFee_extension">Participation Fees</a> extension.
         </td>
