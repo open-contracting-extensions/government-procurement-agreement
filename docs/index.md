@@ -1,4 +1,4 @@
-# OCDS for GPA
+# OCDS for the Agreement on Government Procurement
 
 ```eval_rst
   .. warning::
