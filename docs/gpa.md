@@ -52,7 +52,7 @@ This document annotates selected parts of the GPA, with details on how to publis
             <li>You can proactively enter the <q>cost and terms of payment</q> of <q>all relevant documents relating to the procurement</q> in <code>tender/participationFees</code></li>
             <li>You can proactively enter any <q>relevant documents relating to the procurement</q> in <code>tender/documents</code></li>
           </ul>
-          This requires the <a href="https://github.com/open-contracting/ocds_participationFee_extension">Participation Fees</a> extension.
+          This requires the <a href="https://github.com/open-contracting-extensions/ocds_participationFee_extension">Participation Fees</a> extension.
         </td>
       </tr>
       <tr>
@@ -155,7 +155,7 @@ This document annotates selected parts of the GPA, with details on how to publis
             <li>Find the <code>Organization</code> object in the <code>parties</code> array whose <code>id</code> matches <code>tender/procuringEntity/id</code></li>
             <li>Enter <q>the language or languages in which tenders or requests for participation may be submitted</q> in its <code>contactPoint/availableLanguage</code></li>
           </ul>
-          This requires the <a href="https://github.com/open-contracting/ocds_additionalContactPoints_extension">Additional Contact Points</a> extension.
+          This requires the <a href="https://github.com/open-contracting-extensions/ocds_additionalContactPoints_extension">Additional Contact Points</a> extension.
         </td>
       </tr>
       <tr>

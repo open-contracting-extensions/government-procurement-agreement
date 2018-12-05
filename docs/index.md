@@ -26,10 +26,10 @@ This website provides guidance on how to publish [Open Contracting Data Standard
 
 OCDS for GPA is a profile of OCDS that combines community and core extensions:
 
-* [ocds_additionalContactPoints_extension](https://github.com/open-contracting/ocds_additionalContactPoints_extension)
+* [ocds_additionalContactPoints_extension](https://github.com/open-contracting-extensions/ocds_additionalContactPoints_extension)
 * [ocds_coveredBy_extension](https://github.com/open-contracting-extensions/ocds_coveredBy_extension)
 * [ocds_options_extension](https://github.com/open-contracting-extensions/ocds_options_extension)
-* [ocds_participationFee_extension](https://github.com/open-contracting/ocds_participationFee_extension)
+* [ocds_participationFee_extension](https://github.com/open-contracting-extensions/ocds_participationFee_extension)
 * [ocds_procurementMethodModalities_extension](https://github.com/open-contracting-extensions/ocds_procurementMethodModalities_extension)
 * [ocds_recurrence_extension](https://github.com/open-contracting-extensions/ocds_recurrence_extension)
 
