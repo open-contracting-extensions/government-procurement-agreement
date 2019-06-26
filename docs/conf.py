@@ -125,7 +125,7 @@ html_theme_options = {
 }
 
 # The version of OCDS to patch.
-standard_tag = '1__1__3'
+standard_tag = '1__1__4'
 standard_version = '1.1'
 
 # Where the patched schemas will be deployed.
@@ -143,10 +143,10 @@ gettext_domain_prefix = '{}-'.format(profile_identifier)
 # List the extension identifiers and versions that should be part of this profile. The extensions must be available in
 # the extension registry: https://github.com/open-contracting/extension_registry/blob/master/extension_versions.csv
 extension_versions = OrderedDict([
-    ('recurrence', 'master'),
-    ('options', 'master'),
-    ('procurementMethodModalities', 'master'),
-    ('coveredBy', 'master'),
+    # ('recurrence', 'master'),
+    # ('options', 'master'),
+    # ('procurementMethodModalities', 'master'),
+    # ('coveredBy', 'master'),
     # ('party_classifications', 'master'),
     # ('tender_mainItemClassification', 'master'),
     # ('tender_legalBasisDetails', 'master'),
