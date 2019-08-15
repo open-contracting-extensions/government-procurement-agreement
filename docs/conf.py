@@ -143,10 +143,12 @@ gettext_domain_prefix = '{}-'.format(profile_identifier)
 # List the extension identifiers and versions that should be part of this profile. The extensions must be available in
 # the extension registry: https://github.com/open-contracting/extension_registry/blob/master/extension_versions.csv
 extension_versions = OrderedDict([
+    # Authored.
     # ('recurrence', 'master'),
     # ('options', 'master'),
     # ('procurementMethodModalities', 'master'),
     # ('coveredBy', 'master'),
+    # Not authored.
     # ('party_classifications', 'master'),
     # ('tender_mainItemClassification', 'master'),
     # ('tender_legalBasisDetails', 'master'),
