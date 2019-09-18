@@ -88,7 +88,8 @@ This document annotates selected parts of the GPA, with details on how to publis
         <td>a description of any options;</td>
         <td>
           <ul>
-            <li>Enter this in <code>tender/options</code></li>
+            <li>Set <code>tender/hasOptions</code> to <code>true</code>
+            <li>Enter this in <code>tender/options/description</code></li>
           </ul>
           This requires the <a href="https://github.com/open-contracting-extensions/ocds_options_extension">Options</a> extension.
         </td>
