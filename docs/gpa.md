@@ -1,15 +1,17 @@
 # Annotated Revised GPA
 
 ```eval_rst
-  .. warning::
-    This is prepublication, alpha guidance.
+.. warning::
+
+   This is prepublication, alpha guidance.
 ```
 
 This document annotates selected parts of the GPA, with details on how to publish the information using OCDS in a way that is consistent with the rules of the GPA. It is intended for a policy audience.
 
 ```eval_rst
-  .. warning::
-    References from Articles VII:3, VII:4, VII:5, IX:8, IX:9, X:7, X:9, X:11, XIII:2, XIV:1, XVI:2 are not yet added.
+.. warning::
+
+   References from Articles VII:3, VII:4, VII:5, IX:8, IX:9, X:7, X:9, X:11, XIII:2, XIV:1, XVI:2 are not yet added.
 ```
 
 <div class="wy-table-responsive">

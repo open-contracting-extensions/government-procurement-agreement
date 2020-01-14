@@ -1,8 +1,9 @@
 # OCDS for the Agreement on Government Procurement
 
 ```eval_rst
-  .. warning::
-    This is prepublication, alpha guidance.
+.. warning::
+
+   This is prepublication, alpha guidance.
 ```
 
 To promote open, fair and transparent competition in government procurement markets, a number of [World Trade Organization](https://www.wto.org/) (WTO) members negotiated the [Agreement on Government Procurement](https://www.wto.org/english/tratop_e/gproc_e/gp_gpa_e.htm) (GPA).
