@@ -11,7 +11,7 @@ LANGUAGES=.en $(TRANSLATIONS)
 # Directory of documentation files to build with Sphinx.
 DOCS_DIR=docs
 # Directory of catalog files.
-LOCALE_DIR=locale
+LOCALE_DIR=docs/locale
 # Directory in which to build documentation files.
 BUILD_DIR=build
 # Extra build files or directories. (These should match paths in .gitignore.)
@@ -22,10 +22,10 @@ DIST_FILES=schema/profile/release-schema.json schema/profile/codelists schema/pa
 POT_DIR=$(BUILD_DIR)/locale
 # The prefix, if any, to the schema and codelists domains.
 DOMAIN_PREFIX=
-# Directory containing assets to copy to the build directory (no trailing slash).
-ASSETS_DIR=
 # The Transifex project name.
 TRANSIFEX_PROJECT=
+# Any additional extract targets.
+EXTRACT_TARGETS=
 
 # The path to the branch of the documentation to print to PDF.
 PDF_ROOT=/profiles/gpa/master
