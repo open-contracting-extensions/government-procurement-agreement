@@ -21,7 +21,7 @@ jobs:
     # See https://help.github.com/en/actions/reference/software-installed-on-github-hosted-runners
     - run: pip install -r requirements.txt
     - name:
-      - run: |
+      run: |
         echo $PATH
         echo $CHROMEWEBDRIVER
         ls $CHROMEWEBDRIVER
