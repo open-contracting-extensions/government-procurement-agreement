@@ -24,10 +24,12 @@ jobs:
         if [ $GITHUB_REPOSITORY = 'open-contracting/standard_profile_template' ]; then python schema/build-profile.py; make extract; fi
         make
         pytest
+    - uses: shimataro/ssh-key-action@v2
+      with:
+        key: ${{ secrets.PRIVATE_KEY }}
     - if: success()
       env:
         LANGS: en
         PATH_PREFIX: profiles/gpa/
         SEARCH_SECRET: ${{ secrets.SEARCH_SECRET }}
-        PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
       run: curl -Ss https://raw.githubusercontent.com/open-contracting/deploy/master/deploy-docs.sh | bash -
