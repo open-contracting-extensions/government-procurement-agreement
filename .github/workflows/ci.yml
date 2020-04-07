@@ -1,0 +1,31 @@
+name: CI
+on: [push, pull_request]
+env:
+  LANGS: en
+  PATH_PREFIX: profiles/gpa/
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v1
+      with:
+        python-version: 3.6
+    - uses: actions/cache@v1
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+    # Chrome and ChromeDriver are included.
+    # See https://help.github.com/en/actions/reference/software-installed-on-github-hosted-runners
+    - run: pip install -r requirements.txt
+    - name:
+      - run: |
+        echo $PATH
+        echo $CHROMEWEBDRIVER
+        ls $CHROMEWEBDRIVER
+        export PATH=$PATH:$CHROMEWEBDRIVER
+        if [ $GITHUB_REPOSITORY = 'open-contracting/standard_profile_template' ]; then python schema/build-profile.py; make extract; fi
+        make
+        pytest
