@@ -25,14 +25,9 @@ jobs:
         make
         pytest
     - if: success()
-      shell: bash
       env:
         LANGS: en
         PATH_PREFIX: profiles/gpa/
-        OCDS_SECRET: ${{ secrets.OCDS_SECRET }}
+        SEARCH_SECRET: ${{ secrets.SEARCH_SECRET }}
         PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
-        TEST: ${{ secrets.notasecret }}
-      run: |
-        echo $TEST
-        if [ -z "$TEST" ]; then echo zero; fi
-        curl -Ss https://raw.githubusercontent.com/open-contracting/deploy/master/deploy-docs.sh | bash -
+      run: curl -Ss https://raw.githubusercontent.com/open-contracting/deploy/master/deploy-docs.sh | bash -
