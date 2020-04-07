@@ -1,10 +1,5 @@
 name: CI
 on: [push, pull_request]
-env:
-  LANGS: en
-  PATH_PREFIX: profiles/gpa/
-  OCDS_SECRET: ${{ secrets.OCDS_SECRET }}
-  PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -29,6 +24,10 @@ jobs:
         if [ $GITHUB_REPOSITORY = 'open-contracting/standard_profile_template' ]; then python schema/build-profile.py; make extract; fi
         make
         pytest
-    - name: Deploy
-      if: success()
+    - if: success()
+      env:
+        LANGS: en
+        PATH_PREFIX: profiles/gpa/
+        OCDS_SECRET: ${{ secrets.OCDS_SECRET }}
+        PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
       run: curl -Ss https://raw.githubusercontent.com/open-contracting/deploy/master/deploy-docs.sh | bash -
