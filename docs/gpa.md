@@ -170,7 +170,6 @@ This requires the [Additional Contact Points](https://github.com/open-contractin
 This requires the [Covered By](https://github.com/open-contracting-extensions/ocds_coveredBy_extension) extension.
 </td>
       </tr>
-<!--
       <tr class="section">
         <td>VII:3</td>
         <td colspan="2">For each case of intended procurement, a procuring entity shall publish a summary notice that is readily accessible, at the same time as the publication of the notice of intended procurement, in one of the WTO languages.  The summary notice shall contain at least the following information:</td>
@@ -180,7 +179,8 @@ This requires the [Covered By](https://github.com/open-contracting-extensions/oc
         <td>the subject-matter of the procurement;</td>
         <td markdown=1>
 
-* 
+* Enter it in `tender/description`
+* If `tender/description` is not empty, enter it after the existing content
 </td>
       </tr>
       <tr>
@@ -188,7 +188,7 @@ This requires the [Covered By](https://github.com/open-contracting-extensions/oc
         <td>the final date for the submission of tenders or, where applicable, any final date for the submission of requests for participation in the procurement or for inclusion on a multi-use list; and</td>
         <td markdown=1>
 
-* 
+* Enter *the final date for the submission of tenders* or, if disclosed, *any final date for the submission of  requests for participation in the procurement or for inclusion on a multi-use list*, in `tender/tenderPeriod/endDate`
 </td>
       </tr>
       <tr>
@@ -196,9 +196,13 @@ This requires the [Covered By](https://github.com/open-contracting-extensions/oc
         <td>the address from which documents relating to the procurement may be requested.</td>
         <td markdown=1>
 
-* 
+* If the address has been entered in section VII:2(a), discard
+* Else, follow the guidance for section VII:2(a)
+
+If possible, enter the URL, type, description and other properties of *documents relating to the procurement* in `tender/documents`.
 </td>
       </tr>
+<!--
       <tr>
         <td>VII:4</td>
         <td>Procuring entities are encouraged to publish in the appropriate paper or electronic medium listed in Appendix III as early as possible in each fiscal year a notice regarding their future procurement plans (hereinafter referred to as "notice of planned procurement"). The notice of planned procurement should include the subject-matter of the procurement and the planned date of the publication of the notice of intended procurement.</td>
