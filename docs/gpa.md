@@ -11,7 +11,7 @@ This document annotates selected parts of the GPA, with details on how to publis
 ```eval_rst
 .. warning::
 
-   References from Articles VII:3, VII:4, VII:5, IX:8, IX:9, X:7, X:9, X:11, XIII:2, XIV:1, XVI:2 are not yet added.
+   References from Articles VII:4, VII:5, IX:8, IX:9, X:7, X:9, X:11, XIII:2, XIV:1, XVI:2 are not yet added.
 ```
 
 <div class="wy-table-responsive">
