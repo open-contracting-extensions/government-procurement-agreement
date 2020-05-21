@@ -71,10 +71,11 @@ The method of representing an estimated quantity is [under discussion](https://g
         <td>for recurring contracts, an estimate, if possible, of the timing of subsequent notices of intended procurement;</td>
         <td markdown=1>
 
+* Set `tender/hasRecurrence` to `true`
 * Enter *an estimate, if possible, of the timing of subsequent notices of intended procurement* in `tender/recurrence/dates`
 * Enter any further information in `tender/recurrence/description`
 
-This requires the [Recurring Contracts](https://github.com/open-contracting-extensions/ocds_recurrence_extension) extension.
+This requires the [Recurrence](https://github.com/open-contracting-extensions/ocds_recurrence_extension) extension.
 </td>
       </tr>
       <tr>
@@ -107,10 +108,10 @@ The addition of `period` to the `Milestone` building block is [under discussion]
         <td markdown=1>
 
 * Use 'open', 'selective' or 'limited' for *the procurement method that will be used* in `tender/procurementMethod`
-* If *it will involve negotiation*, add 'negotiated' to `tender/procurementMethodModalities`
-* If *it will involve electronic auction*, add 'electronicAuction' to `tender/procurementMethodModalities`
+* If *it will involve negotiation*, add 'negotiated' to `tender/procurementMethodDetails`
+* If *it will involve electronic auction* set `tender/techniques/hasElectronicAuction` to `true`
 
-This requires the [Procurement Method Modalities](https://github.com/open-contracting-extensions/ocds_procurementMethodModalities_extension) extension.
+This requires the [Techniques](https://github.com/open-contracting-extensions/ocds_techniques_extension) extension.
 </td>
       </tr>
       <tr>
@@ -157,7 +158,14 @@ This requires the [Additional Contact Points](https://github.com/open-contractin
         <td>where, pursuant to Article IX, a procuring entity intends to select a limited number of qualified suppliers to be invited to tender, the criteria that will be used to select them and, where applicable, any limitation on the number of suppliers that will be permitted to tender; and</td>
         <td markdown=1>
 
-* Add this to `tender/eligibilityCriteria`
+* Set `tender.techniques.hasFrameworkAgreement` to `true`
+* Enter *the number of suppliers that will be permitted to tender* in `tender.techniques.frameworkAgreement.maximumParticipants`
+
+This requires the [Techniques](https://github.com/open-contracting-extensions/ocds_techniques_extension) extension.
+
+* Add *the criteria that will be used to select [the suppliers]* to `tender.selectionCriteria.criteria`
+
+This requires the [Selection Criteria](https://github.com/open-contracting-extensions/ocds_selectionCriteria_extension) extension.
 </td>
       </tr>
       <tr>
