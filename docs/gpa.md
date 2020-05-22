@@ -108,7 +108,7 @@ The addition of `period` to the `Milestone` building block is [under discussion]
         <td markdown=1>
 
 * Use 'open', 'selective' or 'limited' for *the procurement method that will be used* in `tender/procurementMethod`
-* If *it will involve negotiation*, add 'negotiated' to `tender/procurementMethodDetails`
+* If *it will involve negotiation*, add "negotiated" to `tender/procurementMethodDetails`
 * If *it will involve electronic auction* set `tender/techniques/hasElectronicAuction` to `true`
 
 This requires the [Techniques](https://github.com/open-contracting-extensions/ocds_techniques_extension) extension.
@@ -158,12 +158,11 @@ This requires the [Additional Contact Points](https://github.com/open-contractin
         <td>where, pursuant to Article IX, a procuring entity intends to select a limited number of qualified suppliers to be invited to tender, the criteria that will be used to select them and, where applicable, any limitation on the number of suppliers that will be permitted to tender; and</td>
         <td markdown=1>
 
-* Set `tender.techniques.hasFrameworkAgreement` to `true`
-* Enter *the number of suppliers that will be permitted to tender* in `tender.techniques.frameworkAgreement.maximumParticipants`
+* Enter *the number of suppliers that will be permitted to tender* in `tender.secondStage.maximumCandidates`
 
-This requires the [Techniques](https://github.com/open-contracting-extensions/ocds_techniques_extension) extension.
+This requires the [Second Stage](https://github.com/open-contracting-extensions/ocds_secondStage_extension) extension.
 
-* Add *the criteria that will be used to select [the suppliers]* to `tender.selectionCriteria.criteria`
+* Add *the criteria that will be used to select [the suppliers]* to `tender.selectionCriteria.description` or, if possible, split this into `SelectionCriterion` objects in the `tender/selectionCriteria/criteria` array.
 
 This requires the [Selection Criteria](https://github.com/open-contracting-extensions/ocds_selectionCriteria_extension) extension.
 </td>
