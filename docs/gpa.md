@@ -182,31 +182,16 @@ This requires the [Covered By](https://github.com/open-contracting-extensions/oc
         <td colspan="2">For each case of intended procurement, a procuring entity shall publish a summary notice that is readily accessible, at the same time as the publication of the notice of intended procurement, in one of the WTO languages.  The summary notice shall contain at least the following information:</td>
       </tr>
       <tr>
-        <td>VII:3(a)</td>
-        <td>the subject-matter of the procurement;</td>
+        <td>VII:3(a)<br/>
+        VII:3(b)<br/>
+        VII:3(c)<br/></td>
+        <td>the subject-matter of the procurement;<br/>
+        the final date for the submission of tenders or, where applicable, any final date for the submission of    requests for participation in the procurement or for inclusion on a multi-use list; and<br/>
+        the address from which documents relating to the procurement may be requested.</td>
         <td markdown=1>
 
-* Enter this in `tender/description`
-* If `tender/description` is not empty, add this to the existing content
-</td>
-      </tr>
-      <tr>
-        <td>VII:3(b)</td>
-        <td>the final date for the submission of tenders or, where applicable, any final date for the submission of requests for participation in the procurement or for inclusion on a multi-use list; and</td>
-        <td markdown=1>
+The information included in the notice of intended procurement covers all the information that must be included in a summary notice. If you follow the guidance for article VII:2, you can discard article VII:3.
 
-* Enter *the final date for the submission of tenders* or, if disclosed, *any final date for the submission of  requests for participation in the procurement or for inclusion on a multi-use list*, in `tender/tenderPeriod/endDate`
-</td>
-      </tr>
-      <tr>
-        <td>VII:3(c)</td>
-        <td>the address from which documents relating to the procurement may be requested.</td>
-        <td markdown=1>
-
-* If the address has been entered in Article VII:2(a), discard
-* Else, follow the guidance for Article VII:2(a)
-
-If possible, enter the URL, type, description and other properties of *documents relating to the procurement* in `tender/documents`.
 </td>
       </tr>
 <!--
