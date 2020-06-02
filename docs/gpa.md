@@ -179,8 +179,8 @@ This requires the [Covered By](https://github.com/open-contracting-extensions/oc
         <td>the subject-matter of the procurement;</td>
         <td markdown=1>
 
-* Enter it in `tender/description`
-* If `tender/description` is not empty, enter it after the existing content
+* Enter this in `tender/description`
+* If `tender/description` is not empty, add this to the existing content
 </td>
       </tr>
       <tr>
@@ -196,8 +196,8 @@ This requires the [Covered By](https://github.com/open-contracting-extensions/oc
         <td>the address from which documents relating to the procurement may be requested.</td>
         <td markdown=1>
 
-* If the address has been entered in section VII:2(a), discard
-* Else, follow the guidance for section VII:2(a)
+* If the address has been entered in Article VII:2(a), discard
+* Else, follow the guidance for Article VII:2(a)
 
 If possible, enter the URL, type, description and other properties of *documents relating to the procurement* in `tender/documents`.
 </td>
