@@ -187,13 +187,13 @@ The information included in the notice of intended procurement covers all the in
 
 </td>
       </tr>
-<!--
       <tr>
         <td>VII:4</td>
         <td>Procuring entities are encouraged to publish in the appropriate paper or electronic medium listed in Appendix III as early as possible in each fiscal year a notice regarding their future procurement plans (hereinafter referred to as "notice of planned procurement"). The notice of planned procurement should include the subject-matter of the procurement and the planned date of the publication of the notice of intended procurement.</td>
         <td markdown=1>
 
-* 
+* Enter *the subject-matter of the procurement* in `planning/rationale`
+* Enter *the planned date of the publication of the notice of intended procurement* in `tender.tenderPeriod.startDate`
 </td>
       </tr>
       <tr>
@@ -201,11 +201,10 @@ The information included in the notice of intended procurement covers all the in
         <td>A procuring entity covered under Annex 2 or 3 may use a notice of planned procurement as a notice of intended procurement provided that the notice of planned procurement includes as much of the information referred to in paragraph 2 as is available to the entity and a statement that interested suppliers should express their interest in the procurement to the procuring entity.</td>
         <td markdown=1>
 
-* 
+If at the time of publishing a notice of planned procurement (article VII:4) you have all the necessary information to publish a notice of intended procurement (VII:2), follow the guidance for article VII:2 instead of the guidance for article VII:4.
 </td>
       </tr>
     </tbody>
--->
   </table>
 
 <!--
