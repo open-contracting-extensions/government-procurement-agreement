@@ -183,7 +183,7 @@ This requires the [Covered By](https://github.com/open-contracting-extensions/oc
         the address from which documents relating to the procurement may be requested.</td>
         <td markdown=1>
 
-The information included in the notice of intended procurement covers all the information that must be included in a summary notice. If you follow the guidance for article VII:2, you can discard article VII:3.
+* The information included in the notice of intended procurement covers all the information that must be included in a summary notice. If you follow the guidance for article VII:2, you can discard article VII:3.
 
 </td>
       </tr>
@@ -193,7 +193,7 @@ The information included in the notice of intended procurement covers all the in
         <td markdown=1>
 
 * Enter *the subject-matter of the procurement* in `planning/rationale`
-* Enter *the planned date of the publication of the notice of intended procurement* in `tender.tenderPeriod.startDate`
+* Enter *the planned date of the publication of the notice of intended procurement* in `tender/tenderPeriod/startDate`
 </td>
       </tr>
       <tr>
@@ -201,7 +201,7 @@ The information included in the notice of intended procurement covers all the in
         <td>A procuring entity covered under Annex 2 or 3 may use a notice of planned procurement as a notice of intended procurement provided that the notice of planned procurement includes as much of the information referred to in paragraph 2 as is available to the entity and a statement that interested suppliers should express their interest in the procurement to the procuring entity.</td>
         <td markdown=1>
 
-If at the time of publishing a notice of planned procurement (article VII:4) you have all the necessary information to publish a notice of intended procurement (VII:2), follow the guidance for article VII:2 instead of the guidance for article VII:4.
+* If at the time of publishing a notice of planned procurement (article VII:4) you have all the necessary information to publish a notice of intended procurement (VII:2), follow the guidance for article VII:2, instead of the guidance for article VII:4.
 </td>
       </tr>
     </tbody>
@@ -252,7 +252,11 @@ This requires the [Award Criteria](https://github.com/open-contracting-extension
 </td>
         <td markdown=1>
 
-* 
+* Create a new OCDS release and follow the corresponding guidance, depending on the information that has been modified:
+  * If the *the criteria or requirements* are modified, follow the guidance for article X:9
+  * If *a notice* (of intended procurement) is amended or reissued, follow the guidance of article VII:2
+  * If the *tender documentation* is amended or reissued, follow the guidance for article X:7
+
 </td>
       </tr>
     </tbody>
