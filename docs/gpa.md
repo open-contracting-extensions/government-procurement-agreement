@@ -227,9 +227,8 @@ If at the time of publishing a notice of planned procurement (article VII:4) you
         <td>A procuring entity shall make available to suppliers tender documentation that includes all information necessary to permit suppliers to prepare and submit responsive tenders. Unless already provided in the notice of intended procurement, such documentation shall include a complete description of:</td>
         <td markdown=1>
 
-If at the time of publishing tender documentation (article X:7) you have already published all the information necessary for a notice of intended procurement (article VII:2), and this information has not changed, discard this article.
-
-If you haven't published all the information necessary for a notice of intended procurement or if the information has changed, follow the guidance for article VII:2 to publish the new and updated data.
+* If at the time of publishing tender documentation (article X:7) you have already published all the information necessary for a notice of intended procurement (article VII:2), and this information has not changed, discard this article.
+* If you haven't published all the information necessary for a notice of intended procurement or if the information has changed, follow the guidance for article VII:2 to publish the new and updated data.
         </td>
       </tr>
       <tr>
@@ -237,7 +236,11 @@ If you haven't published all the information necessary for a notice of intended 
         <td>The evaluation criteria set out in the notice of intended procurement or tender documentation may include, among others, price and other cost factors, quality, technical merit, environmental characteristics and terms of delivery</td>
         <td markdown=1>
 
-* 
+* Enter the *evaluation criteria set out in the notice of intended procurement or tender documentation* in `tender/awardCriteria/description`, or, if possible, split this into `AwardCriterion` objects in the `tender/awardCriteria/criteria` array.
+
+This requires the [Award Criteria](https://github.com/open-contracting-extensions/ocds_awardCriteria_extension) extension.
+
+
 </td>
       </tr>
       <tr>
