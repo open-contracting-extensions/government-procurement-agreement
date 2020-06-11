@@ -186,11 +186,11 @@ This requires the [Covered By](https://github.com/open-contracting-extensions/oc
         VII:3(b)<br/>
         VII:3(c)<br/></td>
         <td>the subject-matter of the procurement;<br/>
-        the final date for the submission of tenders or, where applicable, any final date for the submission of    requests for participation in the procurement or for inclusion on a multi-use list; and<br/>
+        the final date for the submission of tenders or, where applicable, any final date for the submission of requests for participation in the procurement or for inclusion on a multi-use list; and<br/>
         the address from which documents relating to the procurement may be requested.</td>
         <td markdown=1>
 
-The information included in the notice of intended procurement covers all the information that must be included in a summary notice. If you follow the guidance for article VII:2, you can discard article VII:3.
+The information included in the notice of intended procurement covers all the information included in a summary notice. As such, no OCDS release needs to be published that corresponds to the summary notice.
 
 </td>
       </tr>
