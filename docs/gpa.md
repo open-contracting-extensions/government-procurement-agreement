@@ -71,10 +71,11 @@ The method of representing an estimated quantity is [under discussion](https://g
         <td>for recurring contracts, an estimate, if possible, of the timing of subsequent notices of intended procurement;</td>
         <td markdown=1>
 
+* Set `tender/hasRecurrence` to `true`
 * Enter *an estimate, if possible, of the timing of subsequent notices of intended procurement* in `tender/recurrence/dates`
 * Enter any further information in `tender/recurrence/description`
 
-This requires the [Recurring Contracts](https://github.com/open-contracting-extensions/ocds_recurrence_extension) extension.
+This requires the [Recurrence](https://github.com/open-contracting-extensions/ocds_recurrence_extension) extension.
 </td>
       </tr>
       <tr>
@@ -107,10 +108,10 @@ The addition of `period` to the `Milestone` building block is [under discussion]
         <td markdown=1>
 
 * Use 'open', 'selective' or 'limited' for *the procurement method that will be used* in `tender/procurementMethod`
-* If *it will involve negotiation*, add 'negotiated' to `tender/procurementMethodModalities`
-* If *it will involve electronic auction*, add 'electronicAuction' to `tender/procurementMethodModalities`
+* If *it will involve negotiation*, add "negotiated" to `tender/procurementMethodDetails`
+* If *it will involve electronic auction* set `tender/techniques/hasElectronicAuction` to `true`
 
-This requires the [Procurement Method Modalities](https://github.com/open-contracting-extensions/ocds_procurementMethodModalities_extension) extension.
+This requires the [Techniques](https://github.com/open-contracting-extensions/ocds_techniques_extension) extension.
 </td>
       </tr>
       <tr>
@@ -157,7 +158,13 @@ This requires the [Additional Contact Points](https://github.com/open-contractin
         <td>where, pursuant to Article IX, a procuring entity intends to select a limited number of qualified suppliers to be invited to tender, the criteria that will be used to select them and, where applicable, any limitation on the number of suppliers that will be permitted to tender; and</td>
         <td markdown=1>
 
-* Add this to `tender/eligibilityCriteria`
+* Enter *the number of suppliers that will be permitted to tender* in `tender.secondStage.maximumCandidates`
+
+This requires the [Second Stage](https://github.com/open-contracting-extensions/ocds_secondStage_extension) extension.
+
+* Add *the criteria that will be used to select [the suppliers]* to `tender.selectionCriteria.description` or, if possible, split this into `SelectionCriterion` objects in the `tender/selectionCriteria/criteria` array.
+
+This requires the [Selection Criteria](https://github.com/open-contracting-extensions/ocds_selectionCriteria_extension) extension.
 </td>
       </tr>
       <tr>
@@ -179,11 +186,11 @@ This requires the [Covered By](https://github.com/open-contracting-extensions/oc
         VII:3(b)<br/>
         VII:3(c)<br/></td>
         <td>the subject-matter of the procurement;<br/>
-        the final date for the submission of tenders or, where applicable, any final date for the submission of    requests for participation in the procurement or for inclusion on a multi-use list; and<br/>
+        the final date for the submission of tenders or, where applicable, any final date for the submission of requests for participation in the procurement or for inclusion on a multi-use list; and<br/>
         the address from which documents relating to the procurement may be requested.</td>
         <td markdown=1>
 
-* The information included in the notice of intended procurement covers all the information that must be included in a summary notice. If you follow the guidance for article VII:2, you can discard article VII:3.
+The information included in the notice of intended procurement covers all the information included in a summary notice. As such, no OCDS release needs to be published that corresponds to the summary notice.
 
 </td>
       </tr>
