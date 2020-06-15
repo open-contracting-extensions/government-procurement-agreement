@@ -199,7 +199,9 @@ The information included in the notice of intended procurement covers all the in
         <td>Procuring entities are encouraged to publish in the appropriate paper or electronic medium listed in Appendix III as early as possible in each fiscal year a notice regarding their future procurement plans (hereinafter referred to as "notice of planned procurement"). The notice of planned procurement should include the subject-matter of the procurement and the planned date of the publication of the notice of intended procurement.</td>
         <td markdown=1>
 
-* Enter *the subject-matter of the procurement* in `planning/rationale`
+* Add 'planning' to the `tag` array
+* Set `tender/status` to 'planning'
+* Enter *the subject-matter of the procurement* in `tender/description`
 * Enter *the planned date of the publication of the notice of intended procurement* in `tender/tenderPeriod/startDate`
 </td>
       </tr>
