@@ -281,8 +281,10 @@ This requires the [Communication](https://github.com/open-contracting-extensions
         <td markdown=1>
 
 * Set `tender/submissionMethod` to 'electronicSubmission'
-* Enter *authentication and encryption requirements or other requirements related to the submission of information by electronic means* in `tender/submissionMethodDetails`
+* Enter or append *authentication and encryption requirements or other requirements related to the submission of information by electronic means* in `tender/submissionMethodDetails`)
+* If the electronic communication with the procuring entity requires the use of tools and devices that are not generally available, enter the Web address of these tools in `tender.communication.atypicalToolUrl`
 
+This requires the [Communication](https://github.com/open-contracting-extensions/ocds_communication_extension) extension.
 </td>
       </tr>
       <tr>
