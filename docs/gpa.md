@@ -236,12 +236,85 @@ The information included in the notice of intended procurement covers all the in
     <tbody>
       <tr class="section">
         <td>X:7</td>
-        <td>A procuring entity shall make available to suppliers tender documentation that includes all information necessary to permit suppliers to prepare and submit responsive tenders. Unless already provided in the notice of intended procurement, such documentation shall include a complete description of:</td>
+        <td colspan=2>A procuring entity shall make available to suppliers tender documentation that includes all information necessary to permit suppliers to prepare and submit responsive tenders. Unless already provided in the notice of intended procurement, such documentation shall include a complete description of:</td>
+     </tr>
+      <tr>
+        <td>X:7(a)</td>
+        <td>the procurement, including the nature and the quantity of the goods or services to be procured or, where the quantity is not known, the estimated quantity and any requirements to be fulfilled, including any technical specifications, conformity assessment certification, plans, drawings or instructional materials;</td>
         <td markdown=1>
 
-* If at the time of publishing tender documentation (article X:7) you have already published all the information necessary for a notice of intended procurement (article VII:2), and this information has not changed, discard this article.
-* If you haven't published all the information necessary for a notice of intended procurement or if the information has changed, follow the guidance for article VII:2 to publish the new and updated data.
-        </td>
+* For *the procurement, including the nature and the quantity of the goods or services to be procured or, where the quantity is not known, the estimated quantity*, follow the guidance for article VII:2(b)
+* For *any requirements to be fulfilled, including any technical specifications, conformity assessment certification, plans, drawings or instructional materials*, follow the guidance for article VII:2(j)
+</td>
+      </tr>
+      <tr>
+        <td>X:7(b)</td>
+        <td>any conditions for participation of suppliers, including a list of information and documents that suppliers are required to submit in connection with the conditions for participation;</td>
+        <td markdown=1>
+
+* Please follow the guidance for VII:(j)
+</td>
+      </tr>
+      <tr>
+        <td>X:7(c)</td>
+        <td>all evaluation criteria the entity will apply in the awarding of the contract, and, except where price is the sole criterion, the relative importance of such criteria;</td>
+        <td markdown=1>
+
+* Please follow the guidance for VII:(k)
+</td>
+      </tr>
+      <tr>
+        <td>X:7(d)</td>
+        <td>where the procuring entity will conduct the procurement by electronic means, any authentication and encryption requirements or other requirements related to the submission of information by electronic means;</td>
+        <td markdown=1>
+
+* Set `tender/submissionMethod` to 'electronicSubmission'
+* Enter *authentication and encryption requirements or other requirements related to the submission of information by electronic means* in `tender/submissionMethodDetails`
+
+</td>
+      </tr>
+      <tr>
+        <td>X:7(e)</td>
+        <td>where the procuring entity will hold an electronic auction, the rules, including identification of the elements of the tender related to the evaluation criteria, on which the auction will be conducted;</td>
+        <td markdown=1>
+
+* Set `tender/techniques/hasElectronicAuction` to `true`
+* Enter *the rules, including identification of the elements of the tender related to the evaluation criteria, on which the auction will be conducted* in `tender/techniques/electronicAuction/description`
+
+This requires the [Techniques](https://github.com/open-contracting-extensions/ocds_techniques_extension) extension.
+</td>
+      </tr>
+      <tr>
+        <td>X:7(f)</td>
+        <td>where there will be a public opening of tenders, the date, time and place for the opening and, where appropriate, the persons authorized to be present;</td>
+        <td markdown=1>
+
+* Enter the *date* and the *time* in `tender/bidOpening/date`
+* Enter the *place* in `tender/bidOpening/address`, `tender/bidOpening/location` or `tender/bidOpening/gazetteer`
+* Enter *the persons authorized to be present* in `tender/bidOpening/description`
+
+This requires the [Bid Opening](https://github.com/open-contracting-extensions/ocds_bidOpening_extension) extension.
+</td>
+      </tr>
+      <tr>
+        <td>X:7(g)</td>
+        <td>any other terms or conditions, including terms of payment and any limitation on the means by which tenders may be submitted, such as whether on paper or by electronic means; and</td>
+        <td markdown=1>
+
+* Enter the *terms of payment* in `tender/participationFees`
+
+This requires the [Participation Fees](https://github.com/open-contracting-extensions/ocds_participationFees_extension) extension.
+
+* Enter *the means by which tenders may be submitted* in `tender/submissionMethod`
+</td>
+      </tr>
+      <tr>
+        <td>X:7(h)</td>
+        <td>any dates for the delivery of goods or the supply of services</td>
+        <td markdown=1>
+
+* Please follow the guidance for article VII:2(e)
+</td>
       </tr>
       <tr>
         <td>X:9</td>
