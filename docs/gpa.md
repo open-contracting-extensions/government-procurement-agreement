@@ -205,7 +205,9 @@ The information included in the notice of intended procurement covers all the in
 * Add 'planning' to the `tag` array
 * Set `tender/status` to 'planning'
 * Enter *the subject-matter of the procurement* in `tender/description`. The value of `tender/description` can be updated when the data described in article VII:2(b) is published.
-* Enter *the planned date of the publication of the notice of intended procurement* in `tender/tenderPeriod/startDate`
+* Enter *the planned date of the publication of the notice of intended procurement* in `tender/communication/futureNoticeDate`
+
+This requires the [Communication](https://github.com/open-contracting-extensions/ocds_communication_extension) extension.
 </td>
       </tr>
       <tr>
