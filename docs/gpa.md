@@ -336,6 +336,10 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td markdown=1>
 
 * Enter the *evaluation criteria set out in the notice of intended procurement or tender documentation* in `tender/awardCriteriaDetails`
+* If the *evaluation criteria* are published as a document:
+ * Add a `Document` object to the `tender/documents` array
+ * Set its `documentType` to 'evaluationCriteria'
+
 </td>
       </tr>
       <tr>
