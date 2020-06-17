@@ -150,7 +150,10 @@ This requires the [Additional Contact Points](https://github.com/open-contractin
         <td>a list and brief description of any conditions for participation of suppliers, including any requirements for specific documents or certifications to be provided by suppliers in connection therewith, unless such requirements are included in tender documentation that is made available to all interested suppliers at the same time as the notice of intended procurement;</td>
         <td markdown=1>
 
-* Add this to `tender/eligibilityCriteria`
+* Add *a list and brief description of any conditions for participation of suppliers* to `tender/eligibilityCriteria`
+* If *requirements are included in tender documentation that is made available to all interested suppliers*:
+  * For each document, add a `Document` object to the `tender/documents` array
+  * Set its `documentType` to 'eligibilityCriteria'
 </td>
       </tr>
       <tr>
