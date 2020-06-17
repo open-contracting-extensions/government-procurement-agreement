@@ -109,7 +109,9 @@ The addition of `period` to the `Milestone` building block is [under discussion]
 
 * Use 'open', 'selective' or 'limited' for *the procurement method that will be used* in `tender/procurementMethod`
 * If *it will involve negotiation*, add "negotiated" to `tender/procurementMethodDetails`
-* If *it will involve electronic auction* set `tender/techniques/hasElectronicAuction` to `true`
+* If *it will involve electronic auction*
+  * set `tender/submissionMethod` to `electronicAuction`
+  * set `tender/techniques/hasElectronicAuction` to `true`
 
 This requires the [Techniques](https://github.com/open-contracting-extensions/ocds_techniques_extension) extension.
 </td>
@@ -205,9 +207,7 @@ The information included in the notice of intended procurement covers all the in
 * Add 'planning' to the `tag` array
 * Set `tender/status` to 'planning'
 * Enter *the subject-matter of the procurement* in `tender/description`. The value of `tender/description` can be updated when the data described in article VII:2(b) is published.
-* Enter *the planned date of the publication of the notice of intended procurement* in `tender/communication/futureNoticeDate`
-
-This requires the [Communication](https://github.com/open-contracting-extensions/ocds_communication_extension) extension.
+* Enter *the planned date of the publication of the notice of intended procurement* in `tender/tenderPeriod/startDate`
 </td>
       </tr>
       <tr>
@@ -254,7 +254,7 @@ This requires the [Communication](https://github.com/open-contracting-extensions
         <td>any conditions for participation of suppliers, including a list of information and documents that suppliers are required to submit in connection with the conditions for participation;</td>
         <td markdown=1>
 
-* Please follow the guidance for VII:2(j)
+* Please follow the guidance for VII:(j)
 </td>
       </tr>
       <tr>
