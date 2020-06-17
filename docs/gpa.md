@@ -314,6 +314,8 @@ This requires the [Bid Opening](https://github.com/open-contracting-extensions/o
 This requires the [Participation Fees](https://github.com/open-contracting-extensions/ocds_participationFees_extension) extension.
 
 * Enter *the means by which tenders may be submitted* in `tender/submissionMethod`
+  * If it's on *paper*, enter 'written'
+  * If it's 'electronic', enter 'electronicSubmission'
 </td>
       </tr>
       <tr>
