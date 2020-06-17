@@ -214,6 +214,10 @@ The information included in the notice of intended procurement covers all the in
 * Enter *the planned date of the publication of the notice of intended procurement* in `tender/communication/futureNoticeDate`
 
 This requires the [Communication](https://github.com/open-contracting-extensions/ocds_communication_extension) extension.
+
+* If *notice regarding their future procurement plans* is also published as a document:
+ * Add a `Document` object to the `tender/documents` array
+ * Set its `documentType` to 'plannedProcurementNotice'
 </td>
       </tr>
       <tr>
