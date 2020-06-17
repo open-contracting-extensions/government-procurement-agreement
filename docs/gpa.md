@@ -254,7 +254,7 @@ This requires the [Communication](https://github.com/open-contracting-extensions
         <td>any conditions for participation of suppliers, including a list of information and documents that suppliers are required to submit in connection with the conditions for participation;</td>
         <td markdown=1>
 
-* Please follow the guidance for VII:(j)
+* Please follow the guidance for VII:2(j)
 </td>
       </tr>
       <tr>
