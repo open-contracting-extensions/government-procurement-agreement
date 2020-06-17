@@ -321,11 +321,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td>The evaluation criteria set out in the notice of intended procurement or tender documentation may include, among others, price and other cost factors, quality, technical merit, environmental characteristics and terms of delivery</td>
         <td markdown=1>
 
-* Enter the *evaluation criteria set out in the notice of intended procurement or tender documentation* in `tender/awardCriteria/description`, or, if possible, split this into `AwardCriterion` objects in the `tender/awardCriteria/criteria` array.
-
-This requires the [Award Criteria](https://github.com/open-contracting-extensions/ocds_awardCriteria_extension) extension.
-
-
+* Enter the *evaluation criteria set out in the notice of intended procurement or tender documentation* in `tender/awardCriteriaDetails`
 </td>
       </tr>
       <tr>
