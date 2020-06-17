@@ -170,6 +170,10 @@ This requires the [Second Stage](https://github.com/open-contracting-extensions/
 * Add *the criteria that will be used to select [the suppliers]* to `tender.selectionCriteria.description` or, if possible, split this into `SelectionCriterion` objects in the `tender/selectionCriteria/criteria` array.
 
 This requires the [Selection Criteria](https://github.com/open-contracting-extensions/ocds_selectionCriteria_extension) extension.
+
+* If *the criteria that will be used to select them* are published as documents:
+  * For each document, add a `Document` object to the `tender/documents` array
+  * Set its `documentType` to 'evaluationCriteria'
 </td>
       </tr>
       <tr>
