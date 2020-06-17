@@ -173,7 +173,7 @@ This requires the [Selection Criteria](https://github.com/open-contracting-exten
 
 * If *the criteria that will be used to select them* are published as documents:
   * For each document, add a `Document` object to the `tender/documents` array
-  * Set its `documentType` to 'evaluationCriteria'
+  * Set its `documentType` to 'selectionCriteria'
 </td>
       </tr>
       <tr>
