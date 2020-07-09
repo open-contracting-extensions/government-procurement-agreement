@@ -229,7 +229,7 @@ This requires the [Communication](https://github.com/open-contracting-extensions
         <td>A procuring entity covered under Annex 2 or 3 may use a notice of planned procurement as a notice of intended procurement provided that the notice of planned procurement includes as much of the information referred to in paragraph 2 as is available to the entity and a statement that interested suppliers should express their interest in the procurement to the procuring entity.</td>
         <td markdown=1>
 
-* Please follow the guidance for article VII:2.
+* Follow the guidance for article VII:2.
 </td>
       </tr>
     </tbody>
@@ -268,7 +268,7 @@ This requires the [Communication](https://github.com/open-contracting-extensions
         <td>any conditions for participation of suppliers, including a list of information and documents that suppliers are required to submit in connection with the conditions for participation;</td>
         <td markdown=1>
 
-* Please follow the guidance for VII:2(j)
+* Follow the guidance for VII:2(j)
 </td>
       </tr>
       <tr>
@@ -276,7 +276,7 @@ This requires the [Communication](https://github.com/open-contracting-extensions
         <td>all evaluation criteria the entity will apply in the awarding of the contract, and, except where price is the sole criterion, the relative importance of such criteria;</td>
         <td markdown=1>
 
-* Please follow the guidance for VII:(k)
+* Follow the guidance for VII:(k)
 </td>
       </tr>
       <tr>
@@ -333,7 +333,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td>any dates for the delivery of goods or the supply of services</td>
         <td markdown=1>
 
-* Please follow the guidance for article VII:2(e)
+* Follow the guidance for article VII:2(e)
 </td>
       </tr>
       <tr>
