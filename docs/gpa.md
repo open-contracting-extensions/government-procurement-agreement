@@ -231,7 +231,7 @@ This requires the [Communication](https://github.com/open-contracting-extensions
         <td>A procuring entity covered under Annex 2 or 3 may use a notice of planned procurement as a notice of intended procurement provided that the notice of planned procurement includes as much of the information referred to in paragraph 2 as is available to the entity and a statement that interested suppliers should express their interest in the procurement to the procuring entity.</td>
         <td markdown=1>
 
-* Please follow the guidance for article VII:3.
+* Please follow the guidance for article VII:2.
 </td>
       </tr>
     </tbody>
