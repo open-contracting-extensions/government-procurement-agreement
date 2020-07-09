@@ -229,7 +229,7 @@ This requires the [Communication](https://github.com/open-contracting-extensions
         <td>A procuring entity covered under Annex 2 or 3 may use a notice of planned procurement as a notice of intended procurement provided that the notice of planned procurement includes as much of the information referred to in paragraph 2 as is available to the entity and a statement that interested suppliers should express their interest in the procurement to the procuring entity.</td>
         <td markdown=1>
 
-* Follow the guidance for article VII:2.
+* Follow the guidance for VII:2.
 </td>
       </tr>
     </tbody>
@@ -259,8 +259,8 @@ This requires the [Communication](https://github.com/open-contracting-extensions
         <td>the procurement, including the nature and the quantity of the goods or services to be procured or, where the quantity is not known, the estimated quantity and any requirements to be fulfilled, including any technical specifications, conformity assessment certification, plans, drawings or instructional materials;</td>
         <td markdown=1>
 
-* For *the procurement, including the nature and the quantity of the goods or services to be procured or, where the quantity is not known, the estimated quantity*, follow the guidance for article VII:2(b)
-* For *any requirements to be fulfilled, including any technical specifications, conformity assessment certification, plans, drawings or instructional materials*, follow the guidance for article VII:2(j)
+* For *the procurement, including the nature and the quantity of the goods or services to be procured or, where the quantity is not known, the estimated quantity*, follow the guidance for VII:2(b)
+* For *any requirements to be fulfilled, including any technical specifications, conformity assessment certification, plans, drawings or instructional materials*, follow the guidance for VII:2(j)
 </td>
       </tr>
       <tr>
@@ -333,7 +333,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td>any dates for the delivery of goods or the supply of services</td>
         <td markdown=1>
 
-* Follow the guidance for article VII:2(e)
+* Follow the guidance for VII:2(e)
 </td>
       </tr>
       <tr>
@@ -358,9 +358,9 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td markdown=1>
 
 * Create a new OCDS release and follow the corresponding guidance, depending on the information that has been modified:
-  * If the *the criteria or requirements* are modified, follow the guidance for article X:9
+  * If the *the criteria or requirements* are modified, follow the guidance for X:9
   * If *a notice* (of intended procurement) is amended or reissued, follow the guidance of article VII:2
-  * If the *tender documentation* is amended or reissued, follow the guidance for article X:7
+  * If the *tender documentation* is amended or reissued, follow the guidance for X:7
 
 </td>
       </tr>
@@ -387,7 +387,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td>A procuring entity shall prepare a report in writing on each contract awarded under paragraph 1. The report shall include the name of the procuring entity, the value and kind of goods or services procured and a statement indicating the circumstances and conditions described in paragraph 1 that justified the use of limited tendering.</td>
         <td markdown=1>
 
-* If the following data has not been published following the guidance for article VII:2
+* If the following data has not been published following the guidance for VII:2
   * For *the name of the procuring entity*, follow the guidance for VII:2(a)
   * For the *kind of goods or services procured*, follow the guidance for VII:2(b)
 * Add an `Award` object to the `awards` array
