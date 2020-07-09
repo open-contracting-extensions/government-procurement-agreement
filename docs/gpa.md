@@ -1,3 +1,4 @@
+
 # Annotated Revised GPA
 
 ```eval_rst
@@ -156,6 +157,7 @@ This requires the [Additional Contact Points](https://github.com/open-contractin
 * If *requirements are included in tender documentation that is made available to all interested suppliers*:
   * For each document, add a `Document` object to the `tender/documents` array
   * Set its `documentType` to 'eligibilityCriteria'
+  * Fill any other known information for the document ([`Document` object schema](https://standard.open-contracting.org/1.1/en/schema/reference/#document))
 </td>
       </tr>
       <tr>
@@ -174,6 +176,8 @@ This requires the [Selection Criteria](https://github.com/open-contracting-exten
 * If *the criteria that will be used to select them* are published as documents:
   * For each document, add a `Document` object to the `tender/documents` array
   * Set its `documentType` to 'selectionCriteria'
+  * Fill any other known information for the document ([`Document` object schema](https://standard.open-contracting.org/1.1/en/schema/reference/#document))
+
 </td>
       </tr>
       <tr>
@@ -218,6 +222,8 @@ This requires the [Communication](https://github.com/open-contracting-extensions
 * If *notice regarding their future procurement plans* is also published as a document:
  * Add a `Document` object to the `tender/documents` array
  * Set its `documentType` to 'plannedProcurementNotice'
+ * Fill any other known information for the document ([`Document` object schema](https://standard.open-contracting.org/1.1/en/schema/reference/#document))
+
 </td>
       </tr>
       <tr>
@@ -341,7 +347,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
 * If the *evaluation criteria* are published as a document:
  * Add a `Document` object to the `tender/documents` array
  * Set its `documentType` to 'evaluationCriteria'
-
+ * Fill any other known information for the document ([`Document` object schema](https://standard.open-contracting. org/1.1/en/schema/reference/#document))
 </td>
       </tr>
       <tr>
@@ -394,7 +400,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
 * If the *report in writing* is also published as a document
   * Add a `Document` object to the `tender/documents` array
   * Set its `documentType` to 'awardNotice'
-
+  * Fill any other known information for the document ([`Document` object schema](https://standard.open-contracting. org/1.1/en/schema/reference/#document))
 </td>
       </tr>
     </tbody>
