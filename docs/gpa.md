@@ -110,9 +110,7 @@ The addition of `period` to the `Milestone` building block is [under discussion]
 
 * Use 'open', 'selective' or 'limited' for *the procurement method that will be used* in `tender/procurementMethod`
 * If *it will involve negotiation*, add "negotiated" to `tender/procurementMethodDetails`
-* If *it will involve electronic auction*
-  * set `tender/submissionMethod` to `electronicAuction`
-  * set `tender/techniques/hasElectronicAuction` to `true`
+* If *it will involve electronic auction*, set `tender/techniques/hasElectronicAuction` to `true`
 
 This requires the [Techniques](https://github.com/open-contracting-extensions/ocds_techniques_extension) extension.
 </td>
