@@ -276,7 +276,7 @@ This requires the [Communication](https://github.com/open-contracting-extensions
         <td>all evaluation criteria the entity will apply in the awarding of the contract, and, except where price is the sole criterion, the relative importance of such criteria;</td>
         <td markdown=1>
 
-* Follow the guidance for VII:(k)
+* Follow the guidance for VII:2(k)
 </td>
       </tr>
       <tr>
