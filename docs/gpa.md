@@ -254,7 +254,7 @@ This requires the [Communication](https://github.com/open-contracting-extensions
     <tbody>
       <tr class="section">
         <td>X:7</td>
-        <td colspan=2>A procuring entity shall make available to suppliers tender documentation that includes all information necessary to permit suppliers to prepare and submit responsive tenders. Unless already provided in the notice of intended procurement, such documentation shall include a complete description of:</td>
+        <td colspan="2">A procuring entity shall make available to suppliers tender documentation that includes all information necessary to permit suppliers to prepare and submit responsive tenders. Unless already provided in the notice of intended procurement, such documentation shall include a complete description of:</td>
      </tr>
       <tr>
         <td>X:7(a)</td>
