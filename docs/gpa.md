@@ -171,7 +171,7 @@ This requires the [Second Stage](https://github.com/open-contracting-extensions/
 
 This requires the [Selection Criteria](https://github.com/open-contracting-extensions/ocds_selectionCriteria_extension) extension.
 
-* If *the criteria that will be used to select them* are published as documents:
+* If *the criteria that will be used to select [the suppliers]* are published as documents:
   * For each document, add a `Document` object to the `tender/documents` array
   * Set its `documentType` to 'selectionCriteria'
   * Fill any other known information for the document ([`Document` object schema](https://standard.open-contracting.org/1.1/en/schema/reference/#document))
