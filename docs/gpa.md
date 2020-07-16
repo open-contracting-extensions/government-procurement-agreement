@@ -392,12 +392,12 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
   * For *the name of the procuring entity*, follow the guidance for VII:2(a)
   * For the *kind of goods or services procured*, follow the guidance for VII:2(b)
 * Add an `Award` object to the `awards` array
-  * Enter an identifier in its `id`, which can be arbitrary as it is primarily to allow referencing   from other parts of the file
+  * Enter an identifier in its `id`, which can be arbitrary as it is primarily to allow referencing from other parts of the file
   * Enter *the value [of the goods or services]* in its `value/amount`
   * Enter the currency in `value/currency` (see the [currency](https://standard.open-contracting.org/latest/en/schema/codelists/#currency) codelist)
-* Enter *the circumstances and conditions described in paragraph 1  that justified the use of limited tendering* in `tender/procurementMethodRationale`
+* Enter *the circumstances and conditions described in paragraph 1 that justified the use of limited tendering* in `tender/procurementMethodRationale`
 * If the *report in writing* is also published as a document
-  * Add a `Document` object to the `tender/documents` array
+  * Add a `Document` object to the award's `documents` array
   * Set its `documentType` to 'awardNotice'
   * Fill any other known information for the document ([`Document` object schema](https://standard.open-contracting. org/1.1/en/schema/reference/#document))
 </td>
