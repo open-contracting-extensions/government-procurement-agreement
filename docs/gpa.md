@@ -1,3 +1,4 @@
+
 # Annotated Revised GPA
 
 ```eval_rst
@@ -109,7 +110,7 @@ The addition of `period` to the `Milestone` building block is [under discussion]
 
 * Use 'open', 'selective' or 'limited' for *the procurement method that will be used* in `tender/procurementMethod`
 * If *it will involve negotiation*, add "negotiated" to `tender/procurementMethodDetails`
-* If *it will involve electronic auction* set `tender/techniques/hasElectronicAuction` to `true`
+* If *it will involve electronic auction*, set `tender/techniques/hasElectronicAuction` to `true`
 
 This requires the [Techniques](https://github.com/open-contracting-extensions/ocds_techniques_extension) extension.
 </td>
@@ -150,7 +151,11 @@ This requires the [Additional Contact Points](https://github.com/open-contractin
         <td>a list and brief description of any conditions for participation of suppliers, including any requirements for specific documents or certifications to be provided by suppliers in connection therewith, unless such requirements are included in tender documentation that is made available to all interested suppliers at the same time as the notice of intended procurement;</td>
         <td markdown=1>
 
-* Add this to `tender/eligibilityCriteria`
+* Add *a list and brief description of any conditions for participation of suppliers* to `tender/eligibilityCriteria`
+* If *requirements are included in tender documentation that is made available to all interested suppliers*:
+  * For each document, add a `Document` object to the `tender/documents` array
+  * Set its `documentType` to 'eligibilityCriteria'
+  * Fill any other known information for the document ([`Document` object schema](https://standard.open-contracting.org/1.1/en/schema/reference/#document))
 </td>
       </tr>
       <tr>
@@ -165,6 +170,12 @@ This requires the [Second Stage](https://github.com/open-contracting-extensions/
 * Add *the criteria that will be used to select [the suppliers]* to `tender.selectionCriteria.description` or, if possible, split this into `SelectionCriterion` objects in the `tender/selectionCriteria/criteria` array.
 
 This requires the [Selection Criteria](https://github.com/open-contracting-extensions/ocds_selectionCriteria_extension) extension.
+
+* If *the criteria that will be used to select [the suppliers]* are published as documents:
+  * For each document, add a `Document` object to the `tender/documents` array
+  * Set its `documentType` to 'selectionCriteria'
+  * Fill any other known information for the document ([`Document` object schema](https://standard.open-contracting.org/1.1/en/schema/reference/#document))
+
 </td>
       </tr>
       <tr>
@@ -194,13 +205,23 @@ The information included in the notice of intended procurement covers all the in
 
 </td>
       </tr>
-<!--
       <tr>
         <td>VII:4</td>
         <td>Procuring entities are encouraged to publish in the appropriate paper or electronic medium listed in Appendix III as early as possible in each fiscal year a notice regarding their future procurement plans (hereinafter referred to as "notice of planned procurement"). The notice of planned procurement should include the subject-matter of the procurement and the planned date of the publication of the notice of intended procurement.</td>
         <td markdown=1>
 
-* 
+* Add 'planning' to the `tag` array
+* Set `tender/status` to 'planning'
+* Enter *the subject-matter of the procurement* in `tender/description`. The value of `tender/description` can be updated when the data described in article VII:2(b) is published.
+* Enter *the planned date of the publication of the notice of intended procurement* in `tender/communication/futureNoticeDate`
+
+This requires the [Communication](https://github.com/open-contracting-extensions/ocds_communication_extension) extension.
+
+* If *notice regarding their future procurement plans* is also published as a document:
+ * Add a `Document` object to the `tender/documents` array
+ * Set its `documentType` to 'plannedProcurementNotice'
+ * Fill any other known information for the document ([`Document` object schema](https://standard.open-contracting.org/1.1/en/schema/reference/#document))
+
 </td>
       </tr>
       <tr>
@@ -208,14 +229,12 @@ The information included in the notice of intended procurement covers all the in
         <td>A procuring entity covered under Annex 2 or 3 may use a notice of planned procurement as a notice of intended procurement provided that the notice of planned procurement includes as much of the information referred to in paragraph 2 as is available to the entity and a statement that interested suppliers should express their interest in the procurement to the procuring entity.</td>
         <td markdown=1>
 
-* 
+* Follow the guidance for VII:2.
 </td>
       </tr>
     </tbody>
--->
   </table>
 
-<!--
   <table class="docutils">
     <caption><a href="https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm#articleX">Article X</a> Notices</caption>
     <colgroup>
@@ -234,13 +253,14 @@ The information included in the notice of intended procurement covers all the in
       <tr class="section">
         <td>X:7</td>
         <td colspan="2">A procuring entity shall make available to suppliers tender documentation that includes all information necessary to permit suppliers to prepare and submit responsive tenders. Unless already provided in the notice of intended procurement, such documentation shall include a complete description of:</td>
-      </tr>
+     </tr>
       <tr>
         <td>X:7(a)</td>
         <td>the procurement, including the nature and the quantity of the goods or services to be procured or, where the quantity is not known, the estimated quantity and any requirements to be fulfilled, including any technical specifications, conformity assessment certification, plans, drawings or instructional materials;</td>
         <td markdown=1>
 
-* 
+* For *the procurement, including the nature and the quantity of the goods or services to be procured or, where the quantity is not known, the estimated quantity*, follow the guidance for VII:2(b)
+* For *any requirements to be fulfilled, including any technical specifications, conformity assessment certification, plans, drawings or instructional materials*, follow the guidance for VII:2(j)
 </td>
       </tr>
       <tr>
@@ -248,7 +268,7 @@ The information included in the notice of intended procurement covers all the in
         <td>any conditions for participation of suppliers, including a list of information and documents that suppliers are required to submit in connection with the conditions for participation;</td>
         <td markdown=1>
 
-* 
+* Follow the guidance for VII:2(j)
 </td>
       </tr>
       <tr>
@@ -256,7 +276,8 @@ The information included in the notice of intended procurement covers all the in
         <td>all evaluation criteria the entity will apply in the awarding of the contract, and, except where price is the sole criterion, the relative importance of such criteria;</td>
         <td markdown=1>
 
-* 
+* Map *all evaluation criteria the entity will apply in the awarding of the contract* and *the relative importance of such criteria* to `tender.awardCriteriaDetails`
+* If *price is the sole criterion*, set `tender.awardCriteria` to 'priceOnly'
 </td>
       </tr>
       <tr>
@@ -264,7 +285,11 @@ The information included in the notice of intended procurement covers all the in
         <td>where the procuring entity will conduct the procurement by electronic means, any authentication and encryption requirements or other requirements related to the submission of information by electronic means;</td>
         <td markdown=1>
 
-* 
+* Set `tender/submissionMethod` to 'electronicSubmission'
+* Enter or append *authentication and encryption requirements or other requirements related to the submission of information by electronic means* in `tender/submissionMethodDetails`
+* If the electronic communication with the procuring entity requires the use of tools and devices that are not generally available, enter the Web address of these tools in `tender.communication.atypicalToolUrl`
+
+This requires the [Communication](https://github.com/open-contracting-extensions/ocds_communication_extension) extension.
 </td>
       </tr>
       <tr>
@@ -272,7 +297,10 @@ The information included in the notice of intended procurement covers all the in
         <td>where the procuring entity will hold an electronic auction, the rules, including identification of the elements of the tender related to the evaluation criteria, on which the auction will be conducted;</td>
         <td markdown=1>
 
-* 
+* Set `tender/techniques/hasElectronicAuction` to `true`
+* Enter *the rules, including identification of the elements of the tender related to the evaluation criteria, on which the auction will be conducted* in `tender/techniques/electronicAuction/description`
+
+This requires the [Techniques](https://github.com/open-contracting-extensions/ocds_techniques_extension) extension.
 </td>
       </tr>
       <tr>
@@ -280,7 +308,11 @@ The information included in the notice of intended procurement covers all the in
         <td>where there will be a public opening of tenders, the date, time and place for the opening and, where appropriate, the persons authorized to be present;</td>
         <td markdown=1>
 
-* 
+* Enter the *date* and the *time* in `tender/bidOpening/date`
+* Enter the *place* in `tender/bidOpening/address`, `tender/bidOpening/location` or `tender/bidOpening/gazetteer`
+* Enter *the persons authorized to be present* in `tender/bidOpening/description`
+
+This requires the [Bid Opening](https://github.com/open-contracting-extensions/ocds_bidOpening_extension) extension.
 </td>
       </tr>
       <tr>
@@ -288,7 +320,13 @@ The information included in the notice of intended procurement covers all the in
         <td>any other terms or conditions, including terms of payment and any limitation on the means by which tenders may be submitted, such as whether on paper or by electronic means; and</td>
         <td markdown=1>
 
-* 
+* Enter the *terms of payment* in `tender/participationFees`
+
+This requires the [Participation Fees](https://github.com/open-contracting-extensions/ocds_participationFees_extension) extension.
+
+* Enter *the means by which tenders may be submitted* in `tender/submissionMethod`:
+  * If it's *on paper*, enter 'written'
+  * If it's *by electronic means*, enter 'electronicSubmission'
 </td>
       </tr>
       <tr>
@@ -296,7 +334,7 @@ The information included in the notice of intended procurement covers all the in
         <td>any dates for the delivery of goods or the supply of services</td>
         <td markdown=1>
 
-* 
+* Follow the guidance for VII:2(e)
 </td>
       </tr>
       <tr>
@@ -304,7 +342,11 @@ The information included in the notice of intended procurement covers all the in
         <td>The evaluation criteria set out in the notice of intended procurement or tender documentation may include, among others, price and other cost factors, quality, technical merit, environmental characteristics and terms of delivery</td>
         <td markdown=1>
 
-* 
+* Enter the *evaluation criteria set out in the notice of intended procurement or tender documentation* in `tender/awardCriteriaDetails`
+* If the *evaluation criteria* are published as a document:
+ * Add a `Document` object to the `tender/documents` array
+ * Set its `documentType` to 'evaluationCriteria'
+ * Fill any other known information for the document ([`Document` object schema](https://standard.open-contracting. org/1.1/en/schema/reference/#document))
 </td>
       </tr>
       <tr>
@@ -316,7 +358,11 @@ The information included in the notice of intended procurement covers all the in
 </td>
         <td markdown=1>
 
-* 
+* Create a new OCDS release and follow the corresponding guidance, depending on the information that has been modified:
+  * If the *the criteria or requirements* are modified, follow the guidance for X:9
+  * If *a notice* (of intended procurement) is amended or reissued, follow the guidance of article VII:2
+  * If the *tender documentation* is amended or reissued, follow the guidance for X:7
+
 </td>
       </tr>
     </tbody>
@@ -342,7 +388,18 @@ The information included in the notice of intended procurement covers all the in
         <td>A procuring entity shall prepare a report in writing on each contract awarded under paragraph 1. The report shall include the name of the procuring entity, the value and kind of goods or services procured and a statement indicating the circumstances and conditions described in paragraph 1 that justified the use of limited tendering.</td>
         <td markdown=1>
 
-* 
+* If the following data has not been published following the guidance for VII:2
+  * For *the name of the procuring entity*, follow the guidance for VII:2(a)
+  * For the *kind of goods or services procured*, follow the guidance for VII:2(b)
+* Add an `Award` object to the `awards` array
+  * Enter an identifier in its `id`, which can be arbitrary as it is primarily to allow referencing   from other parts of the file
+  * Enter *the value [of the goods or services]* in its `value/amount`
+  * Enter the currency in `value/currency` (see the [currency](https://standard.open-contracting.org/latest/en/schema/codelists/#currency) codelist)
+* Enter *the circumstances and conditions described in paragraph 1  that justified the use of limited tendering* in `tender/procurementMethodRationale`
+* If the *report in writing* is also published as a document
+  * Add a `Document` object to the `tender/documents` array
+  * Set its `documentType` to 'awardNotice'
+  * Fill any other known information for the document ([`Document` object schema](https://standard.open-contracting. org/1.1/en/schema/reference/#document))
 </td>
       </tr>
     </tbody>
