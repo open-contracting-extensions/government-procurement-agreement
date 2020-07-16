@@ -12,7 +12,7 @@ This document annotates selected parts of the GPA, with details on how to publis
 ```eval_rst
 .. warning::
 
-   References from Articles VII:4, VII:5, IX:8, IX:9, X:7, X:9, X:11, XIII:2, XIV:1, XVI:2 are not yet added.
+   References from Articles XIII:2, XIV:1, XVI:2 are not yet added.
 ```
 
 <div class="wy-table-responsive">
@@ -437,7 +437,11 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td>the results of any initial evaluation of the elements of its tender where the contract is to be awarded on the basis of the most advantageous tender;  and</td>
         <td markdown=1>
 
-* 
+* If *the results of any initial evaluation of the elements of [each participant's] tender* are published as a document:
+  * Add a `Document` object to the award's `documents` array
+  * Set its `documentType` to 'evaluationReports'
+  * Fill any other known information for the document ([`Document` object schema](https://standard.open-contracting.org/1.1/en/schema/reference/#document))
+
 </td>
       </tr>
       <tr>
@@ -445,7 +449,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td>any other relevant information relating to the conduct of the auction.</td>
         <td markdown=1>
 
-* 
+* Enter or append *any other relevant information relating to the conduct of the auction* in `tender/techniques/electronicAuction/description`
 </td>
       </tr>
     </tbody>
