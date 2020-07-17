@@ -474,8 +474,10 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td>XVI:2(a)</td>
         <td>a description of the goods or services procured;</td>
         <td markdown=1>
-
-* 
+* [Create an OCDS release](#create-a-release)
+* Add an `Award` object to the `awards` array
+   * Enter an identifier in its `id`, which can be arbitrary as it is primarily to allow referencing from other parts of the file
+  * Enter the *description of the goods or services procured* in its `description` or, if possible, split it into `Item` objects in its `items` array.
 </td>
       </tr>
       <tr id="XVI:2(b)">
@@ -483,7 +485,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td>the name and address of the procuring entity;</td>
         <td markdown=1>
 
-* 
+* Follow the guidance for [VII:2(a)](#VII:2(a))
 </td>
       </tr>
       <tr id="XVI:2(c)">
@@ -491,15 +493,29 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td>the name and address of the successful supplier;</td>
         <td markdown=1>
 
-* 
+* Add an `Organization` object to the `parties` array:
+    * Add 'supplier' to its `roles`
+    * Enter an identifier in its `id`, which can be arbitrary as it is primarily to allow referencing from other parts of the file
+    * Enter the *name* in its `name`
+    * Enter the *address* in its `address`
+* Add an `OrganizationReference` object to the award's `suppliers` array:
+  * Enter the organization `id` of the supplier in its `id`
+  * Enter the *name* of the supplier in its `name`
+
 </td>
       </tr>
       <tr id="XVI:2(d)">
         <td>XVI:2(d)</td>
         <td>the value of the successful tender or the highest and lowest offers taken into account in the award of the contract;</td>
         <td markdown=1>
-
-* 
+* Enter *the value of the successful tender* in the award's `value/amount`
+* Enter the currency in the award's `value/currency` (see the [currency](https://standard.open-contracting.org/latest/en/schema/codelists/#currency) codelist
+* For *the highest offer taken into account in the award of the contract*, add a `BidsStatistic` object to the `bids/statistics` array:
+  * Enter an identifier in its `id`, which can be arbitrary as it is primarily to allow referencing from other parts of the file
+  * Enter the value of the offer in its `value`
+  * Enter the currency of the offer in its `currency`
+  * Set its `measure` to `highestValidBidValue`
+* For *the lowest offer taken into account in the award of the contract*, repeat the above guidance and set `measure` to `lowestValidBidValue`
 </td>
       </tr>
       <tr id="XVI:2(e)">
@@ -507,7 +523,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td>the date of award; and</td>
         <td markdown=1>
 
-* 
+* Enter *the date of the award* in the award's `date`
 </td>
       </tr>
       <tr id="XVI:2(f)">
@@ -515,7 +531,8 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td>the type of procurement method used, and in cases where limited tendering was used in accordance with Article XIII, a description of the circumstances justifying the use of limited tendering.</td>
         <td markdown=1>
 
-* 
+* For *the type of procurement method used*, follow the guidance for [VII:2(f)](#VII:2(f))
+* For *description of the circumstances justifying the use of limited tendering*, follow the guidance for [XIII:2](#XIII:2)
 </td>
       </tr>
       <tr>
