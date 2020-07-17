@@ -46,18 +46,17 @@ This document annotates selected parts of the GPA, with details on how to publis
     * Enter the *name of the procuring entity* in its `name`
     * Enter the *address of the procuring entity* in its `address`
     * Enter *other information necessary to contact the procuring entity* in its `contactPoint`
-    * Add a `Classification` object to the `details/classifications` array
+    * Add a `Classification` object to its `details/classifications` array
       * Set its `scheme` to 'GPA_COVERAGE_SCHEDULE' ([GPA coverage schedule documentation](https://www.wto.org/english/tratop_e/gproc_e/gp_app_agree_e.htm#revisedGPA))
       * Set its `id`
         * to 'annex-1' if the procuring entity is a central government entity
         * to 'annex-2' if the procuring entity a sub-central government entity
-        * to 'annex-3' if the procuring entity is an other type of entity
-      * Enter the above identifier in `tender/procuringEntity/id`
+        * to 'annex-3' if the procuring entity is another type of entity
 
 This requires the [Organization Classification](https://extensions.open-contracting.org/en/extensions/organizationClassification/master/) extension.
 
+* Enter the above identifier in `tender/procuringEntity/id`
 * Enter the *name of the procuring entity* in `tender/procuringEntity/name`
-
 * You can proactively enter the *cost and terms of payment* of *all relevant documents relating to the procurement* in `tender/participationFees`
 * You can proactively enter any *relevant documents relating to the procurement* in `tender/documents`
 
