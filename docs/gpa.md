@@ -262,23 +262,23 @@ This requires the [Communication](https://github.com/open-contracting-extensions
         </td>
       </tr>
       <tr id="IX:8(b)">
-        <td></td>
-        <td></td>
+        <td>IX:8(b)</td>
+        <td>the conditions for participation to be satisfied by suppliers for inclusion on the list and the methods that the procuring entity will use to verify that a supplier satisfies the conditions;</td>
         <td markdown=1></td>
       </tr>
      <tr id="IX:8(c)">
-        <td></td>
-        <td></td>
+        <td>IX:8(c)</td>
+        <td>the name and address of the procuring entity and other information necessary to contact the entity and obtain all relevant documents relating to the list;</td>
         <td markdown=1></td>
       </tr>
       <tr id="IX:8(d)">
-        <td></td>
-        <td></td>
+        <td>IX:8(d)</td>
+        <td>the period of validity of the list and the means for its renewal or termination, or where the period of validity is not provided, an indication of the method by which notice will be given of the termination of use of the list; and </td>
         <td markdown=1></td>
       </tr>
       <tr id="IX:8(e)">
-        <td></td>
-        <td></td>
+        <td>IX:8(e)</td>
+        <td>an indication that the list may be used for procurement covered by this Agreement.</td>
         <td markdown=1></td>
       </tr>
     </tbody>
