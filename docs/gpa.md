@@ -474,8 +474,10 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td>XVI:2(a)</td>
         <td>a description of the goods or services procured;</td>
         <td markdown=1>
-
-* Follow the guidance for [XIII:2](#XIII:2).
+* [Create an OCDS release](#create-a-release)
+* Add an `Award` object to the `awards` array
+   * Enter an identifier in its `id`, which can be arbitrary as it is primarily to allow referencing from other parts of the file
+  * Enter the *description of the goods or services procured* in its `description` or, if possible, split it into `Item` objects in its `items` array.
 </td>
       </tr>
       <tr>
@@ -506,8 +508,14 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td>XVI:2(d)</td>
         <td>the value of the successful tender or the highest and lowest offers taken into account in the award of the contract;</td>
         <td markdown=1>
-
-* For *the value of the successful tender*, follow the guidance for [XIII:2](#XIII:2)
+* Enter *the value of the successful tender* in the award's `value/amount`
+* Enter the currency in the award's `value/currency` (see the [currency](https://standard.open-contracting.org/latest/en/schema/codelists/#currency) codelist
+* For *the highest offer taken into account in the award of the contract*, add a `BidsStatistic` object to the `bids/statistics` array:
+  * Enter an identifier in its `id`, which can be arbitrary as it is primarily to allow referencing from other parts of the file
+  * Enter the value of the offer in its `value`
+  * Enter the currency of the offer in its `currency`
+  * Set its `measure` to `highestValidBidValue`
+* For *the lowest offer taken into account in the award of the contract*, repeat the above guidance and set `measure` to `lowestValidBidValue`
 </td>
       </tr>
       <tr>
