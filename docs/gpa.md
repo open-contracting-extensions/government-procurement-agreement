@@ -266,7 +266,7 @@ This requires the [Communication](https://github.com/open-contracting-extensions
         <td>the conditions for participation to be satisfied by suppliers for inclusion on the list and the methods that the procuring entity will use to verify that a supplier satisfies the conditions;</td>
         <td markdown=1></td>
       </tr>
-     <tr id="IX:8(c)">
+      <tr id="IX:8(c)">
         <td>IX:8(c)</td>
         <td>the name and address of the procuring entity and other information necessary to contact the entity and obtain all relevant documents relating to the list;</td>
         <td markdown=1></td>
@@ -281,6 +281,20 @@ This requires the [Communication](https://github.com/open-contracting-extensions
         <td>an indication that the list may be used for procurement covered by this Agreement.</td>
         <td markdown=1></td>
       </tr>
+      <tr class="section" id="IX:9">
+        <td>IX:9</td>
+        <td colspan="2">Notwithstanding paragraph 7, where a multi-use list will be valid for three years or less, a procuring entity may publish the notice referred to in paragraph 7 only once, at the beginning of the period of validity of the list, provided that the notice:</td>
+     </tr>
+     <tr id="IX:9(a)">
+       <td>IX:9(a)</td>
+       <td>states the period of validity and that further notices will not be published; and</td>
+       <td markdown=1></td>
+     </tr>
+     <tr id="IX:9(b)">
+       <td>IX:9(b)</td>
+       <td>is published by electronic means and is made available continuously during the period of its validity.</td>
+       <td markdown=1></td>
+     </tr>
     </tbody>
   </table>
 
