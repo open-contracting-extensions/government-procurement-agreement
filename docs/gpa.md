@@ -53,7 +53,11 @@ This document annotates selected parts of the GPA, with details on how to publis
         * to 'annex-2' if the procuring entity a sub-central government entity
         * to 'annex-3' if the procuring entity is an other type of entity
       * Enter the above identifier in `tender/procuringEntity/id`
+
+This requires the [Organization Classification](https://extensions.open-contracting.org/en/extensions/organizationClassification/master/) extension.
+
 * Enter the *name of the procuring entity* in `tender/procuringEntity/name`
+
 * You can proactively enter the *cost and terms of payment* of *all relevant documents relating to the procurement* in `tender/participationFees`
 * You can proactively enter any *relevant documents relating to the procurement* in `tender/documents`
 
