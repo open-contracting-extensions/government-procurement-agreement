@@ -260,7 +260,7 @@ This requires the [Communication](https://github.com/open-contracting-extensions
         <td markdown=1>
 
 * For *the procurement, including the nature and the quantity of the goods or services to be procured or, where the quantity is not known, the estimated quantity*, follow the guidance for VII:2(b)
-* For *any requirements to be fulfilled, including any technical specifications, conformity assessment certification, plans, drawings or instructional materials*, follow the guidance for VII:2(j)
+* For *any requirements to be fulfilled, including any technical specifications, conformity assessment certification, plans, drawings or instructional materials*, the OCDS currently doesn't have structured criteria for submission validity
 </td>
       </tr>
       <tr>
