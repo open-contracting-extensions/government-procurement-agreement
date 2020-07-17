@@ -259,12 +259,14 @@ This requires the [Communication](https://github.com/open-contracting-extensions
         <td>a description of the goods or services, or categories thereof, for which the list may be used;
         </td>
         <td markdown=1>
+* Follow the guidance for [VII:2(b)](<#VII:2(b)>)
         </td>
       </tr>
       <tr id="IX:8(b)">
         <td>IX:8(b)</td>
         <td>the conditions for participation to be satisfied by suppliers for inclusion on the list and the methods that the procuring entity will use to verify that a supplier satisfies the conditions;</td>
         <td markdown=1></td>
+
       </tr>
       <tr id="IX:8(c)">
         <td>IX:8(c)</td>
