@@ -234,6 +234,56 @@ This requires the [Communication](https://github.com/open-contracting-extensions
       </tr>
     </tbody>
   </table>
+  
+  <table class="docutils">
+    <caption><a href="https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm#articleIX">Article IX</a> Qualification of suppliers</caption>
+    <colgroup>
+      <col width="10%">
+      <col width="40%">
+      <col width="50%">
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Reference</th>
+        <th>GPA text</th>
+        <th>OCDS guidance</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="section" id="IX:8">
+        <td>IX:8</td>
+        <td colspan="2">The notice provided for in paragraph 7 shall include:</td>
+     </tr>
+     <tr id="IX:8(a)">
+        <td>IX:8(a)</td>
+        <td>a description of the goods or services, or categories thereof, for which the list may be used;
+        </td>
+        <td markdown=1>
+        </td>
+      </tr>
+      <tr id="IX:8(b)">
+        <td></td>
+        <td></td>
+        <td markdown=1></td>
+      </tr>
+     <tr id="IX:8(c)">
+        <td></td>
+        <td></td>
+        <td markdown=1></td>
+      </tr>
+      <tr id="IX:8(d)">
+        <td></td>
+        <td></td>
+        <td markdown=1></td>
+      </tr>
+      <tr id="IX:8(e)">
+        <td></td>
+        <td></td>
+        <td markdown=1></td>
+      </tr>
+    </tbody>
+  </table>
+
 
   <table class="docutils">
     <caption><a href="https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm#articleX">Article X</a> Notices</caption>
