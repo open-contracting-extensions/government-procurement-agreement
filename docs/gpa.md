@@ -600,7 +600,9 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td>the number and total value of all contracts covered by this Agreement awarded by each such entity, broken down by categories of goods and services according to an internationally recognized uniform classification system;  and</td>
         <td markdown=1>
 
-* 
+* *all contracts covered by this Agreement*: filter the records that have 'GPA' as `compiledRelease/tender/coveredBy`
+* *awarded by each such entity*: sort the records by the `identifier/id` field of the party referenced by `compiledRelease/buyer/id`
+* *broken down by categories of goods and services*:
 </td>
       </tr>
       <tr id="XVI:4(a)">
