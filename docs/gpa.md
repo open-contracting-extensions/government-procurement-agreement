@@ -68,6 +68,15 @@ If the notice is a contract award notice for an award within a framework agreeme
     * Enter the *name of the procuring entity* in its `name`
     * Enter the *address of the procuring entity* in its `address`
     * Enter *other information necessary to contact the procuring entity* in its `contactPoint`
+    * Add a `Classification` object to its `details/classifications` array
+      * Set its `scheme` to 'gpaCoverageSchedule' ([GPA coverage schedule documentation](https://www.wto.org/english/tratop_e/gproc_e/gp_app_agree_e.htm#revisedGPA))
+      * Set its `id`
+        * to 'annex1' if the procuring entity is a central government entity
+        * to 'annex2' if the procuring entity a sub-central government entity
+        * to 'annex3' if the procuring entity is another type of entity
+
+This requires the [Organization Classification](https://extensions.open-contracting.org/en/extensions/organizationClassification/master/) extension.
+
 * Enter the above identifier in `tender/procuringEntity/id`
 * Enter the *name of the procuring entity* in `tender/procuringEntity/name`
 * You can proactively enter the *cost and terms of payment* of *all relevant documents relating to the procurement* in `tender/participationFees`
@@ -570,10 +579,6 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
       <tr>
         <td>XVI:4</td>
         <td>Each Party shall collect and report to the Committee statistics on its contracts covered by this Agreement.  Each report shall cover one year and be submitted within two years of the end of the reporting period, and shall contain:</td>
-        <td markdown=1>
-
-* 
-</td>
       </tr>
       <tr id="XVI:4(a)">
         <td>XVI:4(a)</td>
