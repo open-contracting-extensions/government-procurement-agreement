@@ -573,8 +573,8 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td markdown=1>
 
 * In order to produce statistics about contracts using OCDS data, convert your OCDS releases to [records](https://standard.open-contracting.org/latest/en/getting_started/releases_and_records/#records) using [Toucan](https://toucan.open-contracting.org/) Web app or the [ocdskit](https://ocdskit.readthedocs.io/en/latest/) suite of command-line tools.
-* All the filters below are applied on the `Record` objects in the `records` array of a record package.
-* To select the contracts signed within a specific year, filter them using the contract date: `Record/compiledRelease/contracts/dateSigned`
+* All the filters below are applied on the `Record` objects in the `records` array of a record package that have 'GPA' as `compiledRelease/tender/coveredBy`.
+* To select the contracts signed within a specific year, filter the contracts using the contract date: `Record/compiledRelease/contracts/dateSigned`
 </td>
       </tr>
       <tr id="XVI:4(a)">
@@ -592,7 +592,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td>the number and total value, for all such entities, of all contracts covered by this Agreement;</td>
         <td markdown=1>
 
-* 
+* With the records selected in [XVI:4(a)](<#XVI:4(a)>), sum all the values of `compiledRelease/contracts/contract/amount/value` that have the same currency.
 </td>
       </tr>
       <tr id="XVI:4(a)">
