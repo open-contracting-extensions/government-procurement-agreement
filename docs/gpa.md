@@ -49,9 +49,9 @@ This document annotates selected parts of the GPA, with details on how to publis
     * Add a `Classification` object to its `details/classifications` array
       * Set its `scheme` to 'gpaCoverageSchedule' ([GPA coverage schedule documentation](https://www.wto.org/english/tratop_e/gproc_e/gp_app_agree_e.htm#revisedGPA))
       * Set its `id`
-        * to 'annex-1' if the procuring entity is a central government entity
-        * to 'annex-2' if the procuring entity a sub-central government entity
-        * to 'annex-3' if the procuring entity is another type of entity
+        * to 'annex1' if the procuring entity is a central government entity
+        * to 'annex2' if the procuring entity a sub-central government entity
+        * to 'annex3' if the procuring entity is another type of entity
 
 This requires the [Organization Classification](https://extensions.open-contracting.org/en/extensions/organizationClassification/master/) extension.
 
