@@ -47,7 +47,7 @@ This document annotates selected parts of the GPA, with details on how to publis
     * Enter the *address of the procuring entity* in its `address`
     * Enter *other information necessary to contact the procuring entity* in its `contactPoint`
     * Add a `Classification` object to its `details/classifications` array
-      * Set its `scheme` to 'GPA_COVERAGE_SCHEDULE' ([GPA coverage schedule documentation](https://www.wto.org/english/tratop_e/gproc_e/gp_app_agree_e.htm#revisedGPA))
+      * Set its `scheme` to 'gpaCoverageSchedule' ([GPA coverage schedule documentation](https://www.wto.org/english/tratop_e/gproc_e/gp_app_agree_e.htm#revisedGPA))
       * Set its `id`
         * to 'annex-1' if the procuring entity is a central government entity
         * to 'annex-2' if the procuring entity a sub-central government entity
