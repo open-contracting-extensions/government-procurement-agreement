@@ -12,8 +12,27 @@ This document annotates selected parts of the GPA, with details on how to publis
 ```eval_rst
 .. warning::
 
-   References from Articles VII:4, VII:5, IX:8, IX:9, X:7, X:9, X:11, XIII:2, XIV:1, XVI:2 are not yet added.
+   References from Articles XIII:2, XIV:1, XVI:2 are not yet added.
 ```
+
+## Common operations
+
+To avoid repetition in the guidance, we refer and link to the following common operations.
+
+### Create a release
+
+1. Set `id` to the [release ID](https://standard.open-contracting.org/latest/en/schema/identifiers/#release-id).
+1. Set `initiationType` to 'tender'.
+1. Set [`ocid`](https://standard.open-contracting.org/latest/en/schema/identifiers/#contracting-process-identifier-ocid) as described below.
+
+The notice's `ocid` will either be a new `ocid`, or the same `ocid` as the previous publication concerning this procedure. The notice's `ocid` will be a new `ocid` if one of the following is true:
+
+* The notice is the first publication concerning the procedure.
+* The notice is a contract award notice for an award within a framework agreement or dynamic purchasing system.
+
+If none is true, then set the notice's `ocid` to be the same as the previous publication's `ocid`. Otherwise, set the notice's [`ocid`](https://standard.open-contracting.org/latest/en/schema/identifiers/#contracting-process-identifier-ocid) by prepending your [OCID prefix](https://standard.open-contracting.org/latest/en/implementation/registration/) to a unique identifier of your choice (e.g. a [version 4 UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) or a suitable system-internal identifier).
+
+If the notice is a contract award notice for an award within a framework agreement or dynamic purchasing system, you must also add a `RelatedProcess` object to the `relatedProcesses` array, set its `.id` to '1', add 'framework' to its `.relationship` array, set its `.scheme` to 'ocid', and set its `.identifier` to the `ocid` of the procedure that set up the framework agreement or dynamic purchasing system.
 
 <div class="wy-table-responsive">
   <table class="docutils">
@@ -33,7 +52,10 @@ This document annotates selected parts of the GPA, with details on how to publis
     <tbody>
       <tr id="VII:2" class="section">
         <td>VII:2</td>
-        <td colspan="2">Except as otherwise provided in this Agreement, each notice of intended procurement shall include:</td>
+        <td>Except as otherwise provided in this Agreement, each notice of intended procurement shall include:</td>
+        <td markdown=1>
+* [Create an OCDS release](#create-a-release)
+        </td>
       </tr>
       <tr id="VII:2(a)">
         <td>VII:2(a)</td>
@@ -209,7 +231,7 @@ The information included in the notice of intended procurement covers all the in
         <td>VII:4</td>
         <td>Procuring entities are encouraged to publish in the appropriate paper or electronic medium listed in Appendix III as early as possible in each fiscal year a notice regarding their future procurement plans (hereinafter referred to as "notice of planned procurement"). The notice of planned procurement should include the subject-matter of the procurement and the planned date of the publication of the notice of intended procurement.</td>
         <td markdown=1>
-
+* [Create an OCDS release](#create-a-release)
 * Add 'planning' to the `tag` array
 * Set `tender/status` to 'planning'
 * Enter *the subject-matter of the procurement* in `tender/description`. The value of `tender/description` can be updated when the data described in article VII:2(b) is published.
@@ -278,7 +300,11 @@ This requires the [Communication](https://github.com/open-contracting-extensions
     <tbody>
       <tr class="section" id="X:7">
         <td>X:7</td>
-        <td colspan="2">A procuring entity shall make available to suppliers tender documentation that includes all information necessary to permit suppliers to prepare and submit responsive tenders. Unless already provided in the notice of intended procurement, such documentation shall include a complete description of:</td>
+        <td>A procuring entity shall make available to suppliers tender documentation that includes all information necessary to permit suppliers to prepare and submit responsive tenders. Unless already provided in the notice of intended procurement, such documentation shall include a complete description of:</td>
+        <td markdown=1>
+
+* [Create an OCDS release](#create-a-release)
+        </td>
      </tr>
       <tr id="X:7(a)">
         <td>X:7(a)</td>
@@ -286,8 +312,8 @@ This requires the [Communication](https://github.com/open-contracting-extensions
         <td markdown=1>
 
 * For *the procurement, including the nature and the quantity of the goods or services to be procured or, where the quantity is not known, the estimated quantity*, follow the guidance for [VII:2(b)](<#VII:2(b)>)
-* For *any requirements to be fulfilled, including any technical specifications, conformity assessment certification, plans, drawings or instructional materials*, follow the guidance for [VII:2(j)](<#VII:2(j)>)
-</td>
+* For *any requirements to be fulfilled, including any technical specifications, conformity assessment certification, plans, drawings or instructional materials*, append to `tender/description`.
+        </td>
       </tr>
       <tr id="X:7(b)">
         <td>X:7(b)</td>
@@ -384,7 +410,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
 </td>
         <td markdown=1>
 
-* Create a new OCDS release and follow the corresponding guidance, depending on the information that has been modified:
+* [Create a new OCDS release](#create-a-release) and follow the corresponding guidance, depending on the information that has been modified:
   * If the *the criteria or requirements* are modified, follow the guidance for [X:9](<#X:9>)
   * If *a notice* (of intended procurement) is amended or reissued, follow the guidance of article VII:2
   * If the *tender documentation* is amended or reissued, follow the guidance for [X:7](<#X:7>)
@@ -414,18 +440,20 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td>A procuring entity shall prepare a report in writing on each contract awarded under paragraph 1. The report shall include the name of the procuring entity, the value and kind of goods or services procured and a statement indicating the circumstances and conditions described in paragraph 1 that justified the use of limited tendering.</td>
         <td markdown=1>
 
+* [Create an OCDS release](#create-a-release)
 * If the following data has not been published following the guidance for VII:2
   * For *the name of the procuring entity*, follow the guidance for [VII:2(a)](<#VII:2(a)>)
   * For the *kind of goods or services procured*, follow the guidance for [VII:2(b)](<#VII:2(b)>)
 * Add an `Award` object to the `awards` array
-  * Enter an identifier in its `id`, which can be arbitrary as it is primarily to allow referencing   from other parts of the file
+  * Enter an identifier in its `id`, which can be arbitrary as it is primarily to allow referencing from other parts of the file
+  * Enter the *kind of goods or services procured* in its `description` or, if possible, split it into `Item` objects in its `items` array.
   * Enter *the value [of the goods or services]* in its `value/amount`
   * Enter the currency in `value/currency` (see the [currency](https://standard.open-contracting.org/latest/en/schema/codelists/#currency) codelist)
-* Enter *the circumstances and conditions described in paragraph 1  that justified the use of limited tendering* in `tender/procurementMethodRationale`
-* If the *report in writing* is also published as a document
-  * Add a `Document` object to the `tender/documents` array
-  * Set its `documentType` to 'awardNotice'
-  * Fill any other known information for the document ([`Document` object schema](https://standard.open-contracting. org/1.1/en/schema/reference/#document))
+  * If the *report in writing* is also published as a document
+    * Add a `Document` object to its `documents` array
+    * Set its `documentType` to 'awardNotice'
+    * Fill any other known information for the document ([`Document` object schema](https://standard.open-contracting. org/1.1/en/schema/reference/#document))
+* Enter *the circumstances and conditions described in paragraph 1 that justified the use of limited tendering* in `tender/procurementMethodRationale`
 </td>
       </tr>
     </tbody>
@@ -455,7 +483,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td>the automatic evaluation method, including the mathematical formula, that is based on the evaluation criteria set out in the tender documentation and that will be used in the automatic ranking or re-ranking during the auction;</td>
         <td markdown=1>
 
-* 
+* Enter or append *the automatic evaluation method, including the mathematical formula* in `tender/techniques/electronicAuction/description`
 </td>
       </tr>
       <tr id="XIV:1(b)">
@@ -463,7 +491,11 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td>the results of any initial evaluation of the elements of its tender where the contract is to be awarded on the basis of the most advantageous tender;  and</td>
         <td markdown=1>
 
-* 
+* If *the results of any initial evaluation of the elements of [each participant's] tender* are published as a document:
+  * Add a `Document` object to the award's `documents` array
+  * Set its `documentType` to 'evaluationReports'
+  * Fill any other known information for the document ([`Document` object schema](https://standard.open-contracting.org/1.1/en/schema/reference/#document))
+
 </td>
       </tr>
       <tr id="XIV:1(c)">
@@ -471,7 +503,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td>any other relevant information relating to the conduct of the auction.</td>
         <td markdown=1>
 
-* 
+* Enter or append *any other relevant information relating to the conduct of the auction* in `tender/techniques/electronicAuction/description`
 </td>
       </tr>
     </tbody>
@@ -500,8 +532,10 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td>XVI:2(a)</td>
         <td>a description of the goods or services procured;</td>
         <td markdown=1>
-
-* 
+* [Create an OCDS release](#create-a-release)
+* Add an `Award` object to the `awards` array
+   * Enter an identifier in its `id`, which can be arbitrary as it is primarily to allow referencing from other parts of the file
+  * Enter the *description of the goods or services procured* in its `description` or, if possible, split it into `Item` objects in its `items` array.
 </td>
       </tr>
       <tr id="XVI:2(b)">
@@ -509,7 +543,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td>the name and address of the procuring entity;</td>
         <td markdown=1>
 
-* 
+* Follow the guidance for [VII:2(a)](#VII:2(a))
 </td>
       </tr>
       <tr id="XVI:2(c)">
@@ -517,15 +551,29 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td>the name and address of the successful supplier;</td>
         <td markdown=1>
 
-* 
+* Add an `Organization` object to the `parties` array:
+    * Add 'supplier' to its `roles`
+    * Enter an identifier in its `id`, which can be arbitrary as it is primarily to allow referencing from other parts of the file
+    * Enter the *name* in its `name`
+    * Enter the *address* in its `address`
+* Add an `OrganizationReference` object to the award's `suppliers` array:
+  * Enter the organization `id` of the supplier in its `id`
+  * Enter the *name* of the supplier in its `name`
+
 </td>
       </tr>
       <tr id="XVI:2(d)">
         <td>XVI:2(d)</td>
         <td>the value of the successful tender or the highest and lowest offers taken into account in the award of the contract;</td>
         <td markdown=1>
-
-* 
+* Enter *the value of the successful tender* in the award's `value/amount`
+* Enter the currency in the award's `value/currency` (see the [currency](https://standard.open-contracting.org/latest/en/schema/codelists/#currency) codelist
+* For *the highest offer taken into account in the award of the contract*, add a `BidsStatistic` object to the `bids/statistics` array:
+  * Enter an identifier in its `id`, which can be arbitrary as it is primarily to allow referencing from other parts of the file
+  * Enter the value of the offer in its `value`
+  * Enter the currency of the offer in its `currency`
+  * Set its `measure` to `highestValidBidValue`
+* For *the lowest offer taken into account in the award of the contract*, repeat the above guidance and set `measure` to `lowestValidBidValue`
 </td>
       </tr>
       <tr id="XVI:2(e)">
@@ -533,7 +581,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td>the date of award; and</td>
         <td markdown=1>
 
-* 
+* Enter *the date of the award* in the award's `date`
 </td>
       </tr>
       <tr id="XVI:2(f)">
@@ -541,7 +589,8 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td>the type of procurement method used, and in cases where limited tendering was used in accordance with Article XIII, a description of the circumstances justifying the use of limited tendering.</td>
         <td markdown=1>
 
-* 
+* For *the type of procurement method used*, follow the guidance for [VII:2(f)](#VII:2(f))
+* For *description of the circumstances justifying the use of limited tendering*, follow the guidance for [XIII:2](#XIII:2)
 </td>
       </tr>
       <tr>
