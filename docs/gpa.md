@@ -581,7 +581,9 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td>Each Party shall collect and report to the Committee statistics on its contracts covered by this Agreement. Each report shall cover one year and be submitted within two years of the end of the reporting period, and shall contain:</td>
         <td markdown=1>
 
-If you're interested in guidance to produce these statistics from OCDS data, please contact us at data@open-contracting.org. We will update this document as we learn from actual use cases.
+If you are interested in calculating these statistics using OCDS data, please contact <data@open-contracting.org>. We will update this document as we learn from users.
+
+In the meantime, you might be interested in this [Python notebook](http://bit.ly/OCPaustraliaexample), which demonstrates how to calculate the GPA statistics from a specific dataset.
 </td>
       </tr>
       <tr id="XVI:4(a)">
