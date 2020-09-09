@@ -254,7 +254,7 @@ This requires the [Communication](https://github.com/open-contracting-extensions
         <td>IX:8 and IX:9</td>
         <td>Publication of data about multi-use lists.</td>
         <td markdown=1>
-* 
+* If you're interested in guidance to produce OCDS data about multi-use lists, please contact us at data@open-contracting.org or get in touch [on Github](https://github.com/open-contracting-extensions/government-procurement-  agreement/issues/22). We will update this document as we learn from actual data and use cases.
         </td>
       </tr>
    </tbody>
