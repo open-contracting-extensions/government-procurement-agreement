@@ -2,15 +2,10 @@
 
 This document annotates selected parts of the GPA, with details on how to publish the information using OCDS in a way that is consistent with the rules of the GPA. It is intended for a policy audience.
 
-```eval_rst
-.. warning::
-
-   References from Articles XIII:2, XIV:1, XVI:2 are not yet added.
-```
+## [Article VII](https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm#articleVII) Notices
 
 <div class="wy-table-responsive">
   <table class="docutils">
-    <caption><a href="https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm#articleVII">Article VII</a> Notices</caption>
     <colgroup>
       <col width="10%">
       <col width="40%">
@@ -239,9 +234,12 @@ This requires the [Communication](https://github.com/open-contracting-extensions
       </tr>
     </tbody>
   </table>
+</div>
 
+## [Article X](https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm#articleX) Notices
+
+<div class="wy-table-responsive">
   <table class="docutils">
-    <caption><a href="https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm#articleX">Article X</a> Notices</caption>
     <colgroup>
       <col width="10%">
       <col width="40%">
@@ -376,9 +374,12 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
       </tr>
     </tbody>
   </table>
+</div>
 
+## [Article XIII](https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm#articleXIII) Notices
+
+<div class="wy-table-responsive">
   <table class="docutils">
-    <caption><a href="https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm#articleXIII">Article XIII</a> Notices</caption>
     <colgroup>
       <col width="10%">
       <col width="40%">
@@ -415,9 +416,12 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
       </tr>
     </tbody>
   </table>
+</div>
 
+## [Article XIV](https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm#articleXIV) Notices
+
+<div class="wy-table-responsive">
   <table class="docutils">
-    <caption><a href="https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm#articleXIV">Article XIV</a> Notices</caption>
     <colgroup>
       <col width="10%">
       <col width="40%">
@@ -465,9 +469,12 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
       </tr>
     </tbody>
   </table>
+</div>
 
+## [Article XVI](https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm#articleXVI) Notices
+
+<div class="wy-table-responsive">
   <table class="docutils">
-    <caption><a href="https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm#articleXVI">Article XVI</a> Notices</caption>
     <colgroup>
       <col width="10%">
       <col width="40%">
@@ -553,7 +560,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
       <tr>
         <td>XVI:4</td>
         <td>Each Party shall collect and report to the Committee statistics on its contracts covered by this Agreement. Each report shall cover one year and be submitted within two years of the end of the reporting period, and shall contain:</td>
-        <td markdown=1>
+        <td rowspan="7" markdown=1>
 
 If you are interested in calculating these statistics using OCDS data, please contact <data@open-contracting.org>. We will update this document as we learn from users.
 
@@ -562,27 +569,27 @@ In the meantime, you might be interested in this [Python notebook](http://bit.ly
       </tr>
       <tr id="XVI:4(a)">
         <td>XVI:4(a)</td>
-        <td colspan="2">for Annex 1 procuring entities:</td>
+        <td>for Annex 1 procuring entities:</td>
       </tr>
       <tr id="XVI:4(a)">
         <td>XVI:4(a)(i)</td>
-        <td colspan="2">the number and total value, for all such entities, of all contracts covered by this Agreement;</td>
+        <td>the number and total value, for all such entities, of all contracts covered by this Agreement;</td>
       </tr>
       <tr id="XVI:4(a)">
         <td>XVI:4(a)(ii)</td>
-        <td colspan="2">the number and total value of all contracts covered by this Agreement awarded by each such entity, broken down by categories of goods and services according to an internationally recognized uniform classification system;  and</td>
+        <td>the number and total value of all contracts covered by this Agreement awarded by each such entity, broken down by categories of goods and services according to an internationally recognized uniform classification system;  and</td>
       </tr>
       <tr id="XVI:4(a)">
         <td>XVI:4(a)(iii)</td>
-        <td colspan="2">the number and total value of all contracts covered by this Agreement awarded by each such entity under limited tendering;</td>
+        <td>the number and total value of all contracts covered by this Agreement awarded by each such entity under limited tendering;</td>
       </tr>
       <tr id="XVI:4(b)">
         <td>XVI:4(b)</td>
-        <td colspan="2">for Annex 2 and 3 procuring entities, the number and total value of contracts covered by this Agreement awarded by all such entities, broken down by Annex;  and</td>
+        <td>for Annex 2 and 3 procuring entities, the number and total value of contracts covered by this Agreement awarded by all such entities, broken down by Annex;  and</td>
       </tr>
       <tr id="XVI:4(c)">
         <td>XVI:4(c)</td>
-        <td colspan="2">estimates for the data required under subparagraphs (a) and (b), with an explanation of the methodology used to develop the estimates, where it is not feasible to provide the data.</td>
+        <td>estimates for the data required under subparagraphs (a) and (b), with an explanation of the methodology used to develop the estimates, where it is not feasible to provide the data.</td>
       </tr>
     </tbody>
   </table>
