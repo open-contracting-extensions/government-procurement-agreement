@@ -68,6 +68,15 @@ If the notice is a contract award notice for an award within a framework agreeme
     * Enter the *name of the procuring entity* in its `name`
     * Enter the *address of the procuring entity* in its `address`
     * Enter *other information necessary to contact the procuring entity* in its `contactPoint`
+    * Add a `Classification` object to its `details/classifications` array
+      * Set its `scheme` to 'gpaCoverageSchedule' ([GPA coverage schedule documentation](https://www.wto.org/english/tratop_e/gproc_e/gp_app_agree_e.htm#revisedGPA))
+      * Set its `id`
+        * to 'annex1' if the procuring entity is a central government entity
+        * to 'annex2' if the procuring entity a sub-central government entity
+        * to 'annex3' if the procuring entity is another type of entity
+
+This requires the [Organization Classification](https://extensions.open-contracting.org/en/extensions/organizationClassification/master/) extension.
+
 * Enter the above identifier in `tender/procuringEntity/id`
 * Enter the *name of the procuring entity* in `tender/procuringEntity/name`
 * You can proactively enter the *cost and terms of payment* of *all relevant documents relating to the procurement* in `tender/participationFees`
@@ -173,10 +182,10 @@ This requires the [Additional Contact Points](https://github.com/open-contractin
         <td>a list and brief description of any conditions for participation of suppliers, including any requirements for specific documents or certifications to be provided by suppliers in connection therewith, unless such requirements are included in tender documentation that is made available to all interested suppliers at the same time as the notice of intended procurement;</td>
         <td markdown=1>
 
-* Add *a list and brief description of any conditions for participation of suppliers* to `tender/eligibilityCriteria`
+* Add *a list and brief description of any conditions for participation of suppliers* to `tender.selectionCriteria.description` or, if possible, split this into `SelectionCriterion` objects in the `tender/selectionCriteria/criteria` array.
 * If *requirements are included in tender documentation that is made available to all interested suppliers*:
   * For each document, add a `Document` object to the `tender/documents` array
-  * Set its `documentType` to 'eligibilityCriteria'
+  * Set its `documentType` to 'selectionCriteria'
   * Fill any other known information for the document ([`Document` object schema](https://standard.open-contracting.org/1.1/en/schema/reference/#document))
 </td>
       </tr>
