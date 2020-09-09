@@ -1,33 +1,31 @@
 # OCDS for the Agreement on Government Procurement
 
+## Context
+
 To promote open, fair and transparent competition in government procurement markets, a number of [World Trade Organization](https://www.wto.org/) (WTO) members negotiated the [Agreement on Government Procurement](https://www.wto.org/english/tratop_e/gproc_e/gp_gpa_e.htm) (GPA).
 
-This website provides guidance on how to publish [Open Contracting Data Standard](http://standard.open-contracting.org/) data in a way that is consistent with the rules established in the [text of the Agreement](https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm).
+## GPA-to-OCDS mapping
 
-* **[Read selected parts of the GPA, with annotations on how to publish the information using OCDS](gpa.md)**
+This website provides guidance on how to publish [Open Contracting Data Standard](http://standard.open-contracting.org/) data in a way that is consistent with the rules established in the [text of the Agreement](https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm). It includes selected parts of the GPA, with annotations on how to publish the information using OCDS.
 
 ```eval_rst
 .. toctree::
-   :hiddden:
+   :maxdepth: 2
 
    gpa
+   operations
 ```
 
-## Governance
+## Technical reference
 
-OCDS for GPA is a profile of OCDS that combines community and core extensions:
+```eval_rst
+.. toctree::
+   :maxdepth: 2
 
-* [ocds_additionalContactPoints_extension](https://github.com/open-contracting-extensions/ocds_additionalContactPoints_extension)
-* [ocds_coveredBy_extension](https://github.com/open-contracting-extensions/ocds_coveredBy_extension)
-* [ocds_options_extension](https://github.com/open-contracting-extensions/ocds_options_extension)
-* [ocds_participationFee_extension](https://github.com/open-contracting-extensions/ocds_participationFee_extension)
-* [ocds_procurementMethodModalities_extension](https://github.com/open-contracting-extensions/ocds_procurementMethodModalities_extension)
-* [ocds_recurrence_extension](https://github.com/open-contracting-extensions/ocds_recurrence_extension)
+   reference/index
+   changelog
+```
 
-Core extensions are subject to [OCDS' governance process](http://standard.open-contracting.org/latest/en/support/governance/). Community extensions may establish their own governance process.
+## We want your feedback!
 
-The profile itself – i.e. this website – is non-normative content. Please report issues for this profile on [GitHub](https://github.com/open-contracting-extensions/ocds-for-gpa/issues).
-
-## History
-
-OCDS for GPA was developed by the Open Contracting Partnership with the support of the European Bank for Reconstruction and Development.
+To contribute, please first read this page, and then dive into the guidance. Feedback is discussed openly on GitHub. To browse all issues or to open another issue, visit [this website's GitHub issues](https://github.com/open-contracting-extensions/government-procurement-agreement/issues).
