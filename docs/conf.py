@@ -13,6 +13,7 @@
 # import os
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
+import json
 import os
 from glob import glob
 from pathlib import Path
@@ -39,6 +40,8 @@ release = '1.0.0-rc.1'
 # ones.
 extensions = [
     'recommonmark',
+    'sphinxcontrib.jsonschema',
+    'sphinxcontrib.opendataservices',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -97,17 +100,8 @@ gettext_domain_prefix = '{}-'.format(profile_identifier)
 
 # List the extension identifiers and versions that should be part of this profile. The extensions must be available in
 # the extension registry: https://github.com/open-contracting/extension_registry/blob/master/extension_versions.csv
-extension_versions = {
-    # Authored.
-    # 'recurrence': 'master',
-    # 'options': 'master',
-    # 'procurementMethodModalities': 'master',
-    # 'coveredBy': 'master',
-    # Not authored.
-    # 'party_classifications': 'master',
-    # 'tender_mainItemClassification': 'master',
-    # 'tender_legalBasisDetails': 'master',
-}
+with open(os.path.join(os.path.dirname(os.path.realpath(__file__)), 'extension_versions.json')) as f:
+    extension_versions = json.load(f)
 
 
 def setup(app):
