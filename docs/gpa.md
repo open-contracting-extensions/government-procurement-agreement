@@ -63,15 +63,23 @@ If the notice is a contract award notice for an award within a framework agreeme
         <td markdown=1>
 
 1. Add an `Organization` object to the `parties` array:
-    1. Add 'procuringEntity' to its `roles`
-    1. Enter an identifier in its `id`, which can be arbitrary as it is primarily to allow referencing from other parts of the file
-    1. Enter the *name of the procuring entity* in its `name`
-    1. Enter the *address of the procuring entity* in its `address`
-    1. Enter *other information necessary to contact the procuring entity* in its `contactPoint`
+  1. Add 'procuringEntity' to its `roles`
+  1. Enter an identifier in its `id`, which can be arbitrary as it is primarily to allow referencing from other parts of the file
+  1. Enter the *name of the procuring entity* in its `name`
+  1. Enter the *address of the procuring entity* in its `address`
+  1. Enter *other information necessary to contact the procuring entity* in its `contactPoint`
+  1. Add a `Classification` object to its `details/classifications` array
+    1. Set its `scheme` to 'gpaCoverageSchedule' ([GPA coverage schedule documentation](https://www.wto.org/english/tratop_e/gproc_e/gp_app_agree_e.htm#revisedGPA))
+    1. Set its `id`
+      * to 'annex1' if the procuring entity is a central government entity
+      * to 'annex2' if the procuring entity a sub-central government entity
+      * to 'annex3' if the procuring entity is another type of entity
 1. Enter the above identifier in `tender/procuringEntity/id`
 1. Enter the *name of the procuring entity* in `tender/procuringEntity/name`
 1. You can proactively enter the *cost and terms of payment* of *all relevant documents relating to the procurement* in `tender/participationFees`
 1. You can proactively enter any *relevant documents relating to the procurement* in `tender/documents`
+
+This requires the [Organization Classification](https://extensions.open-contracting.org/en/extensions/organizationClassification/master/) extension.
 
 This requires the [Participation Fees](https://github.com/open-contracting-extensions/ocds_participationFee_extension) extension.
 </td>
@@ -178,6 +186,7 @@ This requires the [Additional Contact Points](https://github.com/open-contractin
   1. For each document, add a `Document` object to the `tender/documents` array
   1. Set its `documentType` to 'eligibilityCriteria'
   1. Fill any other known information for the document ([`Document` object schema](https://standard.open-contracting.org/1.1/en/schema/reference/#document))
+
 </td>
       </tr>
       <tr id="VII:2(k)">
