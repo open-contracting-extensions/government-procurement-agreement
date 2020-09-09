@@ -1,0 +1,623 @@
+{
+  "definitions": {
+    "Organization": {
+      "properties": {
+        "additionalContactPoints": {
+          "title": "Additional contact points",
+          "description": "An array of additional contact points that may be consulted for information. Additional contact points should each list the languages they operate in their name, and as structured data in the availableLanguage field.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ContactPoint"
+          },
+          "wholeListMerge": true,
+          "uniqueItems": true,
+          "minItems": 1
+        }
+      }
+    },
+    "ContactPoint": {
+      "properties": {
+        "availableLanguage": {
+          "title": "Available languages",
+          "description": "The languages the contact point operates in, using either two-letter [ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes), or extended [BCP47 language tags](http://www.w3.org/International/articles/language-tags/). The use of lowercase two-letter codes from [ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) is strongly recommended unless there is a clear user need for distinguishing the language subtype.",
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        }
+      }
+    },
+    "Tender": {
+      "properties": {
+        "bidOpening": {
+          "title": "Bid opening",
+          "description": "The date, time, place and other details of the bid opening.",
+          "$ref": "#/definitions/BidOpening"
+        },
+        "communication": {
+          "title": "Communication",
+          "description": "Modalities of communication about key events.",
+          "type": "object",
+          "properties": {
+            "atypicalToolUrl": {
+              "title": "Atypical tool URL",
+              "description": "Electronic communication with the procuring entity requires the use of tools and devices that are not generally available. These tools are accessible via this URL.",
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "uri"
+            },
+            "futureNoticeDate": {
+              "title": "Future notice date",
+              "description": "The estimated date of publication of the next sequential notice.",
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            }
+          },
+          "minProperties": 1
+        },
+        "coveredBy": {
+          "title": "Covered by",
+          "description": "The treaties that the contracting process is covered by.",
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "codelist": "coveredBy.csv",
+          "openCodelist": true,
+          "uniqueItems": true,
+          "minItems": 1
+        },
+        "options": {
+          "title": "Options",
+          "description": "A description of the options.",
+          "$ref": "#/definitions/Options"
+        },
+        "hasOptions": {
+          "title": "Options used",
+          "description": "Whether or not the buyer reserves the right to make additional purchases from the supplier, as long as the contract is valid.",
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "participationFees": {
+          "title": "Participation fees",
+          "description": "Any fees applicable to bidders wishing to participate in the tender process. Fees can apply for accessing bidding documents or for submitting bids, or there can be a \"win fee\" payable by the successful bidder.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ParticipationFee"
+          },
+          "uniqueItems": true,
+          "wholeListMerge": true
+        },
+        "recurrence": {
+          "title": "Recurrence",
+          "description": "Information on the recurrence of the contracting process.",
+          "$ref": "#/definitions/Recurrence"
+        },
+        "hasRecurrence": {
+          "title": "Has recurrence",
+          "description": "Whether the contracting process is recurrent.",
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "secondStage": {
+          "title": "Second stage",
+          "description": "Information about the second stage of a two-stage procedure (e.g. a restricted procedure, a competitive procedure with negotiation, a competitive dialogue or an innovation partnership).",
+          "$ref": "#/definitions/SecondStage"
+        },
+        "selectionCriteria": {
+          "title": "Selection criteria",
+          "description": "Information about the conditions for participation in a procedure.",
+          "$ref": "#/definitions/SelectionCriteria"
+        },
+        "techniques": {
+          "title": "Techniques",
+          "description": "Information about the use of techniques, such as framework agreements, dynamic purchasing systems and electronic auctions.",
+          "$ref": "#/definitions/Techniques"
+        }
+      }
+    },
+    "BidOpening": {
+      "title": "Bid opening",
+      "description": "The date, time, place and other details of the bid opening.",
+      "type": "object",
+      "properties": {
+        "date": {
+          "title": "Date and time",
+          "description": "The date and time of the bid opening.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "location": {
+          "title": "Location",
+          "description": "The place where the bid opening occurs.",
+          "$ref": "#/definitions/Location"
+        },
+        "address": {
+          "title": "Address",
+          "description": "The address of the place where the bid opening occurs.",
+          "$ref": "#/definitions/Address"
+        },
+        "description": {
+          "title": "Details",
+          "description": "Any other details about the bid opening (who can participate, whether authorization is needed, etc.).",
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        }
+      },
+      "minProperties": 1
+    },
+    "Lot": {
+      "properties": {
+        "options": {
+          "title": "Options",
+          "description": "A description of the options.",
+          "$ref": "#/definitions/Options"
+        },
+        "hasOptions": {
+          "title": "Options used",
+          "description": "Whether the buyer reserves the right to make additional purchases from the supplier, as long as the contract is valid.",
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "recurrence": {
+          "title": "Recurrence",
+          "description": "Information on the recurrence of the lot.",
+          "$ref": "#/definitions/Recurrence"
+        },
+        "hasRecurrence": {
+          "title": "Has recurrence",
+          "description": "Whether the contracting process is recurrent.",
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "secondStage": {
+          "title": "Second stage",
+          "description": "Information about the second stage of a two-stage procedure (e.g. a restricted procedure, a competitive procedure with negotiation, a competitive dialogue or an innovation partnership).",
+          "$ref": "#/definitions/SecondStage"
+        },
+        "selectionCriteria": {
+          "title": "Selection criteria",
+          "description": "Information about the conditions for participation in a lot.",
+          "$ref": "#/definitions/SelectionCriteria"
+        },
+        "techniques": {
+          "title": "Techniques",
+          "description": "Information about the use of techniques, such as framework agreements, dynamic purchasing systems and electronic auctions.",
+          "$ref": "#/definitions/Techniques"
+        }
+      }
+    },
+    "Options": {
+      "title": "Options",
+      "description": "A description of the options.",
+      "type": "object",
+      "properties": {
+        "description": {
+          "title": "Description",
+          "description": "A description of the options.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        }
+      },
+      "minProperties": 1
+    },
+    "ParticipationFee": {
+      "title": "Participation fee",
+      "description": "A fee applicable to bidders wishing to participate in the tender process. Fees can apply for accessing bidding documents or for submitting bids, or there can be a \"win fee\" payable by the successful bidder.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "Fee ID",
+          "description": "A local identifier for this fee, unique within this block. This field is used to keep track of multiple revisions of a fee through the compilation from release to record mechanism.",
+          "type": "string"
+        },
+        "type": {
+          "title": "Fee type",
+          "description": "The type of this fee.",
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string",
+            "enum": [
+              "document",
+              "deposit",
+              "submission",
+              "win"
+            ]
+          },
+          "codelist": "participationFeeType.csv",
+          "openCodelist": false
+        },
+        "value": {
+          "title": "Value",
+          "description": "The monetary value of this fee.",
+          "$ref": "#/definitions/Value"
+        },
+        "description": {
+          "title": "Description",
+          "description": "Additional information about this fee, for example: the specific cases in which the fee is applicable (e.g. hard copies of documents only), the way in which the fee is levied, or the exact nature of the fee.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "methodOfPayment": {
+          "title": "Method(s) of payment",
+          "description": "The accepted ways in which fees can be paid.",
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true,
+          "codelist": "methodOfPayment.csv",
+          "openCodelist": true
+        }
+      }
+    },
+    "Recurrence": {
+      "title": "Recurrence",
+      "description": "Information on the recurrence of the contracting process.",
+      "type": "object",
+      "properties": {
+        "dates": {
+          "title": "Estimated dates",
+          "description": "An estimate of the timing of subsequent initiations of contracting processes (e.g. notices of intended procurement).",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Period"
+          },
+          "wholeListMerge": true,
+          "uniqueItems": true,
+          "minItems": 1
+        },
+        "description": {
+          "title": "Further information",
+          "description": "Any further information on the recurrence of the contracting process.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        }
+      },
+      "minProperties": 1
+    },
+    "SecondStage": {
+      "title": "Second stage",
+      "description": "Information about the second stage of a two-stage procedure (e.g. a restricted procedure, a competitive procedure with negotiation, a competitive dialogue or an innovation partnership).",
+      "type": "object",
+      "properties": {
+        "minimumCandidates": {
+          "title": "Minimum number of candidates",
+          "description": "The minimum number of candidates to be invited for the second stage of the procedure. If there is an exact limit on the number of candidates, set `minimumCandidates` and `maximumCandidates` to the same number.",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "maximumCandidates": {
+          "title": "Maximum number of candidates",
+          "description": "The maximum number of candidates to be invited for the second stage of the procedure. If there is an exact limit on the number of candidates, set `minimumCandidates` and `maximumCandidates` to the same number.",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "successiveReduction": {
+          "title": "Successive reduction",
+          "description": "The procedure will take place in successive stages. In each stage, some participants might be eliminated.",
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "noNegotiationNecessary": {
+          "title": "No negotiation necessary",
+          "description": "The buyer or procuring entity reserves the right to award the contract on the basis of the initial bids without any further negotiations.",
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "invitationDate": {
+          "title": "Invitation date",
+          "description": "The estimated date of dispatch of the invitations to participate or to submit bids.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      },
+      "minProperties": 1
+    },
+    "SelectionCriteria": {
+      "title": "Selection criteria",
+      "description": "Information about conditions for participation.",
+      "type": "object",
+      "properties": {
+        "criteria": {
+          "title": "Selection criteria",
+          "description": "The selection criteria.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SelectionCriterion"
+          },
+          "wholeListMerge": true,
+          "uniqueItems": true,
+          "minItems": 1
+        },
+        "description": {
+          "title": "Description",
+          "description": "The description of the criteria used to select the economic operators who will be allowed to bid.",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "minProperties": 1
+    },
+    "SelectionCriterion": {
+      "title": "Selection criterion",
+      "description": "Information about the selection criterion.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "title": "Type",
+          "description": "The type of the criterion.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "technical",
+            "economic",
+            "suitability",
+            "other",
+            null
+          ],
+          "codelist": "selectionCriterionType.csv",
+          "openCodelist": false
+        },
+        "description": {
+          "title": "Description",
+          "description": "The description of the criterion.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "minimum": {
+          "title": "Minimum value or level",
+          "description": "The minimum value or level of compliance a candidate needs to meet in order to participate.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "appliesTo": {
+          "title": "Applies to",
+          "description": "Whether the criterion applies to suppliers, subcontractors, or both.",
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string",
+            "enum": [
+              "supplier",
+              "subcontractor"
+            ]
+          },
+          "codelist": "appliesTo.csv",
+          "openCodelist": false,
+          "uniqueItems": true
+        }
+      },
+      "minProperties": 1
+    },
+    "Techniques": {
+      "title": "Techniques",
+      "description": "Information about the use of techniques, such as framework agreements, dynamic purchasing systems and electronic auctions.",
+      "type": "object",
+      "properties": {
+        "hasFrameworkAgreement": {
+          "title": "Framework agreement involved",
+          "description": "Whether a framework agreement is involved.",
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "frameworkAgreement": {
+          "title": "Framework agreement",
+          "description": "Information about the framework agreement.",
+          "$ref": "#/definitions/FrameworkAgreement"
+        },
+        "hasDynamicPurchasingSystem": {
+          "title": "Dynamic purchasing system involved",
+          "description": "Whether a dynamic purchasing system is involved.",
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "dynamicPurchasingSystem": {
+          "title": "Dynamic purchasing system",
+          "description": "Information about the dynamic purchasing system.",
+          "$ref": "#/definitions/DynamicPurchasingSystem"
+        },
+        "hasElectronicAuction": {
+          "title": "Electronic auction used",
+          "description": "Whether an electronic auction is used.",
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "electronicAuction": {
+          "title": "Electronic auction",
+          "description": "Information about the electronic auction.",
+          "$ref": "#/definitions/ElectronicAuction"
+        }
+      },
+      "minProperties": 1
+    },
+    "FrameworkAgreement": {
+      "title": "Framework agreement",
+      "description": "Information about the framework agreement.",
+      "type": "object",
+      "properties": {
+        "maximumParticipants": {
+          "title": "Maximum number of participants",
+          "description": "The maximum number of participants in the framework agreement. If there is no maximum, set to 1e9999 (which parses to infinity).",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "method": {
+          "title": "Method",
+          "description": "Whether contracts are awarded with, without, or both with and without the reopening of competition.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "openCodelist": false,
+          "codelist": "frameworkAgreementMethod.csv",
+          "enum": [
+            "withReopeningCompetition",
+            "withoutReopeningCompetition",
+            "withAndWithoutReopeningCompetition",
+            null
+          ]
+        },
+        "periodRationale": {
+          "title": "Duration rationale",
+          "description": "The justification for exceptional cases when the duration of a framework agreement exceeds the legal limits.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "buyerCategories": {
+          "title": "Buyer categories",
+          "description": "Any additional categories of buyers participating in the framework agreement and not mentioned by name (e.g. 'all hospitals in the Tuscany region').",
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        }
+      },
+      "minProperties": 1
+    },
+    "DynamicPurchasingSystem": {
+      "title": "Dynamic purchasing system",
+      "description": "Information about the dynamic purchasing system.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "title": "Type",
+          "description": "In the case of central purchasing bodies, whether the dynamic purchasing system can be used by buyers not listed in the contracting process.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "openCodelist": false,
+          "codelist": "dynamicPurchasingSystemType.csv",
+          "enum": [
+            "open",
+            "closed",
+            null
+          ]
+        },
+        "status": {
+          "title": "Status",
+          "description": "The status of the dynamic purchasing system.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "openCodelist": false,
+          "codelist": "dynamicPurchasingSystemStatus.csv",
+          "enum": [
+            "pending",
+            "active",
+            "cancelled",
+            "terminated",
+            null
+          ]
+        }
+      },
+      "minProperties": 1
+    },
+    "ElectronicAuction": {
+      "title": "Electronic auction",
+      "description": "Information about the electronic auction.",
+      "type": "object",
+      "properties": {
+        "url": {
+          "title": "URL",
+          "description": "The internet address of the electronic auction.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "description": {
+          "title": "Description",
+          "description": "Any additional information about the electronic auction.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        }
+      },
+      "minProperties": 1
+    }
+  }
+}

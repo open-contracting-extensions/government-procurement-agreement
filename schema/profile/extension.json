@@ -14,5 +14,15 @@
   "contactPoint": {
     "name": "Open Contracting Partnership",
     "email": "data@open-contracting.org"
-  }
+  },
+  "codelists": [
+    "coveredBy.csv",
+    "participationFeeType.csv",
+    "methodOfPayment.csv",
+    "selectionCriterionType.csv",
+    "appliesTo.csv",
+    "dynamicPurchasingSystemType.csv",
+    "dynamicPurchasingSystemStatus.csv",
+    "frameworkAgreementMethod.csv"
+  ]
 }
