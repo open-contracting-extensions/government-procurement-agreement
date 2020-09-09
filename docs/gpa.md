@@ -572,9 +572,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td>Each Party shall collect and report to the Committee statistics on its contracts covered by this Agreement. Each report shall cover one year and be submitted within two years of the end of the reporting period, and shall contain:</td>
         <td markdown=1>
 
-* In order to produce statistics about contracts using OCDS data, convert your OCDS releases to [records](https://standard.open-contracting.org/latest/en/getting_started/releases_and_records/#records) using [Toucan](https://toucan.open-contracting.org/) Web app or the [ocdskit](https://ocdskit.readthedocs.io/en/latest/) suite of command-line tools.
-* All the filters below are applied on the `Record` objects in the `records` array of a record package that have 'GPA' as `compiledRelease/tender/coveredBy`.
-* To select the contracts signed within a specific year, filter the contracts using the contract date: `Record/compiledRelease/contracts/dateSigned`
+* If you're interested in guidance to produce these statistics from OCDS data, please contact us at data@open-contracting.org. We will update this document as we learn from actual use cases.
 </td>
       </tr>
       <tr id="XVI:4(a)">
@@ -582,9 +580,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td>for Annex 1 procuring entities:</td>
         <td markdown=1>
 
-* Select records where `compiledRelease/buyer/id` refers to a `Party` object in the record's `compiledRelease/parties` array where a `Classification` object in the party's `details/classifications` has:
-  * 'gpaCoverageSchedule' as its `scheme`
-  * 'annex1' as its `id`
+* 
 </td>
       </tr>
       <tr id="XVI:4(a)">
@@ -592,7 +588,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td>the number and total value, for all such entities, of all contracts covered by this Agreement;</td>
         <td markdown=1>
 
-* With the records selected in [XVI:4(a)](<#XVI:4(a)>), sum all the values of `compiledRelease/contracts/contract/amount/value` that have the same currency.
+* 
 </td>
       </tr>
       <tr id="XVI:4(a)">
@@ -600,9 +596,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td>the number and total value of all contracts covered by this Agreement awarded by each such entity, broken down by categories of goods and services according to an internationally recognized uniform classification system;  and</td>
         <td markdown=1>
 
-* *all contracts covered by this Agreement*: filter the records that have 'GPA' as `compiledRelease/tender/coveredBy`
-* *awarded by each such entity*: ...then sort the resulting records by the `identifier/id` field of the party referenced by `compiledRelease/buyer/id`
-* *broken down by categories of goods and services*: ...then sort the resulting records by 
+* 
 </td>
       </tr>
       <tr id="XVI:4(a)">
