@@ -182,7 +182,7 @@ This requires the [Additional Contact Points](https://github.com/open-contractin
         <td markdown=1>
 
 1. Add *a list and brief description of any conditions for participation of suppliers* to `tender/eligibilityCriteria`
-2. If *requirements are included in tender documentation that is made available to all interested suppliers*:
+1. If *requirements are included in tender documentation that is made available to all interested suppliers*:
   1. For each document, add a `Document` object to the `tender/documents` array
   1. Set its `documentType` to 'eligibilityCriteria'
   1. Fill any other known information for the document ([`Document` object schema](https://standard.open-contracting.org/1.1/en/schema/reference/#document))
