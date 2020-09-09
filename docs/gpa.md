@@ -8,25 +8,6 @@ This document annotates selected parts of the GPA, with details on how to publis
    References from Articles XIII:2, XIV:1, XVI:2 are not yet added.
 ```
 
-## Common operations
-
-To avoid repetition in the guidance, we refer and link to the following common operations.
-
-### Create a release
-
-1. Set `id` to the [release ID](https://standard.open-contracting.org/latest/en/schema/identifiers/#release-id).
-1. Set `initiationType` to 'tender'.
-1. Set [`ocid`](https://standard.open-contracting.org/latest/en/schema/identifiers/#contracting-process-identifier-ocid) as described below.
-
-The notice's `ocid` will either be a new `ocid`, or the same `ocid` as the previous publication concerning this procedure. The notice's `ocid` will be a new `ocid` if one of the following is true:
-
-* The notice is the first publication concerning the procedure.
-* The notice is a contract award notice for an award within a framework agreement or dynamic purchasing system.
-
-If none is true, then set the notice's `ocid` to be the same as the previous publication's `ocid`. Otherwise, set the notice's [`ocid`](https://standard.open-contracting.org/latest/en/schema/identifiers/#contracting-process-identifier-ocid) by prepending your [OCID prefix](https://standard.open-contracting.org/latest/en/implementation/registration/) to a unique identifier of your choice (e.g. a [version 4 UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) or a suitable system-internal identifier).
-
-If the notice is a contract award notice for an award within a framework agreement or dynamic purchasing system, you must also add a `RelatedProcess` object to the `relatedProcesses` array, set its `.id` to '1', add 'framework' to its `.relationship` array, set its `.scheme` to 'ocid', and set its `.identifier` to the `ocid` of the procedure that set up the framework agreement or dynamic purchasing system.
-
 <div class="wy-table-responsive">
   <table class="docutils">
     <caption><a href="https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm#articleVII">Article VII</a> Notices</caption>
@@ -47,7 +28,7 @@ If the notice is a contract award notice for an award within a framework agreeme
         <td>VII:2</td>
         <td>Except as otherwise provided in this Agreement, each notice of intended procurement shall include:</td>
         <td markdown=1>
-1. [Create an OCDS release](#create-a-release)
+1. [Create an OCDS release](../operations/#create-a-release)
         </td>
       </tr>
       <tr id="VII:2(a)">
@@ -189,7 +170,7 @@ This requires the [Additional Contact Points](https://github.com/open-contractin
 
 1. Enter *the number of suppliers that will be permitted to tender* in `tender.secondStage.maximumCandidates`
 
-This requires the [Second Stage](https://github.com/open-contracting-extensions/ocds_secondStage_extension) extension.
+This requires the [Second Stage Description](https://github.com/open-contracting-extensions/ocds_secondStageDescription_extension) extension.
 
 1. Add *the criteria that will be used to select [the suppliers]* to `tender.selectionCriteria.description` or, if possible, split this into `SelectionCriterion` objects in the `tender/selectionCriteria/criteria` array.
 
@@ -233,7 +214,7 @@ The information included in the notice of intended procurement covers all the in
         <td>VII:4</td>
         <td>Procuring entities are encouraged to publish in the appropriate paper or electronic medium listed in Appendix III as early as possible in each fiscal year a notice regarding their future procurement plans (hereinafter referred to as "notice of planned procurement"). The notice of planned procurement should include the subject-matter of the procurement and the planned date of the publication of the notice of intended procurement.</td>
         <td markdown=1>
-1. [Create an OCDS release](#create-a-release)
+1. [Create an OCDS release](../operations/#create-a-release)
 1. Add 'planning' to the `tag` array
 1. Set `tender/status` to 'planning'
 1. Enter *the subject-matter of the procurement* in `tender/description`. The value of `tender/description` can be updated when the data described in article VII:2(b) is published.
@@ -279,7 +260,7 @@ This requires the [Communication](https://github.com/open-contracting-extensions
         <td>A procuring entity shall make available to suppliers tender documentation that includes all information necessary to permit suppliers to prepare and submit responsive tenders. Unless already provided in the notice of intended procurement, such documentation shall include a complete description of:</td>
         <td markdown=1>
 
-1. [Create an OCDS release](#create-a-release)
+1. [Create an OCDS release](../operations/#create-a-release)
         </td>
      </tr>
       <tr id="X:7(a)">
@@ -386,7 +367,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
 </td>
         <td markdown=1>
 
-1. [Create a new OCDS release](#create-a-release) and follow the corresponding guidance, depending on the information that has been modified:
+1. [Create a new OCDS release](../operations/#create-a-release) and follow the corresponding guidance, depending on the information that has been modified:
   1. If the *the criteria or requirements* are modified, follow the guidance for [X:9](<#X:9>)
   1. If *a notice* (of intended procurement) is amended or reissued, follow the guidance of article VII:2
   1. If the *tender documentation* is amended or reissued, follow the guidance for [X:7](<#X:7>)
@@ -416,7 +397,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td>A procuring entity shall prepare a report in writing on each contract awarded under paragraph 1. The report shall include the name of the procuring entity, the value and kind of goods or services procured and a statement indicating the circumstances and conditions described in paragraph 1 that justified the use of limited tendering.</td>
         <td markdown=1>
 
-1. [Create an OCDS release](#create-a-release)
+1. [Create an OCDS release](../operations/#create-a-release)
 1. If the following data has not been published following the guidance for VII:2
   1. For *the name of the procuring entity*, follow the guidance for [VII:2(a)](<#VII:2(a)>)
   1. For the *kind of goods or services procured*, follow the guidance for [VII:2(b)](<#VII:2(b)>)
@@ -508,7 +489,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td>XVI:2(a)</td>
         <td>a description of the goods or services procured;</td>
         <td markdown=1>
-1. [Create an OCDS release](#create-a-release)
+1. [Create an OCDS release](../operations/#create-a-release)
 1. Add an `Award` object to the `awards` array
   1. Enter an identifier in its `id`, which can be arbitrary as it is primarily to allow referencing from other parts of the file
   1. Enter the *description of the goods or services procured* in its `description` or, if possible, split it into `Item` objects in its `items` array.
