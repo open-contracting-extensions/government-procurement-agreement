@@ -15,6 +15,9 @@
     "name": "Open Contracting Partnership",
     "email": "data@open-contracting.org"
   },
+  "schema": [
+    "release-schema.json"
+  ],
   "codelists": [
     "coveredBy.csv",
     "participationFeeType.csv",
