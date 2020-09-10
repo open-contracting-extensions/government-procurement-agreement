@@ -236,7 +236,7 @@ This requires the [Communication](https://github.com/open-contracting-extensions
   </table>
 </div>
 
-## [Article X](https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm#articleX) Notices
+## [Article X](https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm#articleX) Technical Specifications and Tender Documentation
 
 <div class="wy-table-responsive">
   <table class="docutils">
@@ -376,7 +376,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
   </table>
 </div>
 
-## [Article XIII](https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm#articleXIII) Notices
+## [Article XIII](https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm#articleXIII) Limited Tendering
 
 <div class="wy-table-responsive">
   <table class="docutils">
@@ -418,7 +418,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
   </table>
 </div>
 
-## [Article XIV](https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm#articleXIV) Notices
+## [Article XIV](https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm#articleXIV) Electronic Auctions
 
 <div class="wy-table-responsive">
   <table class="docutils">
@@ -471,7 +471,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
   </table>
 </div>
 
-## [Article XVI](https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm#articleXVI) Notices
+## [Article XVI](https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm#articleXVI) Transparency of Procurement Information
 
 <div class="wy-table-responsive">
   <table class="docutils">

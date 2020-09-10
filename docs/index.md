@@ -6,7 +6,7 @@ To promote open, fair and transparent competition in government procurement mark
 
 ## GPA-to-OCDS mapping
 
-This website provides guidance on how to publish [Open Contracting Data Standard](http://standard.open-contracting.org/) data in a way that is consistent with the rules established in the [text of the Agreement](https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm). It quotes selected parts of the GPA, adding annotations on how to publish the information using OCDS.
+This website provides guidance on how to publish [Open Contracting Data Standard](http://standard.open-contracting.org/) data in a way that is consistent with the rules established in the [text of the Agreement](https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm). It quotes parts of the GPA, adding annotations on how to publish the information using OCDS.
 
 ```eval_rst
 .. toctree::
