@@ -20,7 +20,7 @@ This document annotates selected parts of the GPA, with details on how to publis
       </tr>
     </thead>
     <tbody>
-      <tr id="VII:2" class="section">
+      <tr id="VII:2">
         <td>VII:2</td>
         <td>Except as otherwise provided in this Agreement, each notice of intended procurement shall include:</td>
         <td markdown=1>
@@ -221,7 +221,7 @@ This requires the [Covered By](https://github.com/open-contracting-extensions/oc
       </tr>
     </thead>
     <tbody>
-      <tr class="section" id="VII:3">
+      <tr id="VII:3">
         <td>VII:3</td>
         <td colspan="2">For each case of intended procurement, a procuring entity shall publish a summary notice that is readily accessible, at the same time as the publication of the notice of intended procurement, in one of the WTO languages.  The summary notice shall contain at least the following information:</td>
       </tr>
@@ -258,7 +258,7 @@ The information included in the notice of intended procurement covers all the in
       </tr>
     </thead>
     <tbody>
-      <tr>
+      <tr id="VII:4">
         <td>VII:4</td>
         <td>Procuring entities are encouraged to publish in the appropriate paper or electronic medium listed in Appendix III as early as possible in each fiscal year a notice regarding their future procurement plans (hereinafter referred to as "notice of planned procurement"). The notice of planned procurement should include the subject-matter of the procurement and the planned date of the publication of the notice of intended procurement.</td>
         <td markdown=1>
@@ -278,7 +278,7 @@ This requires the [Communication](https://github.com/open-contracting-extensions
 
 </td>
       </tr>
-      <tr>
+      <tr id="VII:5">
         <td>VII:5</td>
         <td>A procuring entity covered under Annex 2 or 3 may use a notice of planned procurement as a notice of intended procurement provided that the notice of planned procurement includes as much of the information referred to in paragraph 2 as is available to the entity and a statement that interested suppliers should express their interest in the procurement to the procuring entity.</td>
         <td markdown=1>
@@ -291,8 +291,71 @@ This requires the [Communication](https://github.com/open-contracting-extensions
   </table>
 </div>
 
-## [Article X](https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm#articleX) Technical Specifications and Tender Documentation
+## [Article IX](https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm#articleIX) Qualification of suppliers
 
+<div class="wy-table-responsive">
+  <table class="docutils">
+    <caption>Multi-Use Lists</caption>
+    <colgroup>
+      <col width="10%">
+      <col width="40%">
+      <col width="50%">
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Reference</th>
+        <th>GPA text</th>
+        <th>OCDS guidance</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr id="IX:8">
+        <td>IX:8</td>
+        <td>The notice provided for in paragraph 7 shall include:</td>
+        <td rowspan="9" markdown=1>
+
+If you are interested in using OCDS to publish this, please contact <data@open-contracting.org> or comment on this [GitHub issue](https://github.com/open-contracting-extensions/government-procurement-agreement/issues/22).
+
+</td>
+      </tr>
+      <tr id="IX:8(a)">
+        <td>IX:8(a)</td>
+        <td>a description of the goods or services, or categories thereof, for which the list may be used;</td>
+      </tr>
+      <tr id="IX:8(b)">
+        <td>IX:8(b)</td>
+        <td>the conditions for participation to be satisfied by suppliers for inclusion on the list and the methods that the procuring entity will use to verify that a supplier satisfies the conditions;</td>
+      </tr>
+      <tr id="IX:8(c)">
+        <td>IX:8(c)</td>
+        <td>the name and address of the procuring entity and other information necessary to contact the entity and obtain all relevant documents relating to the list;</td>
+      </tr>
+      <tr id="IX:8(d)">
+        <td>IX:8(d)</td>
+        <td>the period of validity of the list and the means for its renewal or termination, or where the period of validity is not provided, an indication of the method by which notice will be given of the termination of use of the list;  and</td>
+      </tr>
+      <tr id="IX:8(e)">
+        <td>IX:8(e)</td>
+        <td>an indication that the list may be used for procurement covered by this Agreement.</td>
+      </tr>
+      <tr id="IX:9">
+        <td>IX:9</td>
+        <td>Notwithstanding paragraph 7, where a multi-use list will be valid for three years or less, a procuring entity may publish the notice referred to in paragraph 7 only once, at the beginning of the period of validity of the list, provided that the notice:</td>
+      </tr>
+      <tr id="IX:9(a)">
+        <td>IX:9(a)</td>
+        <td>states the period of validity and that further notices will not be published;  and</td>
+      </tr>
+      <tr id="IX:9(b)">
+        <td>IX:9(b)</td>
+        <td>is published by electronic means and is made available continuously during the period of its validity.</td>
+      </tr>
+   </tbody>
+  </table>
+</div>
+
+## [Article X](https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm#articleX) Technical Specifications and Tender Documentation
+  
 <div class="wy-table-responsive">
   <table class="docutils">
     <caption>Tender Documentation</caption>
@@ -309,7 +372,7 @@ This requires the [Communication](https://github.com/open-contracting-extensions
       </tr>
     </thead>
     <tbody>
-      <tr class="section" id="X:7">
+      <tr id="X:7">
         <td>X:7</td>
         <td>A procuring entity shall make available to suppliers tender documentation that includes all information necessary to permit suppliers to prepare and submit responsive tenders. Unless already provided in the notice of intended procurement, such documentation shall include a complete description of:</td>
         <td markdown=1>
@@ -407,7 +470,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
 
 </td>
       </tr>
-      <tr>
+      <tr id="X:9">
         <td>X:9</td>
         <td>The evaluation criteria set out in the notice of intended procurement or tender documentation may include, among others, price and other cost factors, quality, technical merit, environmental characteristics and terms of delivery</td>
         <td markdown=1>
@@ -440,7 +503,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
       </tr>
     </thead>
     <tbody>
-      <tr>
+      <tr id="X:11">
         <td>X:11</td>
         <td>Where, prior to the award of a contract, a procuring entity modifies the criteria or requirements set out in the notice of intended procurement or tender documentation provided to participating suppliers, or amends or reissues a notice or tender documentation, it shall transmit in writing all such modifications or amended or re-issued notice or tender documentation: (a) to all suppliers that are participating at the time of the modification, amendment or re-issuance, where such suppliers are known to the entity, and in all other cases, in the same manner as the original information was made available; and (b) in adequate time to allow such suppliers to modify and re-submit amended tenders, as appropriate.</td>
         <td markdown=1>
@@ -473,7 +536,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
       </tr>
     </thead>
     <tbody>
-      <tr>
+      <tr id="XIII:2">
         <td>XIII:2</td>
         <td>A procuring entity shall prepare a report in writing on each contract awarded under paragraph 1. The report shall include the name of the procuring entity, the value and kind of goods or services procured and a statement indicating the circumstances and conditions described in paragraph 1 that justified the use of limited tendering.</td>
         <td markdown=1>
@@ -516,7 +579,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
       </tr>
     </thead>
     <tbody>
-      <tr class="section" id="XIV:1">
+      <tr id="XIV:1">
         <td>XIV:1</td>
         <td colspan="2">Where a procuring entity intends to conduct a covered procurement using an electronic auction, the entity shall provide each participant, before commencing the electronic auction, with:</td>
       </tr>
@@ -572,7 +635,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
       </tr>
     </thead>
     <tbody>
-      <tr class="section" id="XVI:2">
+      <tr id="XVI:2">
         <td>XVI:2</td>
         <td colspan="2">Not later than 72 days after the award of each contract covered by this Agreement, a procuring entity shall publish a notice in the appropriate paper or electronic medium listed in Appendix III. Where the entity publishes the notice only in an electronic medium, the information shall remain readily accessible for a reasonable period of time. The notice shall include at least the following information:</td>
       </tr>
@@ -673,7 +736,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td>Each Party shall collect and report to the Committee statistics on its contracts covered by this Agreement. Each report shall cover one year and be submitted within two years of the end of the reporting period, and shall contain:</td>
         <td rowspan="7" markdown=1>
 
-If you are interested in calculating statistics using OCDS data, please contact <data@open-contracting.org>.
+If you are interested in calculating statistics using OCDS data, please contact <data@open-contracting.org> or comment on this [GitHub issue](https://github.com/open-contracting-extensions/government-procurement-agreement/issues/45).
 
 In the meantime, you might be interested in this [Python notebook](http://bit.ly/OCPaustraliaexample), which demonstrates how to calculate statistics using Australia's data.
 
