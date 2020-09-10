@@ -4,9 +4,10 @@ This document annotates selected parts of the GPA, with details on how to publis
 
 ## [Article VII](https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm#articleVII) Notices
 
+### Notice of Intended Procurement
+
 <div class="wy-table-responsive">
   <table class="docutils">
-    <caption>Notice of Intended Procurement</caption>
     <colgroup>
       <col width="10%">
       <col width="40%">
@@ -205,9 +206,10 @@ This requires the [Covered By](https://github.com/open-contracting-extensions/oc
   </table>
 </div>
 
+### Summary Notice
+
 <div class="wy-table-responsive">
   <table class="docutils">
-    <caption>Summary Notice</caption>
     <colgroup>
       <col width="10%">
       <col width="40%">
@@ -242,9 +244,10 @@ The information included in the notice of intended procurement covers all the in
   </table>
 </div>
 
+### Notice of Planned Procurement
+
 <div class="wy-table-responsive">
   <table class="docutils">
-    <caption>Notice of Planned Procurement</caption>
     <colgroup>
       <col width="10%">
       <col width="40%">
@@ -293,9 +296,10 @@ This requires the [Communication](https://github.com/open-contracting-extensions
 
 ## [Article IX](https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm#articleIX) Qualification of suppliers
 
+### Multi-Use Lists
+
 <div class="wy-table-responsive">
   <table class="docutils">
-    <caption>Multi-Use Lists</caption>
     <colgroup>
       <col width="10%">
       <col width="40%">
@@ -356,9 +360,10 @@ If you are interested in using OCDS to publish this, please contact <data@open-c
 
 ## [Article X](https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm#articleX) Technical Specifications and Tender Documentation
 
+### Tender Documentation
+
 <div class="wy-table-responsive">
   <table class="docutils">
-    <caption>Tender Documentation</caption>
     <colgroup>
       <col width="10%">
       <col width="40%">
@@ -489,9 +494,10 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
   </table>
 </div>
 
+### Modifications
+
 <div class="wy-table-responsive">
   <table class="docutils">
-    <caption>Modifications</caption>
     <colgroup>
       <col width="10%">
       <col width="40%">
@@ -621,9 +627,10 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
 
 ## [Article XVI](https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm#articleXVI) Transparency of Procurement Information
 
+### Publication of Award Information
+
 <div class="wy-table-responsive">
   <table class="docutils">
-    <caption>Publication of Award Information</caption>
     <colgroup>
       <col width="10%">
       <col width="40%">
@@ -717,9 +724,10 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
   </table>
 </div>
 
+### Collection and Reporting of Statistics
+
 <div class="wy-table-responsive">
   <table class="docutils">
-    <caption>Collection and Reporting of Statistics</caption>
     <colgroup>
       <col width="10%">
       <col width="40%">
