@@ -24,6 +24,7 @@ This profile makes use of the extensions below. Instead of declaring each extens
 * [Bid Opening](https://github.com/open-contracting-extensions/ocds_bidOpening_extension)
 * [Communication](https://github.com/open-contracting-extensions/ocds_communication_extension)
 * [Covered By](https://github.com/open-contracting-extensions/ocds_coveredBy_extension)
+* [Location](https://github.com/open-contracting-extensions/ocds_location_extension)
 * [Options](https://github.com/open-contracting-extensions/ocds_options_extension)
 * [Participation Fees](https://github.com/open-contracting-extensions/ocds_participationFee_extension)
 * [Recurrence](https://github.com/open-contracting-extensions/ocds_recurrence_extension)
