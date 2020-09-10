@@ -6,6 +6,7 @@ This document annotates selected parts of the GPA, with details on how to publis
 
 <div class="wy-table-responsive">
   <table class="docutils">
+    <caption>Notice of Intended Procurement</caption>
     <colgroup>
       <col width="10%">
       <col width="40%">
@@ -200,6 +201,26 @@ This requires the [Covered By](https://github.com/open-contracting-extensions/oc
 
 </td>
       </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="wy-table-responsive">
+  <table class="docutils">
+    <caption>Summary Notice</caption>
+    <colgroup>
+      <col width="10%">
+      <col width="40%">
+      <col width="50%">
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Reference</th>
+        <th>GPA text</th>
+        <th>OCDS guidance</th>
+      </tr>
+    </thead>
+    <tbody>
       <tr class="section" id="VII:3">
         <td>VII:3</td>
         <td colspan="2">For each case of intended procurement, a procuring entity shall publish a summary notice that is readily accessible, at the same time as the publication of the notice of intended procurement, in one of the WTO languages.  The summary notice shall contain at least the following information:</td>
@@ -217,6 +238,26 @@ The information included in the notice of intended procurement covers all the in
 
 </td>
       </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="wy-table-responsive">
+  <table class="docutils">
+    <caption>Notice of Planned Procurement</caption>
+    <colgroup>
+      <col width="10%">
+      <col width="40%">
+      <col width="50%">
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Reference</th>
+        <th>GPA text</th>
+        <th>OCDS guidance</th>
+      </tr>
+    </thead>
+    <tbody>
       <tr>
         <td>VII:4</td>
         <td>Procuring entities are encouraged to publish in the appropriate paper or electronic medium listed in Appendix III as early as possible in each fiscal year a notice regarding their future procurement plans (hereinafter referred to as "notice of planned procurement"). The notice of planned procurement should include the subject-matter of the procurement and the planned date of the publication of the notice of intended procurement.</td>
@@ -254,6 +295,7 @@ This requires the [Communication](https://github.com/open-contracting-extensions
 
 <div class="wy-table-responsive">
   <table class="docutils">
+    <caption>Tender Documentation</caption>
     <colgroup>
       <col width="10%">
       <col width="40%">
@@ -378,6 +420,26 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
 
 </td>
       </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="wy-table-responsive">
+  <table class="docutils">
+    <caption>Modifications</caption>
+    <colgroup>
+      <col width="10%">
+      <col width="40%">
+      <col width="50%">
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Reference</th>
+        <th>GPA text</th>
+        <th>OCDS guidance</th>
+      </tr>
+    </thead>
+    <tbody>
       <tr>
         <td>X:11</td>
         <td>Where, prior to the award of a contract, a procuring entity modifies the criteria or requirements set out in the notice of intended procurement or tender documentation provided to participating suppliers, or amends or reissues a notice or tender documentation, it shall transmit in writing all such modifications or amended or re-issued notice or tender documentation: (a) to all suppliers that are participating at the time of the modification, amendment or re-issuance, where such suppliers are known to the entity, and in all other cases, in the same manner as the original information was made available; and (b) in adequate time to allow such suppliers to modify and re-submit amended tenders, as appropriate.</td>
@@ -496,6 +558,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
 
 <div class="wy-table-responsive">
   <table class="docutils">
+    <caption>Publication of Award Information</caption>
     <colgroup>
       <col width="10%">
       <col width="40%">
@@ -585,14 +648,34 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
 
 </td>
       </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="wy-table-responsive">
+  <table class="docutils">
+    <caption>Collection and Reporting of Statistics</caption>
+    <colgroup>
+      <col width="10%">
+      <col width="40%">
+      <col width="50%">
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Reference</th>
+        <th>GPA text</th>
+        <th>OCDS guidance</th>
+      </tr>
+    </thead>
+    <tbody>
       <tr>
         <td>XVI:4</td>
         <td>Each Party shall collect and report to the Committee statistics on its contracts covered by this Agreement. Each report shall cover one year and be submitted within two years of the end of the reporting period, and shall contain:</td>
         <td rowspan="7" markdown=1>
 
-If you are interested in calculating these statistics using OCDS data, please contact <data@open-contracting.org>. We will update this document as we learn from users.
+If you are interested in calculating statistics using OCDS data, please contact <data@open-contracting.org>.
 
-In the meantime, you might be interested in this [Python notebook](http://bit.ly/OCPaustraliaexample), which demonstrates how to calculate the GPA statistics from a specific dataset.
+In the meantime, you might be interested in this [Python notebook](http://bit.ly/OCPaustraliaexample), which demonstrates how to calculate statistics using Australia's data.
 
 </td>
       </tr>
