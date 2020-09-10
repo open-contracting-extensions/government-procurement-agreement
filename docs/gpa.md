@@ -27,7 +27,7 @@ This document annotates selected parts of the GPA, with details on how to publis
 
 1. [Create an OCDS release](../operations/#create-a-release)
 
-        </td>
+</td>
       </tr>
       <tr id="VII:2(a)">
         <td>VII:2(a)</td>
@@ -355,7 +355,7 @@ If you are interested in using OCDS to publish this, please contact <data@open-c
 </div>
 
 ## [Article X](https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm#articleX) Technical Specifications and Tender Documentation
-  
+
 <div class="wy-table-responsive">
   <table class="docutils">
     <caption>Tender Documentation</caption>
@@ -378,7 +378,8 @@ If you are interested in using OCDS to publish this, please contact <data@open-c
         <td markdown=1>
 
 1. [Create an OCDS release](../operations/#create-a-release)
-        </td>
+
+</td>
      </tr>
       <tr id="X:7(a)">
         <td>X:7(a)</td>
@@ -387,7 +388,8 @@ If you are interested in using OCDS to publish this, please contact <data@open-c
 
 1. For *the procurement, including the nature and the quantity of the goods or services to be procured or, where the quantity is not known, the estimated quantity*, follow the guidance for [VII:2(b)](<#VII:2(b)>)
 1. For *any requirements to be fulfilled, including any technical specifications, conformity assessment certification, plans, drawings or instructional materials*, append to `tender/description`.
-        </td>
+
+</td>
       </tr>
       <tr id="X:7(b)">
         <td>X:7(b)</td>
