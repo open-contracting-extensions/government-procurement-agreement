@@ -23,7 +23,9 @@ This document annotates selected parts of the GPA, with details on how to publis
         <td>VII:2</td>
         <td>Except as otherwise provided in this Agreement, each notice of intended procurement shall include:</td>
         <td markdown=1>
+
 1. [Create an OCDS release](../operations/#create-a-release)
+
         </td>
       </tr>
       <tr id="VII:2(a)">
@@ -51,6 +53,7 @@ This document annotates selected parts of the GPA, with details on how to publis
 This requires the [Organization Classification](https://extensions.open-contracting.org/en/extensions/organizationClassification/master/) extension.
 
 This requires the [Participation Fees](https://github.com/open-contracting-extensions/ocds_participationFee_extension) extension.
+
 </td>
       </tr>
       <tr id="VII:2(b)">
@@ -64,6 +67,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
     1. Enter *the quantity* in an item's `quantity`
 
 The method of representing an estimated quantity is [under discussion](https://github.com/open-contracting/standard/issues/689).
+
 </td>
       </tr>
       <tr id="VII:2(c)">
@@ -76,6 +80,7 @@ The method of representing an estimated quantity is [under discussion](https://g
 1. Enter any further information in `tender/recurrence/description`
 
 This requires the [Recurrence](https://github.com/open-contracting-extensions/ocds_recurrence_extension) extension.
+
 </td>
       </tr>
       <tr id="VII:2(d)">
@@ -87,6 +92,7 @@ This requires the [Recurrence](https://github.com/open-contracting-extensions/oc
 1. Enter this in `tender/options/description`
 
 This requires the [Options](https://github.com/open-contracting-extensions/ocds_options_extension) extension.
+
 </td>
       </tr>
       <tr id="VII:2(e)">
@@ -100,6 +106,7 @@ This requires the [Options](https://github.com/open-contracting-extensions/ocds_
     1. If *the time-frame for delivery of goods or services* is a specific date, enter it in the object's `dueDate` or, if it is a time period, enter it in the object's `period`
 
 The addition of `period` to the `Milestone` building block is [under discussion](https://github.com/open-contracting/standard/issues/523#issuecomment-382608504).
+
 </td>
       </tr>
       <tr id="VII:2(f)">
@@ -112,6 +119,7 @@ The addition of `period` to the `Milestone` building block is [under discussion]
 1. If *it will involve electronic auction*, set `tender/techniques/hasElectronicAuction` to `true`
 
 This requires the [Techniques](https://github.com/open-contracting-extensions/ocds_techniques_extension) extension.
+
 </td>
       </tr>
       <tr id="VII:2(g)">
@@ -123,6 +131,7 @@ This requires the [Techniques](https://github.com/open-contracting-extensions/oc
     1. Use 'requestToParticipate' for its `type`
     1. Enter *any final date for the submission of requests for participation in the procurement* in its `dueDate`
     1. Add *the address for the submission of requests for participation in the procurement* to its `description`
+
 </td>
       </tr>
       <tr id="VII:2(h)">
@@ -132,6 +141,7 @@ This requires the [Techniques](https://github.com/open-contracting-extensions/oc
 
 1. Enter *the final date for the submission of tenders* in `tender/tenderPeriod/endDate`
 1. Add *the address for the submission of tenders* to `tender/submissionMethodDetails`
+
 </td>
       </tr>
       <tr id="VII:2(i)">
@@ -143,6 +153,7 @@ This requires the [Techniques](https://github.com/open-contracting-extensions/oc
 1. Enter *the language or languages in which tenders or requests for participation may be submitted* in its `contactPoint/availableLanguage`
 
 This requires the [Additional Contact Points](https://github.com/open-contracting-extensions/ocds_additionalContactPoints_extension) extension.
+
 </td>
       </tr>
       <tr id="VII:2(j)">
@@ -186,6 +197,7 @@ This requires the [Selection Criteria](https://github.com/open-contracting-exten
 1. Add 'GPA' to `tender/coveredBy`
 
 This requires the [Covered By](https://github.com/open-contracting-extensions/ocds_coveredBy_extension) extension.
+
 </td>
       </tr>
       <tr class="section" id="VII:3">
@@ -209,6 +221,7 @@ The information included in the notice of intended procurement covers all the in
         <td>VII:4</td>
         <td>Procuring entities are encouraged to publish in the appropriate paper or electronic medium listed in Appendix III as early as possible in each fiscal year a notice regarding their future procurement plans (hereinafter referred to as "notice of planned procurement"). The notice of planned procurement should include the subject-matter of the procurement and the planned date of the publication of the notice of intended procurement.</td>
         <td markdown=1>
+
 1. [Create an OCDS release](../operations/#create-a-release)
 1. Add 'planning' to the `tag` array
 1. Set `tender/status` to 'planning'
@@ -230,6 +243,7 @@ This requires the [Communication](https://github.com/open-contracting-extensions
         <td markdown=1>
 
 1. Follow the guidance for [VII:2](<#VII:2>).
+
 </td>
       </tr>
     </tbody>
@@ -276,6 +290,7 @@ This requires the [Communication](https://github.com/open-contracting-extensions
         <td markdown=1>
 
 1. Follow the guidance for [VII:2(j)](<#VII:2(j)>)
+
 </td>
       </tr>
       <tr id="X:7(c)">
@@ -285,6 +300,7 @@ This requires the [Communication](https://github.com/open-contracting-extensions
 
 1. Map *all evaluation criteria the entity will apply in the awarding of the contract* and *the relative importance of such criteria* to `tender.awardCriteriaDetails`
 1. If *price is the sole criterion*, set `tender.awardCriteria` to 'priceOnly'
+
 </td>
       </tr>
       <tr id="X:7(d)">
@@ -297,6 +313,7 @@ This requires the [Communication](https://github.com/open-contracting-extensions
 1. If the electronic communication with the procuring entity requires the use of tools and devices that are not generally available, enter the Web address of these tools in `tender.communication.atypicalToolUrl`
 
 This requires the [Communication](https://github.com/open-contracting-extensions/ocds_communication_extension) extension.
+
 </td>
       </tr>
       <tr id="X:7(e)">
@@ -308,6 +325,7 @@ This requires the [Communication](https://github.com/open-contracting-extensions
 1. Enter *the rules, including identification of the elements of the tender related to the evaluation criteria, on which the auction will be conducted* in `tender/techniques/electronicAuction/description`
 
 This requires the [Techniques](https://github.com/open-contracting-extensions/ocds_techniques_extension) extension.
+
 </td>
       </tr>
       <tr id="X:7(f)">
@@ -320,6 +338,7 @@ This requires the [Techniques](https://github.com/open-contracting-extensions/oc
 1. Enter *the persons authorized to be present* in `tender/bidOpening/description`
 
 This requires the [Bid Opening](https://github.com/open-contracting-extensions/ocds_bidOpening_extension) extension.
+
 </td>
       </tr>
       <tr id="X:7(g)">
@@ -334,6 +353,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
 1. Enter *the means by which tenders may be submitted* in `tender/submissionMethod`:
   1. If it's *on paper*, enter 'written'
   1. If it's *by electronic means*, enter 'electronicSubmission'
+
 </td>
       </tr>
       <tr id="X:7(h)">
@@ -342,6 +362,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td markdown=1>
 
 1. Follow the guidance for [VII:2(e)](<#VII:2(e)>)
+
 </td>
       </tr>
       <tr>
@@ -354,15 +375,12 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
   1. Add a `Document` object to the `tender/documents` array
   1. Set its `documentType` to 'evaluationCriteria'
   1. Fill any other known information for the document ([`Document` object schema](https://standard.open-contracting. org/1.1/en/schema/reference/#document))
+
 </td>
       </tr>
       <tr>
         <td>X:11</td>
-        <td markdown=1>
-          Where, prior to the award of a contract, a procuring entity modifies the criteria or requirements set out in the notice of intended procurement or tender documentation provided to participating suppliers, or amends or reissues a notice or tender documentation, it shall transmit in writing all such modifications or amended or re-issued notice or tender documentation:<br>
-          (a) to all suppliers that are participating at the time of the modification, amendment or re-issuance, where such suppliers are known to the entity, and in all other cases, in the same manner as the original information was made available; and<br>
-          (b) in adequate time to allow such suppliers to modify and re-submit amended tenders, as appropriate.
-</td>
+        <td>Where, prior to the award of a contract, a procuring entity modifies the criteria or requirements set out in the notice of intended procurement or tender documentation provided to participating suppliers, or amends or reissues a notice or tender documentation, it shall transmit in writing all such modifications or amended or re-issued notice or tender documentation: (a) to all suppliers that are participating at the time of the modification, amendment or re-issuance, where such suppliers are known to the entity, and in all other cases, in the same manner as the original information was made available; and (b) in adequate time to allow such suppliers to modify and re-submit amended tenders, as appropriate.</td>
         <td markdown=1>
 
 1. [Create a new OCDS release](../operations/#create-a-release) and follow the corresponding guidance, depending on the information that has been modified:
@@ -412,6 +430,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
     1. Set its `documentType` to 'awardNotice'
     1. Fill any other known information for the document ([`Document` object schema](https://standard.open-contracting. org/1.1/en/schema/reference/#document))
 1. Enter *the circumstances and conditions described in paragraph 1 that justified the use of limited tendering* in `tender/procurementMethodRationale`
+
 </td>
       </tr>
     </tbody>
@@ -445,6 +464,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td markdown=1>
 
 1. Enter or append *the automatic evaluation method, including the mathematical formula* in `tender/techniques/electronicAuction/description`
+
 </td>
       </tr>
       <tr id="XIV:1(b)">
@@ -465,6 +485,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td markdown=1>
 
 1. Enter or append *any other relevant information relating to the conduct of the auction* in `tender/techniques/electronicAuction/description`
+
 </td>
       </tr>
     </tbody>
@@ -496,10 +517,12 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td>XVI:2(a)</td>
         <td>a description of the goods or services procured;</td>
         <td markdown=1>
+
 1. [Create an OCDS release](../operations/#create-a-release)
 1. Add an `Award` object to the `awards` array
   1. Enter an identifier in its `id`, which can be arbitrary as it is primarily to allow referencing from other parts of the file
   1. Enter the *description of the goods or services procured* in its `description` or, if possible, split it into `Item` objects in its `items` array.
+
 </td>
       </tr>
       <tr id="XVI:2(b)">
@@ -508,6 +531,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td markdown=1>
 
 1. Follow the guidance for [VII:2(a)](#VII:2(a))
+
 </td>
       </tr>
       <tr id="XVI:2(c)">
@@ -530,6 +554,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td>XVI:2(d)</td>
         <td>the value of the successful tender or the highest and lowest offers taken into account in the award of the contract;</td>
         <td markdown=1>
+
 1. Enter *the value of the successful tender* in the award's `value/amount`
 1. Enter the currency in the award's `value/currency` (see the [currency](https://standard.open-contracting.org/latest/en/schema/codelists/#currency) codelist
 1. For *the highest offer taken into account in the award of the contract*, add a `BidsStatistic` object to the `bids/statistics` array:
@@ -538,6 +563,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
   1. Enter the currency of the offer in its `currency`
   1. Set its `measure` to `highestValidBidValue`
 1. For *the lowest offer taken into account in the award of the contract*, repeat the above guidance and set `measure` to `lowestValidBidValue`
+
 </td>
       </tr>
       <tr id="XVI:2(e)">
@@ -546,6 +572,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td markdown=1>
 
 1. Enter *the date of the award* in the award's `date`
+
 </td>
       </tr>
       <tr id="XVI:2(f)">
@@ -555,6 +582,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
 
 1. For *the type of procurement method used*, follow the guidance for [VII:2(f)](#VII:2(f))
 1. For *description of the circumstances justifying the use of limited tendering*, follow the guidance for [XIII:2](#XIII:2)
+
 </td>
       </tr>
       <tr>
@@ -565,6 +593,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
 If you are interested in calculating these statistics using OCDS data, please contact <data@open-contracting.org>. We will update this document as we learn from users.
 
 In the meantime, you might be interested in this [Python notebook](http://bit.ly/OCPaustraliaexample), which demonstrates how to calculate the GPA statistics from a specific dataset.
+
 </td>
       </tr>
       <tr id="XVI:4(a)">
