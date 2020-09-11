@@ -1,6 +1,6 @@
 # Annotated Revised GPA
 
-This document annotates selected parts of the GPA, with details on how to publish the information using OCDS in a way that is consistent with the rules of the GPA. It is intended for a policy audience.
+This document annotates selected parts of the GPA, with details on how to publish the information using OCDS in a way that is consistent with the rules of the GPA. It is intended for both policy and technical audiences.
 
 ## [Article VII](https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm#articleVII) Notices
 
