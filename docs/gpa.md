@@ -286,7 +286,7 @@ This requires the [Communication](https://github.com/open-contracting-extensions
         <td>A procuring entity covered under Annex 2 or 3 may use a notice of planned procurement as a notice of intended procurement provided that the notice of planned procurement includes as much of the information referred to in paragraph 2 as is available to the entity and a statement that interested suppliers should express their interest in the procurement to the procuring entity.</td>
         <td markdown=1>
 
-1. Follow the guidance for [VII:2](<#VII:2>).
+1. Follow the guidance for [VII:2](#VII:2).
 
 </td>
       </tr>
@@ -391,7 +391,7 @@ If you are interested in using OCDS to publish this, please contact <data@open-c
         <td>the procurement, including the nature and the quantity of the goods or services to be procured or, where the quantity is not known, the estimated quantity and any requirements to be fulfilled, including any technical specifications, conformity assessment certification, plans, drawings or instructional materials;</td>
         <td markdown=1>
 
-1. For *the procurement, including the nature and the quantity of the goods or services to be procured or, where the quantity is not known, the estimated quantity*, follow the guidance for [VII:2(b)](<#VII:2(b)>)
+1. For *the procurement, including the nature and the quantity of the goods or services to be procured or, where the quantity is not known, the estimated quantity*, follow the guidance for [VII:2(b)](#VII:2(b))
 1. For *any requirements to be fulfilled, including any technical specifications, conformity assessment certification, plans, drawings or instructional materials*, append to `tender/description`.
 
 </td>
@@ -401,7 +401,7 @@ If you are interested in using OCDS to publish this, please contact <data@open-c
         <td>any conditions for participation of suppliers, including a list of information and documents that suppliers are required to submit in connection with the conditions for participation;</td>
         <td markdown=1>
 
-1. Follow the guidance for [VII:2(j)](<#VII:2(j)>)
+1. Follow the guidance for [VII:2(j)](#VII:2(j))
 
 </td>
       </tr>
@@ -473,7 +473,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td>any dates for the delivery of goods or the supply of services</td>
         <td markdown=1>
 
-1. Follow the guidance for [VII:2(e)](<#VII:2(e)>)
+1. Follow the guidance for [VII:2(e)](#VII:2(e))
 
 </td>
       </tr>
@@ -486,7 +486,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
 1. If the *evaluation criteria* are published as a document:
   1. Add a `Document` object to the `tender/documents` array
   1. Set its `documentType` to 'evaluationCriteria'
-  1. Fill any other known information for the document ([`Document` object schema](https://standard.open-contracting. org/1.1/en/schema/reference/#document))
+  1. Fill any other known information for the document ([`Document` object schema](https://standard.open-contracting.org/1.1/en/schema/reference/#document))
 
 </td>
       </tr>
@@ -517,9 +517,9 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td markdown=1>
 
 1. [Create a new OCDS release](../operations/#create-a-release) and follow the corresponding guidance, depending on the information that has been modified:
-  1. If the *the criteria or requirements* are modified, follow the guidance for [X:9](<#X:9>)
-  1. If *a notice* (of intended procurement) is amended or reissued, follow the guidance of article VII:2
-  1. If the *tender documentation* is amended or reissued, follow the guidance for [X:7](<#X:7>)
+  1. If the *the criteria or requirements* are modified, follow the guidance for [X:9](#X:9)
+  1. If *a notice* (of intended procurement) is amended or reissued, follow the guidance for [VII:2](#VII:2)
+  1. If the *tender documentation* is amended or reissued, follow the guidance for [X:7](#X:7)
 
 </td>
       </tr>
@@ -551,8 +551,8 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
 
 1. [Create an OCDS release](../operations/#create-a-release)
 1. If the following data has not been published following the guidance for VII:2
-  1. For *the name of the procuring entity*, follow the guidance for [VII:2(a)](<#VII:2(a)>)
-  1. For the *kind of goods or services procured*, follow the guidance for [VII:2(b)](<#VII:2(b)>)
+  1. For *the name of the procuring entity*, follow the guidance for [VII:2(a)](#VII:2(a))
+  1. For the *kind of goods or services procured*, follow the guidance for [VII:2(b)](#VII:2(b))
 1. Add an `Award` object to the `awards` array
   1. Enter an identifier in its `id`, which can be arbitrary as it is primarily to allow referencing from other parts of the file
   1. Enter the *kind of goods or services procured* in its `description` or, if possible, split it into `Item` objects in its `items` array.
@@ -561,7 +561,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
   1. If the *report in writing* is also published as a document
     1. Add a `Document` object to its `documents` array
     1. Set its `documentType` to 'awardNotice'
-    1. Fill any other known information for the document ([`Document` object schema](https://standard.open-contracting. org/1.1/en/schema/reference/#document))
+    1. Fill any other known information for the document ([`Document` object schema](https://standard.open-contracting.org/1.1/en/schema/reference/#document))
 1. Enter *the circumstances and conditions described in paragraph 1 that justified the use of limited tendering* in `tender/procurementMethodRationale`
 
 </td>
