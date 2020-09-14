@@ -26,4 +26,4 @@ You might also be interested in [How open data helps WTO GPA objectives: Step-by
 
 ## We want your feedback!
 
-To contribute, please first read this page, and then dive into the [guidance](gpa). Feedback is discussed openly on GitHub. To browse all issues or to open another issue, visit [this website's GitHub issues](https://github.com/open-contracting-extensions/government-procurement-agreement/issues).
+To contribute, please first read this page, and then dive into the [guidance](gpa). Feedback is discussed openly on GitHub. To browse all issues or to open another issue, visit [this website's GitHub issues](https://github.com/open-contracting-extensions/government-procurement-agreement/issues). You can also send feedback privately to <data@open-contracting.org>.
