@@ -52,7 +52,7 @@ This document annotates selected parts of the GPA, with details on how to publis
 1. You can proactively enter the *cost and terms of payment* of *all relevant documents relating to the procurement* in `tender/participationFees`
 1. You can proactively enter any *relevant documents relating to the procurement* in `tender/documents`
 
-This requires the [Organization Classification](https://extensions.open-contracting.org/en/extensions/organizationClassification/master/) and the [Participation Fees](https://github.com/open-contracting-extensions/ocds_participationFee_extension) extensions.
+This requires the [Organization Classification](https://extensions.open-contracting.org/en/extensions/organizationClassification/master/) and [Participation Fees](https://github.com/open-contracting-extensions/ocds_participationFee_extension) extensions.
 
 </td>
       </tr>
@@ -181,7 +181,7 @@ This requires the [Additional Contact Points](https://github.com/open-contractin
   1. Set its `documentType` to 'selectionCriteria'
   1. Fill any other known information for the document ([`Document` object schema](https://standard.open-contracting.org/1.1/en/schema/reference/#document))
 
-This requires the [Second Stage Description](https://github.com/open-contracting-extensions/ocds_secondStageDescription_extension) and the [Selection Criteria](https://github.com/open-contracting-extensions/ocds_selectionCriteria_extension) extensions.
+This requires the [Second Stage Description](https://github.com/open-contracting-extensions/ocds_secondStageDescription_extension) and [Selection Criteria](https://github.com/open-contracting-extensions/ocds_selectionCriteria_extension) extensions.
 
 </td>
       </tr>
@@ -457,6 +457,7 @@ This requires the [Bid Opening](https://github.com/open-contracting-extensions/o
   1. If it's *by electronic means*, enter 'electronicSubmission'
 
 This requires the [Participation Fees](https://github.com/open-contracting-extensions/ocds_participationFees_extension) extension.
+
 </td>
       </tr>
       <tr id="X:7(h)">
