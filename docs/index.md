@@ -2,7 +2,7 @@
 
 To promote open, fair and transparent competition in government procurement markets, a number of [World Trade Organization](https://www.wto.org/) (WTO) members negotiated the [Agreement on Government Procurement](https://www.wto.org/english/tratop_e/gproc_e/gp_gpa_e.htm) (GPA).
 
-This website provides guidance on how to publish [Open Contracting Data Standard](http://standard.open-contracting.org/) data in a way that is consistent with the rules established in the [text of the Agreement](https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm). It quotes parts of the GPA, adding annotations on how to publish the information using OCDS.
+This website provides guidance on how to publish [Open Contracting Data Standard](http://standard.open-contracting.org/) data in a way that is consistent with the rules established in the [text of the Agreement](https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm) ([PDF](https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.pdf)). It quotes parts of the GPA, adding annotations on how to publish the information using OCDS.
 
 ```eval_rst
 .. toctree::
