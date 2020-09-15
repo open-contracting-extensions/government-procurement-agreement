@@ -36,17 +36,17 @@ This document annotates selected parts of the GPA, with details on how to publis
         <td markdown=1>
 
 1. Add an `Organization` object to the `parties` array:
-  1. Add 'procuringEntity' to its `roles`
-  1. Enter an identifier in its `id`, which can be arbitrary as it is primarily to allow referencing from other parts of the file
-  1. Enter the *name of the procuring entity* in its `name`
-  1. Enter the *address of the procuring entity* in its `address`
-  1. Enter *other information necessary to contact the procuring entity* in its `contactPoint`
-  1. Add a `Classification` object to its `details/classifications` array
-    1. Set its `scheme` to 'gpaCoverageSchedule' ([GPA coverage schedule documentation](https://www.wto.org/english/tratop_e/gproc_e/gp_app_agree_e.htm#revisedGPA))
-    1. Set its `id`
-      * to 'annex1' if the procuring entity is a central government entity
-      * to 'annex2' if the procuring entity a sub-central government entity
-      * to 'annex3' if the procuring entity is another type of entity
+    1. Add 'procuringEntity' to its `roles`
+    1. Enter an identifier in its `id`, which can be arbitrary as it is primarily to allow referencing from other parts of the file
+    1. Enter the *name of the procuring entity* in its `name`
+    1. Enter the *address of the procuring entity* in its `address`
+    1. Enter *other information necessary to contact the procuring entity* in its `contactPoint`
+    1. Add a `Classification` object to its `details/classifications` array
+        1. Set its `scheme` to 'gpaCoverageSchedule' ([GPA coverage schedule documentation](https://www.wto.org/english/tratop_e/gproc_e/gp_app_agree_e.htm#revisedGPA))
+        1. Set its `id`
+            * to 'annex1' if the procuring entity is a central government entity
+            * to 'annex2' if the procuring entity a sub-central government entity
+            * to 'annex3' if the procuring entity is another type of entity
 1. Enter the above identifier in `tender/procuringEntity/id`
 1. Enter the *name of the procuring entity* in `tender/procuringEntity/name`
 1. You can proactively enter the *cost and terms of payment* of *all relevant documents relating to the procurement* in `tender/participationFees`
@@ -163,9 +163,9 @@ This requires the [Additional Contact Points](https://github.com/open-contractin
 
 1. Add *a list and brief description of any conditions for participation of suppliers* to `tender/eligibilityCriteria`
 1. If *requirements are included in tender documentation that is made available to all interested suppliers*:
-  1. For each document, add a `Document` object to the `tender/documents` array
-  1. Set its `documentType` to 'eligibilityCriteria'
-  1. Fill any other known information for the document ([`Document` object schema](https://standard.open-contracting.org/1.1/en/schema/reference/#document))
+    1. For each document, add a `Document` object to the `tender/documents` array
+    1. Set its `documentType` to 'eligibilityCriteria'
+    1. Fill any other known information for the document ([`Document` object schema](https://standard.open-contracting.org/1.1/en/schema/reference/#document))
 
 </td>
       </tr>
@@ -177,9 +177,9 @@ This requires the [Additional Contact Points](https://github.com/open-contractin
 1. Enter *the number of suppliers that will be permitted to tender* in `tender.secondStage.maximumCandidates`
 1. Add *the criteria that will be used to select [the suppliers]* to `tender.selectionCriteria.description` or, if possible, split this into `SelectionCriterion` objects in the `tender/selectionCriteria/criteria` array.
 1. If *the criteria that will be used to select [the suppliers]* are published as documents:
-  1. For each document, add a `Document` object to the `tender/documents` array
-  1. Set its `documentType` to 'selectionCriteria'
-  1. Fill any other known information for the document ([`Document` object schema](https://standard.open-contracting.org/1.1/en/schema/reference/#document))
+    1. For each document, add a `Document` object to the `tender/documents` array
+    1. Set its `documentType` to 'selectionCriteria'
+    1. Fill any other known information for the document ([`Document` object schema](https://standard.open-contracting.org/1.1/en/schema/reference/#document))
 
 This requires the [Second Stage Description](https://github.com/open-contracting-extensions/ocds_secondStageDescription_extension) and [Selection Criteria](https://github.com/open-contracting-extensions/ocds_selectionCriteria_extension) extensions.
 
@@ -266,9 +266,9 @@ The information included in the notice of intended procurement covers all the in
 1. Enter *the subject-matter of the procurement* in `tender/description`. The value of `tender/description` can be updated when the data described in article VII:2(b) is published.
 1. Enter *the planned date of the publication of the notice of intended procurement* in `tender/communication/futureNoticeDate`
 1. If *notice regarding their future procurement plans* is also published as a document:
-  1. Add a `Document` object to the `tender/documents` array
-  1. Set its `documentType` to 'plannedProcurementNotice'
-  1. Fill any other known information for the document ([`Document` object schema](https://standard.open-contracting.org/1.1/en/schema/reference/#document))
+    1. Add a `Document` object to the `tender/documents` array
+    1. Set its `documentType` to 'plannedProcurementNotice'
+    1. Fill any other known information for the document ([`Document` object schema](https://standard.open-contracting.org/1.1/en/schema/reference/#document))
 
 This requires the [Communication](https://github.com/open-contracting-extensions/ocds_communication_extension) extension.
 
@@ -453,8 +453,8 @@ This requires the [Bid Opening](https://github.com/open-contracting-extensions/o
 
 1. Enter the *terms of payment* in `tender/participationFees`
 1. Enter *the means by which tenders may be submitted* in `tender/submissionMethod`:
-  1. If it's *on paper*, enter 'written'
-  1. If it's *by electronic means*, enter 'electronicSubmission'
+    1. If it's *on paper*, enter 'written'
+    1. If it's *by electronic means*, enter 'electronicSubmission'
 
 This requires the [Participation Fees](https://github.com/open-contracting-extensions/ocds_participationFees_extension) extension.
 
@@ -476,9 +476,9 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
 
 1. Enter the *evaluation criteria set out in the notice of intended procurement or tender documentation* in `tender/awardCriteriaDetails`
 1. If the *evaluation criteria* are published as a document:
-  1. Add a `Document` object to the `tender/documents` array
-  1. Set its `documentType` to 'evaluationCriteria'
-  1. Fill any other known information for the document ([`Document` object schema](https://standard.open-contracting.org/1.1/en/schema/reference/#document))
+    1. Add a `Document` object to the `tender/documents` array
+    1. Set its `documentType` to 'evaluationCriteria'
+    1. Fill any other known information for the document ([`Document` object schema](https://standard.open-contracting.org/1.1/en/schema/reference/#document))
 
 </td>
       </tr>
@@ -509,9 +509,9 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td markdown=1>
 
 1. [Create a new OCDS release](../operations/#create-a-release) and follow the corresponding guidance, depending on the information that has been modified:
-  1. If the *the criteria or requirements* are modified, follow the guidance for [X:9](#X:9)
-  1. If *a notice* (of intended procurement) is amended or reissued, follow the guidance for [VII:2](#VII:2)
-  1. If the *tender documentation* is amended or reissued, follow the guidance for [X:7](#X:7)
+    1. If the *the criteria or requirements* are modified, follow the guidance for [X:9](#X:9)
+    1. If *a notice* (of intended procurement) is amended or reissued, follow the guidance for [VII:2](#VII:2)
+    1. If the *tender documentation* is amended or reissued, follow the guidance for [X:7](#X:7)
 
 </td>
       </tr>
@@ -543,17 +543,17 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
 
 1. [Create an OCDS release](../operations/#create-a-release)
 1. If the following data has not been published following the guidance for VII:2
-  1. For *the name of the procuring entity*, follow the guidance for [VII:2(a)](#VII:2(a))
-  1. For the *kind of goods or services procured*, follow the guidance for [VII:2(b)](#VII:2(b))
+    1. For *the name of the procuring entity*, follow the guidance for [VII:2(a)](#VII:2(a))
+    1. For the *kind of goods or services procured*, follow the guidance for [VII:2(b)](#VII:2(b))
 1. Add an `Award` object to the `awards` array
-  1. Enter an identifier in its `id`, which can be arbitrary as it is primarily to allow referencing from other parts of the file
-  1. Enter the *kind of goods or services procured* in its `description` or, if possible, split it into `Item` objects in its `items` array.
-  1. Enter *the value [of the goods or services]* in its `value/amount`
-  1. Enter the currency in `value/currency` (see the [currency](https://standard.open-contracting.org/latest/en/schema/codelists/#currency) codelist)
-  1. If the *report in writing* is also published as a document
-    1. Add a `Document` object to its `documents` array
-    1. Set its `documentType` to 'awardNotice'
-    1. Fill any other known information for the document ([`Document` object schema](https://standard.open-contracting.org/1.1/en/schema/reference/#document))
+    1. Enter an identifier in its `id`, which can be arbitrary as it is primarily to allow referencing from other parts of the file
+    1. Enter the *kind of goods or services procured* in its `description` or, if possible, split it into `Item` objects in its `items` array.
+    1. Enter *the value [of the goods or services]* in its `value/amount`
+    1. Enter the currency in `value/currency` (see the [currency](https://standard.open-contracting.org/latest/en/schema/codelists/#currency) codelist)
+    1. If the *report in writing* is also published as a document
+        1. Add a `Document` object to its `documents` array
+        1. Set its `documentType` to 'awardNotice'
+        1. Fill any other known information for the document ([`Document` object schema](https://standard.open-contracting.org/1.1/en/schema/reference/#document))
 1. Enter *the circumstances and conditions described in paragraph 1 that justified the use of limited tendering* in `tender/procurementMethodRationale`
 
 </td>
@@ -598,9 +598,9 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td markdown=1>
 
 1. If *the results of any initial evaluation of the elements of [each participant's] tender* are published as a document:
-  1. Add a `Document` object to the award's `documents` array
-  1. Set its `documentType` to 'evaluationReports'
-  1. Fill any other known information for the document ([`Document` object schema](https://standard.open-contracting.org/1.1/en/schema/reference/#document))
+    1. Add a `Document` object to the award's `documents` array
+    1. Set its `documentType` to 'evaluationReports'
+    1. Fill any other known information for the document ([`Document` object schema](https://standard.open-contracting.org/1.1/en/schema/reference/#document))
 
 </td>
       </tr>
@@ -647,8 +647,8 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
 
 1. [Create an OCDS release](../operations/#create-a-release)
 1. Add an `Award` object to the `awards` array
-  1. Enter an identifier in its `id`, which can be arbitrary as it is primarily to allow referencing from other parts of the file
-  1. Enter the *description of the goods or services procured* in its `description` or, if possible, split it into `Item` objects in its `items` array.
+    1. Enter an identifier in its `id`, which can be arbitrary as it is primarily to allow referencing from other parts of the file
+    1. Enter the *description of the goods or services procured* in its `description` or, if possible, split it into `Item` objects in its `items` array.
 
 </td>
       </tr>
@@ -667,13 +667,13 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td markdown=1>
 
 1. Add an `Organization` object to the `parties` array:
-  1. Add 'supplier' to its `roles`
-  1. Enter an identifier in its `id`, which can be arbitrary as it is primarily to allow referencing from other parts of the file
-  1. Enter the *name* in its `name`
-  1. Enter the *address* in its `address`
+    1. Add 'supplier' to its `roles`
+    1. Enter an identifier in its `id`, which can be arbitrary as it is primarily to allow referencing from other parts of the file
+    1. Enter the *name* in its `name`
+    1. Enter the *address* in its `address`
 1. Add an `OrganizationReference` object to the award's `suppliers` array:
-  1. Enter the organization `id` of the supplier in its `id`
-  1. Enter the *name* of the supplier in its `name`
+    1. Enter the organization `id` of the supplier in its `id`
+    1. Enter the *name* of the supplier in its `name`
 
 </td>
       </tr>
@@ -685,10 +685,10 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
 1. Enter *the value of the successful tender* in the award's `value/amount`
 1. Enter the currency in the award's `value/currency` (see the [currency](https://standard.open-contracting.org/latest/en/schema/codelists/#currency) codelist
 1. For *the highest offer taken into account in the award of the contract*, add a `BidsStatistic` object to the `bids/statistics` array:
-  1. Enter an identifier in its `id`, which can be arbitrary as it is primarily to allow referencing from other parts of the file
-  1. Enter the value of the offer in its `value`
-  1. Enter the currency of the offer in its `currency`
-  1. Set its `measure` to `highestValidBidValue`
+    1. Enter an identifier in its `id`, which can be arbitrary as it is primarily to allow referencing from other parts of the file
+    1. Enter the value of the offer in its `value`
+    1. Enter the currency of the offer in its `currency`
+    1. Set its `measure` to `highestValidBidValue`
 1. For *the lowest offer taken into account in the award of the contract*, repeat the above guidance and set `measure` to `lowestValidBidValue`
 
 </td>
