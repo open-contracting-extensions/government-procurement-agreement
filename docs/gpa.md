@@ -588,6 +588,8 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td>the automatic evaluation method, including the mathematical formula, that is based on the evaluation criteria set out in the tender documentation and that will be used in the automatic ranking or re-ranking during the auction;</td>
         <td markdown=1>
 
+1. [Create an OCDS release](../operations/#create-a-release)
+1. Set `tender/status` to 'planned'
 1. Enter or append *the automatic evaluation method, including the mathematical formula* in `tender/techniques/electronicAuction/description`
 
 </td>
