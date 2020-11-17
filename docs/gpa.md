@@ -378,7 +378,8 @@ If you are interested in using OCDS to publish this, please contact <data@open-c
         <td markdown=1>
 
 1. [Create an OCDS release](../operations/#create-a-release)
-1. Add 'tenderUpdate' to the `tag` array
+1. Set the `tag` array:
+  1. If data has been published acc
 1. Set `tender/status` to 'active'
 
 </td>
@@ -568,7 +569,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
   </table>
 </div>
 
-## [Article XIV](https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm#articleXIV) Electronic Auctions
+  ## [Article XIV](https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm#articleXIV) Electronic Auctions
 
 <div class="wy-table-responsive">
   <table class="docutils">
@@ -595,7 +596,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td markdown=1>
 
 1. [Create an OCDS release](../operations/#create-a-release)
-1. Set `tender/status` to 'planned'
+1. Set `tender/status` to 'active'
 1. Enter or append *the automatic evaluation method, including the mathematical formula* in `tender/techniques/electronicAuction/description`
 
 </td>
