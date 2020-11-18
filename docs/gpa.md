@@ -27,6 +27,8 @@ This document annotates selected parts of the GPA, with details on how to publis
         <td markdown=1>
 
 1. [Create an OCDS release](../operations/#create-a-release)
+1. Add 'tender' to the `tag` array
+1. Set `tender/status` to 'active'
 
 </td>
       </tr>
@@ -376,6 +378,7 @@ If you are interested in using OCDS to publish this, please contact <data@open-c
         <td markdown=1>
 
 1. [Create an OCDS release](../operations/#create-a-release)
+1. Add 'tenderUpdate' to the `tag` array
 
 </td>
      </tr>
@@ -509,9 +512,9 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td markdown=1>
 
 1. [Create a new OCDS release](../operations/#create-a-release) and follow the corresponding guidance, depending on the information that has been modified:
-    1. If the *the criteria or requirements* are modified, follow the guidance for [X:9](#X:9)
-    1. If *a notice* (of intended procurement) is amended or reissued, follow the guidance for [VII:2](#VII:2)
-    1. If the *tender documentation* is amended or reissued, follow the guidance for [X:7](#X:7)
+    1. If the *the criteria or requirements* are modified, follow the guidance for [X:9](#X:9), and add 'tenderAmendment' to the `tag` array
+    1. If *a notice* (of intended procurement) is amended or reissued, follow the guidance for [VII:2](#VII:2), but instead add 'tenderAmendment' to the `tag` array
+    1. If the *tender documentation* is amended or reissued, follow the guidance for [X:7](#X:7), but instead add 'tenderAmendment' to the `tag` array
 
 </td>
       </tr>
@@ -542,6 +545,8 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td markdown=1>
 
 1. [Create an OCDS release](../operations/#create-a-release)
+1. Add 'award' to the `tag` array
+1. Set `tender/status` to 'complete'
 1. If the following data has not been published following the guidance for VII:2
     1. For *the name of the procuring entity*, follow the guidance for [VII:2(a)](#VII:2(a))
     1. For the *kind of goods or services procured*, follow the guidance for [VII:2(b)](#VII:2(b))
@@ -588,6 +593,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td>the automatic evaluation method, including the mathematical formula, that is based on the evaluation criteria set out in the tender documentation and that will be used in the automatic ranking or re-ranking during the auction;</td>
         <td markdown=1>
 
+1. [Create an OCDS release](../operations/#create-a-release)
 1. Enter or append *the automatic evaluation method, including the mathematical formula* in `tender/techniques/electronicAuction/description`
 
 </td>
@@ -646,6 +652,8 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td markdown=1>
 
 1. [Create an OCDS release](../operations/#create-a-release)
+1. Add 'award' to the `tag` array
+1. Set `tender/status` to 'complete'
 1. Add an `Award` object to the `awards` array
     1. Enter an identifier in its `id`, which can be arbitrary as it is primarily to allow referencing from other parts of the file
     1. Enter the *description of the goods or services procured* in its `description` or, if possible, split it into `Item` objects in its `items` array.
