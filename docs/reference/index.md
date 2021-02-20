@@ -15,7 +15,7 @@ This profile makes use of the extensions below. Instead of declaring each extens
 ```json
 {
   "extensions": [
-    "https://standard.open-contracting.org/profiles/gpa/master/en/extension.json"
+    "https://standard.open-contracting.org/profiles/gpa/latest/en/extension.json"
   ]
 }
 ```

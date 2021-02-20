@@ -1,6 +1,3 @@
-# Compare this file to:
-# https://github.com/open-contracting/standard_profile_template/blob/main/include/config.mk
-
 # Edit these variables as appropriate.
 
 # The space-separated, period-prefixed translations to build (for easier substitutions).
@@ -28,7 +25,7 @@ TRANSIFEX_PROJECT=
 EXTRACT_TARGETS=
 
 # The path to the branch of the documentation to print to PDF.
-PDF_ROOT=/profiles/gpa/master
+PDF_ROOT=/profiles/gpa/latest
 # The pattern of pages to print to PDF. Update if the documentation adds, removes or renames pages.
 PDF_PAGES={,gpa/,operations/,reference/{,schema/,codelists/},changelog/}
 # 15000 may warn: "Warning: Received createRequest signal on a disposed ResourceObject's NetworkAccessManager. This might

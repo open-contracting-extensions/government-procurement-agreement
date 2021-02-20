@@ -6,7 +6,7 @@
     "en": "Collects, into a single extension, the extensions that compose the OCDS for the Agreement on Government Procurement profile."
   },
   "documentationUrl": {
-    "en": "http://standard.open-contracting.org/profiles/gpa/master/en/"
+    "en": "http://standard.open-contracting.org/profiles/gpa/latest/en/"
   },
   "compatibility": [
     "1.1"
