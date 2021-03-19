@@ -10,243 +10,216 @@ The codelists can be downloaded as CSV files from <https://standard.open-contrac
 
 ## Applies To
 
-```eval_rst
-   .. csv-table-no-translate::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../_static/patched/codelists/appliesTo.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:class: codelist-table
+:file: ../_static/patched/codelists/appliesTo.csv
 ```
 
 ## Award Criteria
 
-```eval_rst
-   .. csv-table-no-translate::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../_static/patched/codelists/awardCriteria.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:class: codelist-table
+:file: ../_static/patched/codelists/awardCriteria.csv
 ```
 
 ## Award Status
 
-```eval_rst
-   .. csv-table-no-translate::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../_static/patched/codelists/awardStatus.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:class: codelist-table
+:file: ../_static/patched/codelists/awardStatus.csv
 ```
 
 ## Contract Status
 
-```eval_rst
-   .. csv-table-no-translate::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../_static/patched/codelists/contractStatus.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:class: codelist-table
+:file: ../_static/patched/codelists/contractStatus.csv
 ```
 
 ## Covered By
 
-```eval_rst
-   .. csv-table-no-translate::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../_static/patched/codelists/coveredBy.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:class: codelist-table
+:file: ../_static/patched/codelists/coveredBy.csv
 ```
 
 ## Currency
 
-```eval_rst
-   .. csv-table-no-translate::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../_static/patched/codelists/currency.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:class: codelist-table
+:file: ../_static/patched/codelists/currency.csv
 ```
 
 ## Document Type
 
-```eval_rst
-   .. csv-table-no-translate::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../_static/patched/codelists/documentType.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:class: codelist-table
+:file: ../_static/patched/codelists/documentType.csv
 ```
 
 ## Dynamic Purchasing System Status
 
-```eval_rst
-   .. csv-table-no-translate::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../_static/patched/codelists/dynamicPurchasingSystemStatus.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:class: codelist-table
+:file: ../_static/patched/codelists/dynamicPurchasingSystemStatus.csv
 ```
 
 ## Dynamic Purchasing System Type
 
-```eval_rst
-   .. csv-table-no-translate::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../_static/patched/codelists/dynamicPurchasingSystemType.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:class: codelist-table
+:file: ../_static/patched/codelists/dynamicPurchasingSystemType.csv
 ```
 
 ## Extended Procurement Category
 
-```eval_rst
-   .. csv-table-no-translate::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../_static/patched/codelists/extendedProcurementCategory.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:class: codelist-table
+:file: ../_static/patched/codelists/extendedProcurementCategory.csv
 ```
 
 ## Framework Agreement Method
 
-```eval_rst
-   .. csv-table-no-translate::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../_static/patched/codelists/frameworkAgreementMethod.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:class: codelist-table
+:file: ../_static/patched/codelists/frameworkAgreementMethod.csv
 ```
 
 ## Initiation Type
 
-```eval_rst
-   .. csv-table-no-translate::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../_static/patched/codelists/initiationType.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:class: codelist-table
+:file: ../_static/patched/codelists/initiationType.csv
 ```
 
 ## Item Classification Scheme
 
-```eval_rst
-   .. csv-table-no-translate::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../_static/patched/codelists/itemClassificationScheme.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:class: codelist-table
+:file: ../_static/patched/codelists/itemClassificationScheme.csv
 ```
 
 ## Method
 
-```eval_rst
-   .. csv-table-no-translate::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../_static/patched/codelists/method.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:class: codelist-table
+:file: ../_static/patched/codelists/method.csv
 ```
 
 ## Method Of Payment
 
-```eval_rst
-   .. csv-table-no-translate::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../_static/patched/codelists/methodOfPayment.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:class: codelist-table
+:file: ../_static/patched/codelists/methodOfPayment.csv
 ```
 
 ## Milestone Status
 
-```eval_rst
-   .. csv-table-no-translate::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../_static/patched/codelists/milestoneStatus.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:class: codelist-table
+:file: ../_static/patched/codelists/milestoneStatus.csv
 ```
 
 ## Milestone Type
 
-```eval_rst
-   .. csv-table-no-translate::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../_static/patched/codelists/milestoneType.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:class: codelist-table
+:file: ../_static/patched/codelists/milestoneType.csv
 ```
 
 ## Participation Fee Type
 
-```eval_rst
-   .. csv-table-no-translate::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../_static/patched/codelists/participationFeeType.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:class: codelist-table
+:file: ../_static/patched/codelists/participationFeeType.csv
 ```
 
 ## Party Role
 
-```eval_rst
-   .. csv-table-no-translate::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../_static/patched/codelists/partyRole.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:class: codelist-table
+:file: ../_static/patched/codelists/partyRole.csv
 ```
 
 ## Procurement Category
 
-```eval_rst
-   .. csv-table-no-translate::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../_static/patched/codelists/procurementCategory.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:class: codelist-table
+:file: ../_static/patched/codelists/procurementCategory.csv
 ```
 
 ## Related Process
 
-```eval_rst
-   .. csv-table-no-translate::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../_static/patched/codelists/relatedProcess.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:class: codelist-table
+:file: ../_static/patched/codelists/relatedProcess.csv
 ```
 
 ## Related Process Scheme
 
-```eval_rst
-   .. csv-table-no-translate::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../_static/patched/codelists/relatedProcessScheme.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:class: codelist-table
+:file: ../_static/patched/codelists/relatedProcessScheme.csv
 ```
 
 ## Release Tag
 
-```eval_rst
-   .. csv-table-no-translate::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../_static/patched/codelists/releaseTag.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:class: codelist-table
+:file: ../_static/patched/codelists/releaseTag.csv
 ```
 
 ## Selection Criterion Type
 
-```eval_rst
-   .. csv-table-no-translate::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../_static/patched/codelists/selectionCriterionType.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:class: codelist-table
+:file: ../_static/patched/codelists/selectionCriterionType.csv
 ```
 
 ## Submission Method
 
-```eval_rst
-   .. csv-table-no-translate::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../_static/patched/codelists/submissionMethod.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:class: codelist-table
+:file: ../_static/patched/codelists/submissionMethod.csv
 ```
 
 ## Tender Status
 
-```eval_rst
-   .. csv-table-no-translate::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../_static/patched/codelists/tenderStatus.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:class: codelist-table
+:file: ../_static/patched/codelists/tenderStatus.csv
 ```
 
 ## Unit Classification Scheme
 
-```eval_rst
-   .. csv-table-no-translate::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../_static/patched/codelists/unitClassificationScheme.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:class: codelist-table
+:file: ../_static/patched/codelists/unitClassificationScheme.csv
 ```

@@ -4,24 +4,22 @@ To promote open, fair and transparent competition in government procurement mark
 
 This website provides guidance on how to publish [Open Contracting Data Standard](http://standard.open-contracting.org/) data in a way that is consistent with the rules established in the [text of the Agreement](https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm) ([PDF](https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.pdf)). It quotes parts of the GPA, adding annotations on how to publish the information using OCDS.
 
-```eval_rst
-.. toctree::
-   :maxdepth: 2
+```{toctree}
+:maxdepth: 2
 
-   gpa
-   operations
+gpa
+operations
 ```
 
 You might also be interested in [How open data helps WTO GPA objectives: Step-by-step guidance](https://www.open-contracting.org/resources/how-open-data-helps-wto-gpa-objectives-a-step-by-step-guidance-document/).
 
 ## Technical reference
 
-```eval_rst
-.. toctree::
-   :maxdepth: 2
+```{toctree}
+:maxdepth: 2
 
-   reference/index
-   changelog
+reference/index
+changelog
 ```
 
 ## We want your feedback!
