@@ -31,7 +31,7 @@ def main():
             f.write('\n## {}\n\n'.format(codelist_name))
 
             f.write(dedent("""\
-            ```{csv-table-no-translate}
+            ```{{csv-table-no-translate}}
             :header-rows: 1
             :class: codelist-table
             :file: ../_static/patched/codelists/{}
