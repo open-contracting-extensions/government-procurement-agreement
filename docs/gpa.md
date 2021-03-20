@@ -26,7 +26,7 @@ This document annotates selected parts of the GPA, with details on how to publis
         <td>Except as otherwise provided in this Agreement, each notice of intended procurement shall include:</td>
         <td>
 
-1. [Create an OCDS release](../operations/#create-a-release)
+1. [Create an OCDS release](operations.md#create-a-release)
 1. Add 'tender' to the `tag` array
 1. Set `tender/status` to 'active'
 
@@ -262,7 +262,7 @@ The information included in the notice of intended procurement covers all the in
         <td>Procuring entities are encouraged to publish in the appropriate paper or electronic medium listed in Appendix III as early as possible in each fiscal year a notice regarding their future procurement plans (hereinafter referred to as "notice of planned procurement"). The notice of planned procurement should include the subject-matter of the procurement and the planned date of the publication of the notice of intended procurement.</td>
         <td>
 
-1. [Create an OCDS release](../operations/#create-a-release)
+1. [Create an OCDS release](operations.md#create-a-release)
 1. Add 'planning' to the `tag` array
 1. Set `tender/status` to 'planning'
 1. Enter *the subject-matter of the procurement* in `tender/description`. The value of `tender/description` can be updated when the data described in article VII:2(b) is published.
@@ -281,7 +281,7 @@ This requires the [Communication](https://github.com/open-contracting-extensions
         <td>A procuring entity covered under Annex 2 or 3 may use a notice of planned procurement as a notice of intended procurement provided that the notice of planned procurement includes as much of the information referred to in paragraph 2 as is available to the entity and a statement that interested suppliers should express their interest in the procurement to the procuring entity.</td>
         <td>
 
-1. Follow the guidance for [VII:2](#VII:2).
+1. Follow the guidance for <a href="#VII:2">VII:2</a>.
 
 </td>
       </tr>
@@ -377,7 +377,7 @@ If you are interested in using OCDS to publish this, please contact <data@open-c
         <td>A procuring entity shall make available to suppliers tender documentation that includes all information necessary to permit suppliers to prepare and submit responsive tenders. Unless already provided in the notice of intended procurement, such documentation shall include a complete description of:</td>
         <td>
 
-1. [Create an OCDS release](../operations/#create-a-release)
+1. [Create an OCDS release](operations.md#create-a-release)
 1. Add 'tenderUpdate' to the `tag` array
 
 </td>
@@ -387,7 +387,7 @@ If you are interested in using OCDS to publish this, please contact <data@open-c
         <td>the procurement, including the nature and the quantity of the goods or services to be procured or, where the quantity is not known, the estimated quantity and any requirements to be fulfilled, including any technical specifications, conformity assessment certification, plans, drawings or instructional materials;</td>
         <td>
 
-1. For *the procurement, including the nature and the quantity of the goods or services to be procured or, where the quantity is not known, the estimated quantity*, follow the guidance for [VII:2(b)](#VII:2(b))
+1. For *the procurement, including the nature and the quantity of the goods or services to be procured or, where the quantity is not known, the estimated quantity*, follow the guidance for <a href="#VII:2(b)">VII:2(b)</a>
 1. For *any requirements to be fulfilled, including any technical specifications, conformity assessment certification, plans, drawings or instructional materials*, append to `tender/description`.
 
 </td>
@@ -397,7 +397,7 @@ If you are interested in using OCDS to publish this, please contact <data@open-c
         <td>any conditions for participation of suppliers, including a list of information and documents that suppliers are required to submit in connection with the conditions for participation;</td>
         <td>
 
-1. Follow the guidance for [VII:2(j)](#VII:2(j))
+1. Follow the guidance for <a href="#VII:2(j)">VII:2(j)</a>
 
 </td>
       </tr>
@@ -468,7 +468,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td>any dates for the delivery of goods or the supply of services</td>
         <td>
 
-1. Follow the guidance for [VII:2(e)](#VII:2(e))
+1. Follow the guidance for <a href="#VII:2(e)">VII:2(e)</a>
 
 </td>
       </tr>
@@ -511,10 +511,10 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td>Where, prior to the award of a contract, a procuring entity modifies the criteria or requirements set out in the notice of intended procurement or tender documentation provided to participating suppliers, or amends or reissues a notice or tender documentation, it shall transmit in writing all such modifications or amended or re-issued notice or tender documentation: (a) to all suppliers that are participating at the time of the modification, amendment or re-issuance, where such suppliers are known to the entity, and in all other cases, in the same manner as the original information was made available; and (b) in adequate time to allow such suppliers to modify and re-submit amended tenders, as appropriate.</td>
         <td>
 
-1. [Create a new OCDS release](../operations/#create-a-release) and follow the corresponding guidance, depending on the information that has been modified:
-    1. If the *the criteria or requirements* are modified, follow the guidance for [X:9](#X:9), and add 'tenderAmendment' to the `tag` array
-    1. If *a notice* (of intended procurement) is amended or reissued, follow the guidance for [VII:2](#VII:2), but instead add 'tenderAmendment' to the `tag` array
-    1. If the *tender documentation* is amended or reissued, follow the guidance for [X:7](#X:7), but instead add 'tenderAmendment' to the `tag` array
+1. [Create a new OCDS release](operations.md#create-a-release) and follow the corresponding guidance, depending on the information that has been modified:
+    1. If the *the criteria or requirements* are modified, follow the guidance for <a href="#X:9">X:9</a>, and add 'tenderAmendment' to the `tag` array
+    1. If *a notice* (of intended procurement) is amended or reissued, follow the guidance for <a href="#VII:2">VII:2</a>, but instead add 'tenderAmendment' to the `tag` array
+    1. If the *tender documentation* is amended or reissued, follow the guidance for <a href="#X:7">X:7</a>, but instead add 'tenderAmendment' to the `tag` array
 
 </td>
       </tr>
@@ -544,12 +544,12 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td>A procuring entity shall prepare a report in writing on each contract awarded under paragraph 1. The report shall include the name of the procuring entity, the value and kind of goods or services procured and a statement indicating the circumstances and conditions described in paragraph 1 that justified the use of limited tendering.</td>
         <td>
 
-1. [Create an OCDS release](../operations/#create-a-release)
+1. [Create an OCDS release](operations.md#create-a-release)
 1. Add 'award' to the `tag` array
 1. Set `tender/status` to 'complete'
 1. If the following data has not been published following the guidance for VII:2
-    1. For *the name of the procuring entity*, follow the guidance for [VII:2(a)](#VII:2(a))
-    1. For the *kind of goods or services procured*, follow the guidance for [VII:2(b)](#VII:2(b))
+    1. For *the name of the procuring entity*, follow the guidance for <a href="#VII:2(a)">VII:2(a)</a>
+    1. For the *kind of goods or services procured*, follow the guidance for <a href="#VII:2(b)">VII:2(b)</a>
 1. Add an `Award` object to the `awards` array
     1. Enter an identifier in its `id`, which can be arbitrary as it is primarily to allow referencing from other parts of the file
     1. Enter the *kind of goods or services procured* in its `description` or, if possible, split it into `Item` objects in its `items` array.
@@ -593,7 +593,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td>the automatic evaluation method, including the mathematical formula, that is based on the evaluation criteria set out in the tender documentation and that will be used in the automatic ranking or re-ranking during the auction;</td>
         <td>
 
-1. [Create an OCDS release](../operations/#create-a-release)
+1. [Create an OCDS release](operations.md#create-a-release)
 1. Enter or append *the automatic evaluation method, including the mathematical formula* in `tender/techniques/electronicAuction/description`
 
 </td>
@@ -651,7 +651,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td>a description of the goods or services procured;</td>
         <td>
 
-1. [Create an OCDS release](../operations/#create-a-release)
+1. [Create an OCDS release](operations.md#create-a-release)
 1. Add 'award' to the `tag` array
 1. Set `tender/status` to 'complete'
 1. Add an `Award` object to the `awards` array
@@ -665,7 +665,7 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td>the name and address of the procuring entity;</td>
         <td>
 
-1. Follow the guidance for [VII:2(a)](#VII:2(a))
+1. Follow the guidance for <a href="#VII:2(a)">VII:2(a)</a>
 
 </td>
       </tr>
@@ -715,8 +715,8 @@ This requires the [Participation Fees](https://github.com/open-contracting-exten
         <td>the type of procurement method used, and in cases where limited tendering was used in accordance with Article XIII, a description of the circumstances justifying the use of limited tendering.</td>
         <td>
 
-1. For *the type of procurement method used*, follow the guidance for [VII:2(f)](#VII:2(f))
-1. For *description of the circumstances justifying the use of limited tendering*, follow the guidance for [XIII:2](#XIII:2)
+1. For *the type of procurement method used*, follow the guidance for <a href="#VII:2(f)">VII:2(f)</a>
+1. For *description of the circumstances justifying the use of limited tendering*, follow the guidance for <a href="#XIII:2">XIII:2</a>
 
 </td>
       </tr>
