@@ -71,6 +71,7 @@ profile_identifier = 'gpa'
 repository_url = 'https://github.com/open-contracting-extensions/government-procurement-agreement'
 
 html_theme_options = {
+    'analytics_id': 'HTWZHRIZ',
     'display_version': False,
     'root_url': '/profiles/{}'.format(profile_identifier),
     'short_project': 'OCDS for GPA',
