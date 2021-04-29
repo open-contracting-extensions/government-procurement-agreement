@@ -44,7 +44,7 @@ This document annotates selected parts of the GPA, with details on how to publis
     1. Enter the *address of the procuring entity* in its `address`
     1. Enter *other information necessary to contact the procuring entity* in its `contactPoint`
     1. Add a `Classification` object to its `details/classifications` array
-        1. Set its `scheme` to 'gpaCoverageSchedule' ([GPA coverage schedule documentation](https://www.wto.org/english/tratop_e/gproc_e/gp_app_agree_e.htm#revisedGPA))
+        1. Set its `scheme` to 'gpaCoverageSchedule' ([GPA coverage schedule documentation](https://www.wto.org/english/tratop_e/gproc_e/gp_app_agree_e.htm))
         1. Set its `id`
             * to 'annex1' if the procuring entity is a central government entity
             * to 'annex2' if the procuring entity a sub-central government entity
@@ -54,7 +54,7 @@ This document annotates selected parts of the GPA, with details on how to publis
 1. You can proactively enter the *cost and terms of payment* of *all relevant documents relating to the procurement* in `tender/participationFees`
 1. You can proactively enter any *relevant documents relating to the procurement* in `tender/documents`
 
-This requires the [Organization Classification](https://extensions.open-contracting.org/en/extensions/organizationClassification/master/) and [Participation Fees](https://github.com/open-contracting-extensions/ocds_participationFee_extension) extensions.
+This requires the [Organization Classification](https://extensions.open-contracting.org/en/extensions/organizationClassification/master/) and [Participation Fees](https://extensions.open-contracting.org/en/extensions/participation_fee/master/) extensions.
 
 </td>
       </tr>
@@ -81,7 +81,7 @@ The method of representing an estimated quantity is [under discussion](https://g
 1. Enter *an estimate, if possible, of the timing of subsequent notices of intended procurement* in `tender/recurrence/dates`
 1. Enter any further information in `tender/recurrence/description`
 
-This requires the [Recurrence](https://github.com/open-contracting-extensions/ocds_recurrence_extension) extension.
+This requires the [Recurrence](https://extensions.open-contracting.org/en/extensions/recurrence/master/) extension.
 
 </td>
       </tr>
@@ -93,7 +93,7 @@ This requires the [Recurrence](https://github.com/open-contracting-extensions/oc
 1. Set `tender/hasOptions` to `true`
 1. Enter this in `tender/options/description`
 
-This requires the [Options](https://github.com/open-contracting-extensions/ocds_options_extension) extension.
+This requires the [Options](https://extensions.open-contracting.org/en/extensions/options/master/) extension.
 
 </td>
       </tr>
@@ -120,7 +120,7 @@ The addition of `period` to the `Milestone` building block is [under discussion]
 1. If *it will involve negotiation*, add "negotiated" to `tender/procurementMethodDetails`
 1. If *it will involve electronic auction*, set `tender/techniques/hasElectronicAuction` to `true`
 
-This requires the [Techniques](https://github.com/open-contracting-extensions/ocds_techniques_extension) extension.
+This requires the [Techniques](https://extensions.open-contracting.org/en/extensions/techniques/master/) extension.
 
 </td>
       </tr>
@@ -154,7 +154,7 @@ This requires the [Techniques](https://github.com/open-contracting-extensions/oc
 1. Find the `Organization` object in the `parties` array whose `id` matches `tender/procuringEntity/id`
 1. Enter *the language or languages in which tenders or requests for participation may be submitted* in its `contactPoint/availableLanguage`
 
-This requires the [Additional Contact Points](https://github.com/open-contracting-extensions/ocds_additionalContactPoints_extension) extension.
+This requires the [Additional Contact Points](https://extensions.open-contracting.org/en/extensions/additionalContactPoint/master/) extension.
 
 </td>
       </tr>
@@ -183,7 +183,7 @@ This requires the [Additional Contact Points](https://github.com/open-contractin
     1. Set its `documentType` to 'selectionCriteria'
     1. Fill any other known information for the document ([`Document` object schema](https://standard.open-contracting.org/1.1/en/schema/reference/#document))
 
-This requires the [Second Stage Description](https://github.com/open-contracting-extensions/ocds_secondStageDescription_extension) and [Selection Criteria](https://github.com/open-contracting-extensions/ocds_selectionCriteria_extension) extensions.
+This requires the [Second Stage Description](https://extensions.open-contracting.org/en/extensions/secondStageDescription/master/) and [Selection Criteria](https://extensions.open-contracting.org/en/extensions/selectionCriteria/master/) extensions.
 
 </td>
       </tr>
@@ -194,7 +194,7 @@ This requires the [Second Stage Description](https://github.com/open-contracting
 
 1. Add 'GPA' to `tender/coveredBy`
 
-This requires the [Covered By](https://github.com/open-contracting-extensions/ocds_coveredBy_extension) extension.
+This requires the [Covered By](https://extensions.open-contracting.org/en/extensions/coveredBy/master/) extension.
 
 </td>
       </tr>
@@ -272,7 +272,7 @@ The information included in the notice of intended procurement covers all the in
     1. Set its `documentType` to 'plannedProcurementNotice'
     1. Fill any other known information for the document ([`Document` object schema](https://standard.open-contracting.org/1.1/en/schema/reference/#document))
 
-This requires the [Communication](https://github.com/open-contracting-extensions/ocds_communication_extension) extension.
+This requires the [Communication](https://extensions.open-contracting.org/en/extensions/communication/master/) extension.
 
 </td>
       </tr>
@@ -420,7 +420,7 @@ If you are interested in using OCDS to publish this, please contact <data@open-c
 1. Enter or append *authentication and encryption requirements or other requirements related to the submission of information by electronic means* in `tender/submissionMethodDetails`
 1. If the electronic communication with the procuring entity requires the use of tools and devices that are not generally available, enter the Web address of these tools in `tender.communication.atypicalToolUrl`
 
-This requires the [Communication](https://github.com/open-contracting-extensions/ocds_communication_extension) extension.
+This requires the [Communication](https://extensions.open-contracting.org/en/extensions/communication/master/) extension.
 
 </td>
       </tr>
@@ -432,7 +432,7 @@ This requires the [Communication](https://github.com/open-contracting-extensions
 1. Set `tender/techniques/hasElectronicAuction` to `true`
 1. Enter *the rules, including identification of the elements of the tender related to the evaluation criteria, on which the auction will be conducted* in `tender/techniques/electronicAuction/description`
 
-This requires the [Techniques](https://github.com/open-contracting-extensions/ocds_techniques_extension) extension.
+This requires the [Techniques](https://extensions.open-contracting.org/en/extensions/techniques/master/) extension.
 
 </td>
       </tr>
@@ -445,7 +445,7 @@ This requires the [Techniques](https://github.com/open-contracting-extensions/oc
 1. Enter the *place* in `tender/bidOpening/address`, `tender/bidOpening/location` or `tender/bidOpening/gazetteer`
 1. Enter *the persons authorized to be present* in `tender/bidOpening/description`
 
-This requires the [Bid Opening](https://github.com/open-contracting-extensions/ocds_bidOpening_extension) extension.
+This requires the [Bid Opening](https://extensions.open-contracting.org/en/extensions/bidOpening/master/) extension.
 
 </td>
       </tr>
@@ -459,7 +459,7 @@ This requires the [Bid Opening](https://github.com/open-contracting-extensions/o
     1. If it's *on paper*, enter 'written'
     1. If it's *by electronic means*, enter 'electronicSubmission'
 
-This requires the [Participation Fees](https://github.com/open-contracting-extensions/ocds_participationFees_extension) extension.
+This requires the [Participation Fees](https://extensions.open-contracting.org/en/extensions/participation_fee/master/) extension.
 
 </td>
       </tr>
