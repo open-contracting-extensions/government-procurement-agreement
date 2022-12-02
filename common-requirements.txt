@@ -96,7 +96,7 @@ ocds-babel==0.3.1
     # via -r common-requirements.in
 ocdsextensionregistry==0.1.12
     # via -r common-requirements.in
-ocdsindex==0.1.0
+ocdsindex==0.1.1
     # via -r common-requirements.in
 outcome==1.1.0
     # via trio
