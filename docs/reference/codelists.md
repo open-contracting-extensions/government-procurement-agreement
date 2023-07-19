@@ -24,6 +24,22 @@ The codelists can be downloaded as CSV files from <https://standard.open-contrac
 :file: ../_static/patched/codelists/awardCriteria.csv
 ```
 
+## Award Criterion Fixed
+
+```{csv-table-no-translate}
+:header-rows: 1
+:class: codelist-table
+:file: ../_static/patched/codelists/awardCriterionFixed.csv
+```
+
+## Award Criterion Type
+
+```{csv-table-no-translate}
+:header-rows: 1
+:class: codelist-table
+:file: ../_static/patched/codelists/awardCriterionType.csv
+```
+
 ## Award Status
 
 ```{csv-table-no-translate}
@@ -46,6 +62,22 @@ The codelists can be downloaded as CSV files from <https://standard.open-contrac
 :header-rows: 1
 :class: codelist-table
 :file: ../_static/patched/codelists/coveredBy.csv
+```
+
+## Criterion Threshold
+
+```{csv-table-no-translate}
+:header-rows: 1
+:class: codelist-table
+:file: ../_static/patched/codelists/criterionThreshold.csv
+```
+
+## Criterion Weight
+
+```{csv-table-no-translate}
+:header-rows: 1
+:class: codelist-table
+:file: ../_static/patched/codelists/criterionWeight.csv
 ```
 
 ## Currency

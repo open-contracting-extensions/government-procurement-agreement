@@ -2366,6 +2366,11 @@
     },
     "Lot": {
       "properties": {
+        "awardCriteria": {
+          "title": "Award criteria",
+          "description": "Information about the award criteria for the lot.",
+          "$ref": "#/definitions/AwardCriteria"
+        },
         "bidOpening": {
           "title": "Bid opening",
           "description": "The date, time, place and other details of the public bid opening.",
@@ -2434,6 +2439,171 @@
           "$ref": "#/definitions/Techniques"
         }
       }
+    },
+    "LotGroup": {
+      "properties": {
+        "awardCriteria": {
+          "title": "Award criteria",
+          "description": "Information about the award criteria for the lot.",
+          "$ref": "#/definitions/AwardCriteria"
+        },
+        "techniques": {
+          "title": "Techniques",
+          "description": "Information about the use of techniques, such as framework agreements, dynamic purchasing systems and electronic auctions.",
+          "$ref": "#/definitions/Techniques"
+        }
+      }
+    },
+    "AwardCriteria": {
+      "title": "Award criteria",
+      "description": "Information about the award criteria.",
+      "type": "object",
+      "properties": {
+        "weightingDescription": {
+          "title": "Complicated weighting description",
+          "description": "When the weighting cannot be expressed per criterion, the mathematical equation (or other description) that expresses the complicated (e.g. non-linear) weighting.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "orderRationale": {
+          "title": "Justification for order of importance",
+          "description": "The justification for only indicating the award criteria's order of importance, not their weighting.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "criteria": {
+          "title": "Award criteria",
+          "description": "The award criteria.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AwardCriterion"
+          },
+          "wholeListMerge": true,
+          "uniqueItems": true,
+          "minItems": 1
+        }
+      },
+      "minProperties": 1
+    },
+    "AwardCriterion": {
+      "title": "Award criterion",
+      "description": "Information about the award criterion.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "title": "Type",
+          "description": "The aspect of the bid that the criterion concerns.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "codelist": "awardCriterionType.csv",
+          "openCodelist": true,
+          "minLength": 1
+        },
+        "name": {
+          "title": "Name",
+          "description": "The name of the criterion.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "description": {
+          "title": "Description",
+          "description": "The description of the criterion.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "numbers": {
+          "title": "Numbers",
+          "description": "Numbers linked to the criterion.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CriterionNumber"
+          },
+          "wholeListMerge": true,
+          "uniqueItems": true,
+          "minItems": 1
+        }
+      },
+      "minProperties": 1
+    },
+    "CriterionNumber": {
+      "title": "Criterion number",
+      "description": "Information about a number linked to a criterion.",
+      "type": "object",
+      "properties": {
+        "number": {
+          "title": "Number",
+          "description": "The number.",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "weight": {
+          "title": "Weight",
+          "description": "Whether the number is a type of weight.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "codelist": "criterionWeight.csv",
+          "openCodelist": false,
+          "enum": [
+            "percentageExact",
+            "percentageRangeMiddle",
+            "decimalExact",
+            "decimalRangeMiddle",
+            "pointsExact",
+            "pointsRangeMiddle",
+            "order",
+            null
+          ]
+        },
+        "fixed": {
+          "title": "Fixed",
+          "description": "Whether the number is a fixed value.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "codelist": "awardCriterionFixed.csv",
+          "openCodelist": false,
+          "enum": [
+            "total",
+            "unit",
+            null
+          ]
+        },
+        "threshold": {
+          "title": "Threshold",
+          "description": "Whether the number is a type of threshold.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "codelist": "criterionThreshold.csv",
+          "openCodelist": false,
+          "enum": [
+            "minimumScore",
+            "maximumBids",
+            null
+          ]
+        }
+      },
+      "minProperties": 1
     },
     "BidOpening": {
       "title": "Bid opening",
@@ -2889,15 +3059,6 @@
         }
       },
       "minProperties": 1
-    },
-    "LotGroup": {
-      "properties": {
-        "techniques": {
-          "title": "Techniques",
-          "description": "Information about the use of techniques, such as framework agreements, dynamic purchasing systems and electronic auctions.",
-          "$ref": "#/definitions/Techniques"
-        }
-      }
     },
     "Techniques": {
       "title": "Techniques",
