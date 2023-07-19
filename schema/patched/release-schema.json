@@ -445,43 +445,17 @@
         },
         "bidOpening": {
           "title": "Bid opening",
-          "description": "The date, time, place and other details of the bid opening.",
+          "description": "The date, time, place and other details of the public bid opening.",
           "$ref": "#/definitions/BidOpening"
         },
         "communication": {
           "title": "Communication",
           "description": "Modalities of communication about key events.",
-          "type": "object",
-          "properties": {
-            "atypicalToolUrl": {
-              "title": "Atypical tool URL",
-              "description": "Electronic communication with the procuring entity requires the use of tools and devices that are not generally available. These tools are accessible via this URL.",
-              "type": [
-                "string",
-                "null"
-              ],
-              "format": "uri"
-            },
-            "futureNoticeDate": {
-              "title": "Future notice date",
-              "description": "The estimated date of publication of the next sequential notice.",
-              "type": [
-                "string",
-                "null"
-              ],
-              "format": "date-time"
-            },
-            "documentAvailabilityPeriod": {
-              "title": "Document availability period",
-              "description": "The period during which documents can be accessed, or during which requests for access to documents can be submitted.",
-              "$ref": "#/definitions/Period"
-            }
-          },
-          "minProperties": 1
+          "$ref": "#/definitions/Communication"
         },
         "coveredBy": {
           "title": "Covered by",
-          "description": "The treaties that the contracting process is covered by.",
+          "description": "The international legal instruments that the contracting process is covered by.",
           "type": [
             "array",
             "null"
@@ -502,8 +476,8 @@
           "items": {
             "$ref": "#/definitions/Location"
           },
-          "uniqueItems": true,
-          "wholeListMerge": true
+          "wholeListMerge": true,
+          "uniqueItems": true
         },
         "deliveryAddresses": {
           "title": "Delivery Addresses",
@@ -512,8 +486,8 @@
           "items": {
             "$ref": "#/definitions/Address"
           },
-          "uniqueItems": true,
-          "wholeListMerge": true
+          "wholeListMerge": true,
+          "uniqueItems": true
         },
         "options": {
           "title": "Options",
@@ -564,6 +538,14 @@
           "title": "Techniques",
           "description": "Information about the use of techniques, such as framework agreements, dynamic purchasing systems and electronic auctions.",
           "$ref": "#/definitions/Techniques"
+        },
+        "competitive": {
+          "title": "Is the framework agreement call-off competitive?",
+          "description": "Whether this call-off is competitive or not.",
+          "type": [
+            "boolean",
+            "null"
+          ]
         }
       },
       "patternProperties": {
@@ -1580,13 +1562,14 @@
         },
         "deliveryLocations": {
           "title": "Delivery Locations",
-          "description": "The locations where activity related to this tender, contract or license will be delivered",
+          "description": "The locations where activity related to this tender, contract or license will be delivered.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Location"
           },
+          "wholeListMerge": true,
           "uniqueItems": true,
-          "wholeListMerge": true
+          "minItems": 1
         },
         "deliveryLocation": {
           "title": "Delivery Location",
@@ -1594,7 +1577,7 @@
           "$ref": "#/definitions/Location",
           "deprecated": {
             "description": "This field is deprecated in favour of `.deliveryLocations` to support items with multiple delivery locations.",
-            "deprecatedVersion": "1.1.6"
+            "deprecatedVersion": "1.2.0"
           }
         },
         "deliveryAddresses": {
@@ -1604,8 +1587,9 @@
           "items": {
             "$ref": "#/definitions/Address"
           },
+          "wholeListMerge": true,
           "uniqueItems": true,
-          "wholeListMerge": true
+          "minItems": 1
         },
         "deliveryAddress": {
           "title": "Delivery Address",
@@ -1613,7 +1597,7 @@
           "$ref": "#/definitions/Address",
           "deprecated": {
             "description": "This field is deprecated in favour of `.deliveryAddresses` to support items with multiple delivery locations.",
-            "deprecatedVersion": "1.1.6"
+            "deprecatedVersion": "1.2.0"
           }
         }
       },
@@ -2380,138 +2364,34 @@
         }
       }
     },
-    "BidOpening": {
-      "title": "Bid opening",
-      "description": "The date, time, place and other details of the bid opening.",
-      "type": "object",
-      "properties": {
-        "date": {
-          "title": "Date and time",
-          "description": "The date and time of the bid opening.",
-          "type": [
-            "string",
-            "null"
-          ],
-          "format": "date-time"
-        },
-        "location": {
-          "title": "Location",
-          "description": "The place where the bid opening occurs.",
-          "$ref": "#/definitions/Location"
-        },
-        "address": {
-          "title": "Address",
-          "description": "The address of the place where the bid opening occurs.",
-          "$ref": "#/definitions/Address"
-        },
-        "description": {
-          "title": "Details",
-          "description": "Any other details about the bid opening (who can participate, whether authorization is needed, etc.).",
-          "type": [
-            "string",
-            "null"
-          ],
-          "minLength": 1
-        }
-      },
-      "minProperties": 1
-    },
-    "Location": {
-      "type": "object",
-      "title": "Delivery Location",
-      "description": "The location where activity related to this tender, contract or license will be delivered, or will take place. A location can be described by either a geometry (point location, line or polygon), or a gazetteer entry, or both.",
-      "properties": {
-        "description": {
-          "title": "Description",
-          "description": "A name or description of this location. This might include the name(s) of the location(s), or might provide a human-readable description of the location to be covered.",
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "geometry": {
-          "type": "object",
-          "title": "Geometry",
-          "description": "We follow the [GeoJSON standard](https://geojson.org/) to express basic location information, using longitude, latitude, and optional elevation values in the [WGS84](https://en.wikipedia.org/wiki/World_Geodetic_System) (EPSG:4326) projection. A point location can be identified by geocoding a delivery address. For concession licenses, or other contracts covering a polygon location which is not contained in a known gazetteer, polygon and multi-polygon can be used.",
-          "properties": {
-            "type": {
-              "title": "Type",
-              "description": "The type of [GeoJSON Geometry Objects](https://geojson.org/geojson-spec.html#geometry-objects) being provided. To provide longitude, latitude, and optional elevation, use 'Point', and enter an array of [longitude, latitude] or [longitude, latitude, elevation] as the value of the coordinates field: e.g. [-122.085, 37.42].",
-              "type": [
-                "string",
-                "null"
-              ],
-              "enum": [
-                "Point",
-                "MultiPoint",
-                "LineString",
-                "MultiLineString",
-                "Polygon",
-                "MultiPolygon",
-                null
-              ],
-              "codelist": "geometryType.csv",
-              "openCodelist": false
-            },
-            "coordinates": {
-              "title": "Coordinates",
-              "description": "The relevant array of points, e.g. [longitude, latitude] or [longitude, latitude, elevation], or a nested array of points, for the GeoJSON geometry being described. The longitude and latitude must be expressed in decimal degrees in the WGS84 (EPSG:4326) projection.",
-              "type": [
-                "array",
-                "null"
-              ],
-              "items": {
-                "type": [
-                  "number",
-                  "array"
-                ]
-              }
-            }
-          }
-        },
-        "gazetteer": {
-          "type": "object",
-          "title": "Gazetteer",
-          "description": "Identifiers from a gazetteer (a geographical index or directory) for the location.",
-          "properties": {
-            "scheme": {
-              "title": "Gazetteer scheme",
-              "description": "The identifier of the gazetteer. The `locationGazetteers.csv` codelist provides details of services, where available, that can resolve a gazetteer entry to provide location names.",
-              "type": [
-                "string",
-                "null"
-              ],
-              "codelist": "locationGazetteers.csv",
-              "openCodelist": true
-            },
-            "identifiers": {
-              "title": "Identifiers",
-              "description": "An array of one or more codes drawn from the gazetteer indicated by the `scheme` field.",
-              "type": [
-                "array",
-                "null"
-              ],
-              "items": {
-                "type": [
-                  "string"
-                ]
-              }
-            }
-          }
-        },
-        "uri": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "format": "uri",
-          "title": "URI",
-          "description": "A URI to a further description of the activity location. This might be a human-readable document with information on the location, or a machine-readable description of the location."
-        }
-      }
-    },
     "Lot": {
       "properties": {
+        "bidOpening": {
+          "title": "Bid opening",
+          "description": "The date, time, place and other details of the public bid opening.",
+          "$ref": "#/definitions/BidOpening"
+        },
+        "communication": {
+          "title": "Communication",
+          "description": "Modalities of communication about key events for this lot.",
+          "$ref": "#/definitions/Communication"
+        },
+        "coveredBy": {
+          "title": "Covered by",
+          "description": "The international legal instruments that the lot is covered by.",
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "codelist": "coveredBy.csv",
+          "openCodelist": true,
+          "uniqueItems": true,
+          "minItems": 1
+        },
         "options": {
           "title": "Options",
           "description": "A description of the options.",
@@ -2552,6 +2432,192 @@
           "title": "Techniques",
           "description": "Information about the use of techniques, such as framework agreements, dynamic purchasing systems and electronic auctions.",
           "$ref": "#/definitions/Techniques"
+        }
+      }
+    },
+    "BidOpening": {
+      "title": "Bid opening",
+      "description": "The date, time, place and other details of the public bid opening.",
+      "type": "object",
+      "properties": {
+        "date": {
+          "title": "Date and time",
+          "description": "The date and time of the bid opening.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "location": {
+          "title": "Location",
+          "description": "The place where the bid opening occurs.",
+          "$ref": "#/definitions/Location"
+        },
+        "address": {
+          "title": "Address",
+          "description": "The address of the place where the bid opening occurs.",
+          "$ref": "#/definitions/Address"
+        },
+        "description": {
+          "title": "Details",
+          "description": "Any other details about the bid opening (who can participate, whether authorization is needed, etc.).",
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        }
+      },
+      "minProperties": 1
+    },
+    "Communication": {
+      "title": "Communication",
+      "description": "Modalities of communication about key events.",
+      "type": "object",
+      "properties": {
+        "atypicalToolName": {
+          "title": "Atypical tool name",
+          "description": "The name of the tools and devices that are not generally available and that are required to communicate electronically with the buyer.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "atypicalToolUrl": {
+          "title": "Atypical tool URL",
+          "description": "The URL of the tools and devices that are not generally available and that are required to communicate electronically with the buyer.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri"
+        },
+        "noticePreferredPublicationDate": {
+          "title": "Notice preferred publication date",
+          "description": "The buyer's preferred date of publication of the notice (e.g. to avoid publication during a national holiday).",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "futureNoticeDate": {
+          "title": "Future notice date",
+          "description": "The estimated date of publication of the next sequential notice. For example, the next sequential notice for a planning notice might be a competition notice.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "invitationToConfirmInterestDispatchDate": {
+          "title": "Invitation to confirm interest dispatch date",
+          "description": "The estimated date of dispatch from the buyer to potential suppliers of the invitations to confirm interest. For example, when a planning notice is used as a call for competition, the buyer might simultaneously invite the potential suppliers that have expressed their interest to confirm their continuing interest.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "documentAvailabilityPeriod": {
+          "title": "Document availability period",
+          "description": "The period during which documents can be accessed, or during which requests for access to documents can be submitted.",
+          "$ref": "#/definitions/Period"
+        }
+      },
+      "minProperties": 1
+    },
+    "Location": {
+      "title": "Location",
+      "description": "A physical or virtual location.",
+      "type": "object",
+      "properties": {
+        "description": {
+          "title": "Description",
+          "description": "A name or description of this location. This might include the name(s) of the location(s), or might provide a human-readable description of the location to be covered.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "geometry": {
+          "title": "Geometry",
+          "description": "We follow the [GeoJSON standard](https://www.rfc-editor.org/rfc/rfc7946) to express basic location information, using longitude, latitude, and optional elevation values in the [WGS84](https://en.wikipedia.org/wiki/World_Geodetic_System) (EPSG:4326) projection. A point location can be identified by geocoding an address. For concession licenses, or other scenarios covering a polygon location that is not contained in a known gazetteer, polygon and multi-polygon can be used.",
+          "type": "object",
+          "properties": {
+            "type": {
+              "title": "Type",
+              "description": "The type of [GeoJSON Geometry Objects](https://www.rfc-editor.org/rfc/rfc7946#section-3.1) being provided. To provide longitude, latitude, and optional elevation, use 'Point', and enter an array of [longitude, latitude] or [longitude, latitude, elevation] as the value of the coordinates field: e.g. [-122.085, 37.42].",
+              "type": [
+                "string",
+                "null"
+              ],
+              "codelist": "geometryType.csv",
+              "openCodelist": false,
+              "enum": [
+                "Point",
+                "MultiPoint",
+                "LineString",
+                "MultiLineString",
+                "Polygon",
+                "MultiPolygon",
+                null
+              ]
+            },
+            "coordinates": {
+              "title": "Coordinates",
+              "description": "The relevant array of points, e.g. [longitude, latitude] or [longitude, latitude, elevation], or a nested array of points, for the GeoJSON geometry being described. The longitude and latitude must be expressed in decimal degrees in the WGS84 (EPSG:4326) projection.",
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": [
+                  "number",
+                  "array"
+                ]
+              }
+            }
+          }
+        },
+        "gazetteer": {
+          "title": "Gazetteer",
+          "description": "Identifiers from a gazetteer (a geographical index or directory) for the location.",
+          "type": "object",
+          "properties": {
+            "scheme": {
+              "title": "Gazetteer scheme",
+              "description": "The identifier of the gazetteer. The `locationGazetteers.csv` codelist provides details of services, where available, that can resolve a gazetteer entry to provide location names.",
+              "type": [
+                "string",
+                "null"
+              ],
+              "codelist": "locationGazetteers.csv",
+              "openCodelist": true
+            },
+            "identifiers": {
+              "title": "Identifiers",
+              "description": "An array of one or more codes drawn from the gazetteer indicated by the `scheme` field.",
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "uri": {
+          "title": "URI",
+          "description": "A URI to a further description of the location. This might be a human-readable document with information on the location, or a machine-readable description of the location.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri"
         }
       }
     },
@@ -2632,9 +2698,9 @@
           "items": {
             "type": "string"
           },
-          "uniqueItems": true,
           "codelist": "methodOfPayment.csv",
-          "openCodelist": true
+          "openCodelist": true,
+          "uniqueItems": true
         }
       }
     },
@@ -2755,15 +2821,15 @@
             "string",
             "null"
           ],
+          "codelist": "selectionCriterionType.csv",
+          "openCodelist": false,
           "enum": [
             "technical",
             "economic",
             "suitability",
             "other",
             null
-          ],
-          "codelist": "selectionCriterionType.csv",
-          "openCodelist": false
+          ]
         },
         "description": {
           "title": "Description",
@@ -2801,9 +2867,37 @@
           "openCodelist": false,
           "uniqueItems": true,
           "minItems": 1
+        },
+        "forReduction": {
+          "title": "For reduction?",
+          "description": "Whether the criterion is used to select the potential suppliers to be invited to the second stage of the contracting process, if the number of invitations is limited.",
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "numbers": {
+          "title": "Numbers",
+          "description": "Numbers linked to the criterion.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CriterionNumber"
+          },
+          "wholeListMerge": true,
+          "uniqueItems": true,
+          "minItems": 1
         }
       },
       "minProperties": 1
+    },
+    "LotGroup": {
+      "properties": {
+        "techniques": {
+          "title": "Techniques",
+          "description": "Information about the use of techniques, such as framework agreements, dynamic purchasing systems and electronic auctions.",
+          "$ref": "#/definitions/Techniques"
+        }
+      }
     },
     "Techniques": {
       "title": "Techniques",
@@ -2880,8 +2974,8 @@
             "string",
             "null"
           ],
-          "openCodelist": false,
           "codelist": "frameworkAgreementMethod.csv",
+          "openCodelist": false,
           "enum": [
             "withReopeningCompetition",
             "withoutReopeningCompetition",
@@ -2941,8 +3035,8 @@
             "string",
             "null"
           ],
-          "openCodelist": false,
           "codelist": "dynamicPurchasingSystemType.csv",
+          "openCodelist": false,
           "enum": [
             "open",
             "closed",
@@ -2956,8 +3050,8 @@
             "string",
             "null"
           ],
-          "openCodelist": false,
           "codelist": "dynamicPurchasingSystemStatus.csv",
+          "openCodelist": false,
           "enum": [
             "pending",
             "active",
