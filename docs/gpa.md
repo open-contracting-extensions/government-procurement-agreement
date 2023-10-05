@@ -748,7 +748,7 @@ This requires the [Participation Fees](https://extensions.open-contracting.org/e
 
 If you are interested in calculating statistics using OCDS data, please contact <data@open-contracting.org> or comment on this [GitHub issue](https://github.com/open-contracting-extensions/government-procurement-agreement/issues/45).
 
-In the meantime, you might be interested in this [Python notebook](http://bit.ly/OCPaustraliaexample), which demonstrates how to calculate statistics using Australia's data.
+In the meantime, you might be interested in this [Python notebook](https://bit.ly/OCPaustraliaexample), which demonstrates how to calculate statistics using Australia's data.
 
 </td>
       </tr>
