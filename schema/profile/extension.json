@@ -35,6 +35,6 @@
     "frameworkAgreementMethod.csv"
   ],
   "testDependencies": [
-    "https://raw.githubusercontent.com/open-contracting-extensions/ocds_lots_extension/v1.1.5/extension.json"
+    "https://raw.githubusercontent.com/open-contracting-extensions/ocds_lots_extension/761aaa0/extension.json"
   ]
 }
