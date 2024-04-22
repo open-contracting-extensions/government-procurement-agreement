@@ -28,6 +28,7 @@
     "geometryType.csv",
     "participationFeeType.csv",
     "methodOfPayment.csv",
+    "monetaryValue.csv",
     "selectionCriterionType.csv",
     "appliesTo.csv",
     "dynamicPurchasingSystemType.csv",
@@ -35,6 +36,6 @@
     "frameworkAgreementMethod.csv"
   ],
   "testDependencies": [
-    "https://raw.githubusercontent.com/open-contracting-extensions/ocds_lots_extension/761aaa0/extension.json"
+    "https://raw.githubusercontent.com/open-contracting-extensions/ocds_lots_extension/master/extension.json"
   ]
 }

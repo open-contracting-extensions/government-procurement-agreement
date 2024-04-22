@@ -192,6 +192,14 @@ The codelists can be downloaded as CSV files from <https://standard.open-contrac
 :file: ../_static/patched/codelists/milestoneType.csv
 ```
 
+## Monetary Value
+
+```{csv-table-no-translate}
+:header-rows: 1
+:class: codelist-table
+:file: ../_static/patched/codelists/monetaryValue.csv
+```
+
 ## Participation Fee Type
 
 ```{csv-table-no-translate}

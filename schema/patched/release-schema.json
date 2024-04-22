@@ -531,7 +531,7 @@
         },
         "selectionCriteria": {
           "title": "Selection criteria",
-          "description": "Information about the conditions for participation in a procedure.",
+          "description": "The minimum requirements for potential suppliers to participate in the contracting process. Selection criteria ensure that a potential supplier has the legal and financial capacities and the technical and professional abilities to perform the contract.",
           "$ref": "#/definitions/SelectionCriteria"
         },
         "techniques": {
@@ -1851,6 +1851,14 @@
             "null"
           ],
           "description": "The country name. For example, United States."
+        },
+        "description": {
+          "title": "Description",
+          "description": "The description of the address.",
+          "type": [
+            "string",
+            "null"
+          ]
         }
       },
       "patternProperties": {
@@ -1921,6 +1929,11 @@
           },
           "uniqueItems": true,
           "minItems": 1
+        },
+        "address": {
+          "title": "Address",
+          "description": "The address of the contact point.",
+          "$ref": "#/definitions/Address"
         }
       },
       "patternProperties": {
@@ -2850,6 +2863,11 @@
           "description": "The monetary value of this fee.",
           "$ref": "#/definitions/Value"
         },
+        "relativeValue": {
+          "title": "Relative value",
+          "description": "The value of the participation fee, as a proportion of a monetary value.",
+          "$ref": "#/definitions/RelativeValue"
+        },
         "description": {
           "title": "Description",
           "description": "Additional information about this fee, for example: the specific cases in which the fee is applicable (e.g. hard copies of documents only), the way in which the fee is levied, or the exact nature of the fee.",
@@ -2871,6 +2889,38 @@
           "codelist": "methodOfPayment.csv",
           "openCodelist": true,
           "uniqueItems": true
+        }
+      }
+    },
+    "RelativeValue": {
+      "title": "Relative value",
+      "description": "The value of the participation fee, as a proportion of a monetary value.",
+      "type": "object",
+      "required": [
+        "proportion",
+        "monetaryValue"
+      ],
+      "properties": {
+        "proportion": {
+          "title": "Proportion",
+          "description": "The proportion of the monetary value, expressed as a decimal between 0 and 1.",
+          "type": [
+            "number"
+          ],
+          "maximum": 1,
+          "minimum": 0,
+          "exclusiveMinimum": true
+        },
+        "monetaryValue": {
+          "title": "Monetary value",
+          "description": "The name of the monetary value.",
+          "type": "string",
+          "enum": [
+            "tender",
+            "award"
+          ],
+          "codelist": "monetaryValue.csv",
+          "openCodelist": false
         }
       }
     },
@@ -2969,7 +3019,7 @@
         },
         "description": {
           "title": "Description",
-          "description": "The description of the criteria used to select the economic operators who will be allowed to bid.",
+          "description": "The description of the criteria.",
           "type": [
             "string",
             "null"
@@ -3056,6 +3106,15 @@
           "wholeListMerge": true,
           "uniqueItems": true,
           "minItems": 1
+        },
+        "verificationMethod": {
+          "title": "Verification method",
+          "description": "The methods the buyer or procuring entity uses to verify the potential supplier satisfies the criterion.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
         }
       },
       "minProperties": 1
