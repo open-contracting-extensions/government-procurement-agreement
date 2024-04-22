@@ -31,6 +31,7 @@
     "monetaryValue.csv",
     "selectionCriterionType.csv",
     "appliesTo.csv",
+    "permission.csv",
     "dynamicPurchasingSystemType.csv",
     "dynamicPurchasingSystemStatus.csv",
     "frameworkAgreementMethod.csv"

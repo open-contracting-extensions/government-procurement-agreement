@@ -216,6 +216,14 @@ The codelists can be downloaded as CSV files from <https://standard.open-contrac
 :file: ../_static/patched/codelists/partyRole.csv
 ```
 
+## Permission
+
+```{csv-table-no-translate}
+:header-rows: 1
+:class: codelist-table
+:file: ../_static/patched/codelists/permission.csv
+```
+
 ## Procurement Category
 
 ```{csv-table-no-translate}
